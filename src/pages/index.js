@@ -6,6 +6,8 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <h1>Hello Guys</h1>
+
+      <h1>Developer Tawsif Pro max</h1>
     </div>
   )
 }
