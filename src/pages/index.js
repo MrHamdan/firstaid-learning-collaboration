@@ -3,10 +3,12 @@ import Image from "next/image";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
- return (
-  <div className={styles.container}>
-   <h1>Hello Guys Helllooooooo bangladesh</h1>
-   <h1>last commit m 3:05 pm </h1>
-  </div>
- );
+  return (
+    <div className={styles.container}>
+      <h1>Hello Guys</h1>
+
+      <h1>This is business</h1>
+      <h1>ZTesting GIT for first time</h1>
+    </div>
+  )
 }
