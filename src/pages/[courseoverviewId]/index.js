@@ -2,6 +2,8 @@ import { Box, Typography } from '@mui/material';
 import Image from 'next/image';
 import detailBg from '../../Images/detailbackground.png';
 import detailImg from '../../Images/detailimage.png';
+import styles from "../../styles/CourseOverview.module.css";
+import { FaStar } from "react-icons/fa";
 const Styles = {
     detailBackground:{
         backgroundImage: `url(${detailBg.src})`,
@@ -21,9 +23,12 @@ const CourseOverview = () => {
                 <Typography sx={{fontStyle:'normal', fontWeight:'500',fontSize:'36px',lineHeight:'145%', color:'white'}}>
                 Level 2 Food Hygiene and Safety for Catering
                 </Typography>
+                <Box sx={{display:'flex'}}><Typography sx={{marginRight:'20px'}}>4.8 <FaStar style={{
+                                    color: '#FFB300'
+                                }} /></Typography><Typography sx={{marginRight:'20px'}}>( 50 REVIEWS )</Typography><Typography sx={{marginRight:'20px'}}>6245 STUDENTS</Typography></Box>
             </Box>
-            <Box sx={{position: 'relative'}}>
-                <Image src={detailImg} />
+            <Box>
+                <Image src={detailImg} className={styles.detailImage}/>
             </Box>
             </Box>
         </Box>
