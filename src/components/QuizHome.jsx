@@ -7,3 +7,4 @@ const QuizHome = () => {
 }
 
 export default QuizHome
+
