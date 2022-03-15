@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import google_icon from '../../images/google-icon.png';
 import facebook_icon from '../../images/facebook-icon.png';
 import CloseIcon from '@mui/icons-material/Close';
-
+import { AiOutlineClose } from "react-icons/ai";
 import AuthenticationButton from './AuthenticationButton';
 import useAuth from 'hooks/useAuth';
 
@@ -61,8 +61,8 @@ const LoginModal = ({ handleClose }) => {
             >
 
                 <Box sx={Styles.modal}>
-                    <CloseIcon onClick={handleClose}
-                        sx={{
+                    <AiOutlineClose onClick={handleClose}
+                        style={{
                             position: 'absolute',
                             top: 16, right: 16,
                             backgroundColor: '#F8F8F8',
