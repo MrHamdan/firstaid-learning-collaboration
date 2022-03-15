@@ -23,9 +23,11 @@ const CourseOverview = () => {
                 <Typography sx={{fontStyle:'normal', fontWeight:'500',fontSize:'36px',lineHeight:'145%', color:'white'}}>
                 Level 2 Food Hygiene and Safety for Catering
                 </Typography>
-                <Box sx={{display:'flex'}}><Typography sx={{marginRight:'20px'}}>4.8 <FaStar style={{
+                <Box sx={{display:'flex',lineHeight:'32px'}}><Typography sx={{marginRight:'20px'}}>4.8 <FaStar style={{
                                     color: '#FFB300'
-                                }} /></Typography><Typography sx={{marginRight:'20px'}}>( 50 REVIEWS )</Typography><Typography sx={{marginRight:'20px'}}>6245 STUDENTS</Typography></Box>
+                }} /></Typography><Typography sx={{marginRight:'20px'}}>( 50 REVIEWS )</Typography><Typography sx={{marginRight:'20px'}}>6245 STUDENTS</Typography>
+                </Box>
+                <Typography sx={{fontStyle:'normal', fontWeight:'400',fontSize:'18px', lineHeight:'145%', color:'white'}}>We are a company who is best known for offering awarding body accredited courses for anyone <br/> who wishes to take their professional life to the next level.</Typography>
             </Box>
             <Box>
                 <Image src={detailImg} className={styles.detailImage}/>
