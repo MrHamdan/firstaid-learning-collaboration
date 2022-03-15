@@ -1,5 +1,7 @@
+import BlogsBanner from "./BlogsBanner";
+
 const BlogsHome = () => {
- return <div>Hello from blogs</div>;
+ return <BlogsBanner />;
 };
 
 export default BlogsHome;
