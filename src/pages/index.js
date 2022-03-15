@@ -7,7 +7,11 @@ export default function Home() {
     <div className={styles.container}>
       <h1>Hello Guys</h1>
 
+<<<<<<< HEAD
       <h1>Developer Tawsif Pro max</h1>
+=======
+      <h1>This is business</h1>
+>>>>>>> 27c0b1b7ef955756ea8be0265bd2dff1426f8bff
     </div>
   )
 }
