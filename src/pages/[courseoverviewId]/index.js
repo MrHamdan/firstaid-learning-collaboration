@@ -41,7 +41,7 @@ const CourseOverview = () => {
                                     <Typography sx={{ fontStyle: 'normal', fontWeight: '500', fontSize: { xs: '31px', xl: '36px' }, lineHeight: '145%', color: 'white', marginBottom: { xs: '0px', xl: '30px' } }}>
                                         Level 2 Food Hygiene and Safety for Catering
                                     </Typography>
-                                    <Box sx={{ display: 'flex', lineHeight: '32px', marginBottom: '30px', flexDirection: { xs: 'column' } }}><Typography sx={{ marginRight: '20px', color: 'white' }}>4.8 <FaStar style={{
+                                    <Box sx={{ display: 'flex', lineHeight: '32px', marginBottom: '30px', flexDirection: { xs: 'column', xl: 'row' } }}><Typography sx={{ marginRight: '20px', color: 'white' }}>4.8 <FaStar style={{
                                         color: '#FFB300'
                                     }} /></Typography><Typography sx={{ marginRight: '20px', color: 'white' }}>( 50 REVIEWS )</Typography><Typography sx={{ marginRight: '20px', color: 'white' }}>6245 STUDENTS</Typography>
                                     </Box>
@@ -103,7 +103,7 @@ const CourseOverview = () => {
                             <Grid item xs={12} xl={5}>
                                 <Item sx={{ backgroundColor: 'transparent', textAlign: 'left', boxShadow: '0' }}>
                                     <Image src={detailImg} className={styles.detailImage} />
-                                    <Grid container spacing={2} sx={{ marginTop: { xl: '100px', xs: '0px' } }}>
+                                    <Grid container spacing={2} sx={{ marginTop: { xl: '80px', xs: '0px' } }}>
                                         <Grid item xs={2}>
                                             <Item sx={{ backgroundColor: 'transparent', textAlign: 'left', boxShadow: '0' }}>
                                                 <del>$100.00</del> <br /> <span>75% off</span>
