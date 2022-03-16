@@ -9,15 +9,18 @@ const Styles = {
         width: {
             md: '152.43px'
         },
-        height: '67.25px'
+        height: '67.25px',
+        '&:hover': {
+            backgroundColor: 'red'
+        }
     }
 }
-const PrimaryButton = ({ text, onClick }) => {
+const PrimaryButton = ({ children, onClick }) => {
     return (
         <div>
             <Button onClick={onClick} variant="contained"
                 sx={Styles.loginButton}>
-                {text}
+                {children}
             </Button>
         </div>
     );

@@ -1,11 +1,10 @@
 import { Box, Button } from '@mui/material';
+import Image from 'next/image';
 import React from 'react';
 
-const AuthenticationButton = ({ text, backgroundColor, icon, onClick }) => {
-    console.log({ onClick })
+const AuthenticationButton = ({ children, backgroundColor, icon, onClick }) => {
     return (
         <Box>
-
             <Button variant="contained" sx={{
                 width: '100%', fontWeight: 600,
                 fontSize: '12px',
@@ -19,7 +18,10 @@ const AuthenticationButton = ({ text, backgroundColor, icon, onClick }) => {
             }}
                 onClick={onClick}
             >
-                <img style={{ marginRight: '5px' }} src={icon} alt="" />  {text}
+                {icon &&
+                    <Box sx={{ mr: 2 }}><Image src={icon} alt="" /></Box>
+                }
+                {children}
             </Button>
         </Box>
     );

@@ -85,10 +85,10 @@ const LoginModal = ({ handleClose }) => {
 
                         </Typography>
                         {isFunction &&
-                            <AuthenticationButton onClick={handleGoogleSignIn} text='Log In With Google' backgroundColor='#4688F1' icon={google_icon} />
+                            <AuthenticationButton onClick={handleGoogleSignIn} backgroundColor='#4688F1' icon={google_icon} >Log In With Google</AuthenticationButton>
                         }
 
-                        <AuthenticationButton text='Log In With Facebook' backgroundColor='#3E5C97' icon={facebook_icon} />
+                        <AuthenticationButton backgroundColor='#3E5C97' icon={facebook_icon} >Log In With Facebook</AuthenticationButton>
                         <Box sx={{ mt: '100px', mb: '20px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                             <hr style={{ width: '40%' }} /> <span style={{
                                 fontWeight: 600,
@@ -100,11 +100,11 @@ const LoginModal = ({ handleClose }) => {
                         </Box>
                         <Box>
                             <Typography sx={Styles.label}>Email</Typography>
-                            <TextField onBlur={handleEmailChange} id="outlined-basic" variant="outlined" type="text" sx={Styles.form} />
+                            <TextField onBlur={handleEmailChange} variant="outlined" type="text" sx={Styles.form} />
 
                             <Typography sx={Styles.label}>Password</Typography>
-                            <TextField onBlur={handlePasswordChange} id="outlined-basic" variant="outlined" type='password' sx={Styles.form} />
-                            <AuthenticationButton onClick={handleRegistration} text={registered ? 'Log In' : 'Sign Up'} backgroundColor='#C63437' />
+                            <TextField onBlur={handlePasswordChange} variant="outlined" type='password' sx={Styles.form} />
+                            <AuthenticationButton onClick={handleRegistration} backgroundColor='#C63437' >{registered ? 'Log In' : 'Sign Up'}</AuthenticationButton>
                             <Typography sx={{
                                 fontWeight: 'bold',
                                 fontSize: '16px',
