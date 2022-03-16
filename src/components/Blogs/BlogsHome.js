@@ -10,6 +10,7 @@ import {
  Typography,
 } from "@mui/material";
 import BlogsBanner from "./BlogsBanner";
+import BlogsBottomSlogan from "./BlogsBottomSlogan";
 import BlogsPostsCard from "./BlogsPostsCard";
 import BlogsSideBar from "./BlogsSideBar";
 
@@ -31,6 +32,7 @@ const BlogsHome = () => {
      </Grid>
     </Grid>
    </Container>
+   <BlogsBottomSlogan />
   </>
  );
 };

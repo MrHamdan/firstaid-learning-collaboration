@@ -1,5 +1,3 @@
-
-
 // import { Box, Typography, Paper, Grid, Container, Button } from '@mui/material';
 // import Image from 'next/image';
 // import detailBg from '../../Images/detailbackground.png';
@@ -26,7 +24,6 @@
 
 import CourseOverview from "components/CourseOverview/CourseOverview";
 
-
 // const Item = styled(Paper)(({ theme }) => ({
 //     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
 //     ...theme.typography.body2,
@@ -34,7 +31,6 @@ import CourseOverview from "components/CourseOverview/CourseOverview";
 //     textAlign: 'center',
 //     color: theme.palette.text.secondary,
 // }));
-
 
 // const Styles = {
 //     detailBackground: {
@@ -164,10 +160,10 @@ import CourseOverview from "components/CourseOverview/CourseOverview";
 // }
 
 const index = () => {
-    return (
-        <>
-            <CourseOverview />
-            {/* <Box sx={{ ...Styles.detailBackground, display: 'flex', alignItems: 'center' }}>
+ return (
+  <>
+   <CourseOverview />
+   {/* <Box sx={{ ...Styles.detailBackground, display: 'flex', alignItems: 'center' }}>
                 <Container maxWidth='xl'>
                     <Box sx={{ flexGrow: 1 }}>
                         <Grid container spacing={2}>
@@ -496,8 +492,8 @@ const index = () => {
                     </Box>
                 </Container>
             </Box> */}
-        </>
-    )
-}
+  </>
+ );
+};
 
 export default index;
