@@ -1,14 +1,4 @@
-import {
- Box,
- Button,
- Card,
- CardActions,
- CardContent,
- CardMedia,
- Container,
- Grid,
- Typography,
-} from "@mui/material";
+import { Container, Grid } from "@mui/material";
 import BlogsBanner from "./BlogsBanner";
 import BlogsBottomSlogan from "./BlogsBottomSlogan";
 import BlogsPostsCard from "./BlogsPostsCard";

@@ -10,26 +10,30 @@ import {
 import cover1 from "../../images/blogs-cover-1.png";
 
 const BlogsPostsCard = () => {
+ const Styles = {
+  card: { maxWidth: "100%", pb: "1em", mb: 5 },
+  cardMedia: { borderRadius: "8px" },
+  cardDateContainer: {
+   display: "flex",
+   alignItems: "center",
+   color: "#435770",
+   my: { xs: 1, md: 2 },
+  },
+  cardTitleText: { color: "#272D4E", letterSpacing: { xs: "0px", md: "1px" } },
+  readBtn: { color: "#ED3B45", fontWeight: "bold" },
+ };
+
  return (
-  <Card sx={{ maxWidth: "100%", pb: "1em", mb: 5 }}>
+  <Card sx={Styles.card}>
    <CardMedia
     component="img"
     height="300"
     image={cover1.src}
     alt="green iguana"
-    sx={{ borderRadius: "8px" }}
+    sx={Styles.cardMedia}
    />
    <CardContent>
-    <Typography
-     gutterBottom
-     variant="body1"
-     sx={{
-      display: "flex",
-      alignItems: "center",
-      color: "#435770",
-      my: { xs: 1, md: 2 },
-     }}
-    >
+    <Typography gutterBottom variant="body1" sx={Styles.cardDateContainer}>
      <CalendarMonthIcon />
      <Typography variant="span" sx={{ mt: "2px" }}>
       17 March, 2022
@@ -39,7 +43,7 @@ const BlogsPostsCard = () => {
      gutterBottom
      variant="h5"
      component="div"
-     sx={{ color: "#272D4E", letterSpacing: { xs: "0px", md: "1px" } }}
+     sx={Styles.cardTitleText}
     >
      How to make a website look more attractive with llustrations
     </Typography>
@@ -50,7 +54,7 @@ const BlogsPostsCard = () => {
     </Typography>
    </CardContent>
    <CardActions>
-    <Button size="small" sx={{ color: "#ED3B45", fontWeight: "bold" }}>
+    <Button size="small" sx={Styles.readBtn}>
      Read More
     </Button>
    </CardActions>

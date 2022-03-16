@@ -8,46 +8,58 @@ import {
  Typography,
 } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
-import Image from "next/image";
 import popularBlogsImg from "../../images/blogs-cover-1.png";
 
 const BlogsSideBar = () => {
+ const Styles = {
+  adContainer: {
+   backgroundColor: "#F0F0F0",
+   height: "231px",
+   display: "flex",
+   justifyContent: "center",
+   alignItems: "center",
+   borderRadius: "8px",
+   mb: 5,
+  },
+  serachContainer: {
+   backgroundColor: "#F0F0F0",
+   p: 3,
+   borderRadius: "8px",
+  },
+  titleText: { color: "#272D4E", fontWeight: "bold" },
+  serachInputPaper: {
+   p: "2px 4px",
+   display: "flex",
+   alignItems: "center",
+   width: "100%",
+   mt: 2,
+   boxShadow: "none",
+  },
+  popularBlogsContainer: {
+   border: "1px solid rgba(0, 0, 0, 0.08)",
+   my: 4,
+   p: 3,
+   borderRadius: "8px",
+  },
+  popularBlogsImgBg: {
+   height: "50px",
+   background: `url(${popularBlogsImg.src})`,
+   backgroundPosition: "center",
+   backgroundSize: "cover",
+   borderRadius: "5px",
+  },
+ };
+
  return (
   <>
-   <Box
-    sx={{
-     backgroundColor: "#F0F0F0",
-     height: "231px",
-     display: "flex",
-     justifyContent: "center",
-     alignItems: "center",
-     borderRadius: "8px",
-     mb: 5,
-    }}
-   >
+   <Box sx={Styles.adContainer}>
     <Typography>Image AD</Typography>
    </Box>
-   <Box
-    sx={{
-     backgroundColor: "#F0F0F0",
-     p: 3,
-     borderRadius: "8px",
-    }}
-   >
-    <Typography variant="h6" sx={{ color: "#272D4E", fontWeight: "bold" }}>
+   <Box sx={Styles.serachContainer}>
+    <Typography variant="h6" sx={Styles.titleText}>
      Search Topic
     </Typography>
-    <Paper
-     component="form"
-     sx={{
-      p: "2px 4px",
-      display: "flex",
-      alignItems: "center",
-      width: "100%",
-      mt: 2,
-      boxShadow: "none",
-     }}
-    >
+    <Paper component="form" sx={Styles.serachInputPaper}>
      <InputBase
       sx={{ ml: 1, flex: 1 }}
       placeholder="Enter topic name"
@@ -60,15 +72,8 @@ const BlogsSideBar = () => {
     </Paper>
    </Box>
    {/* popular blogs section here */}
-   <Box
-    sx={{
-     border: "1px solid rgba(0, 0, 0, 0.08)",
-     my: 4,
-     p: 3,
-     borderRadius: "8px",
-    }}
-   >
-    <Typography variant="h6" sx={{ color: "#272D4E", fontWeight: "bold" }}>
+   <Box sx={Styles.popularBlogsContainer}>
+    <Typography variant="h6" sx={Styles.titleText}>
      Popular Blogs
     </Typography>
 
@@ -80,15 +85,7 @@ const BlogsSideBar = () => {
       sx={{ alignItems: "center", my: 2 }}
      >
       <Grid item xs={2} sx={{ height: "100" }}>
-       <Box
-        sx={{
-         height: "50px",
-         background: `url(${popularBlogsImg.src})`,
-         backgroundPosition: "center",
-         backgroundSize: "cover",
-         borderRadius: "5px",
-        }}
-       ></Box>
+       <Box sx={Styles.popularBlogsImgBg}></Box>
       </Grid>
       <Grid item xs={10}>
        <Typography>How to become a professional bookkeeper</Typography>
