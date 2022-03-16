@@ -41,3 +41,9 @@
         grid-template-columns: 1fr;
     }
 }
+
+@media only screen and (max-width:899px) {
+    .link {
+        font-size: 15px;
+    }
+}

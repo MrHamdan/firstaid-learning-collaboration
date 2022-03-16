@@ -7,6 +7,7 @@ const Styles = {
         borderRadius: '11.21px',
         backgroundColor: '#EA2E10',
         width: {
+            xs: '120px',
             md: '152.43px'
         },
         height: '67.25px',

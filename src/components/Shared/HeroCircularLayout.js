@@ -6,9 +6,15 @@ const HeroCircularLayout = ({ children }) => {
         <Box
             sx={{
 
-                height: '450px',
+                height: {
+                    xs: '300px',
+                    sm: '350px',
+                    lg: '380px',
+                    xl: '450px'
+                },
                 width: {
                     xs: '300px',
+                    sm: '350px',
                     lg: '380px',
                     xl: '450px'
                 },

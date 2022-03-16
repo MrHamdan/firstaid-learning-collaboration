@@ -31,7 +31,12 @@ const Hero = () => {
                     </Box>
                     <Box sx={{
                         position: 'absolute', bottom: '-111px',
-                        right: '-40px'
+                        right: {
+                            xs: '-150px',
+                            sm: '-50px',
+                            lg: '-40px'
+                        },
+
                     }}>
                         <HeroCircularLayout />
                     </Box>
@@ -45,7 +50,10 @@ const Hero = () => {
                             <ArrowIcon />
                             <Typography sx={{
                                 fontWeight: 600,
-                                fontSize: '22px',
+                                fontSize: {
+                                    xs: '15px',
+                                    lg: '22px',
+                                },
                                 lineHeight: '36px',
                                 color: '#272D4E'
                             }}>
@@ -54,7 +62,10 @@ const Hero = () => {
                         </Box>
                         <Box className={styles.grid_image} sx={{
                             top: '60px',
-                            right: '-100px',
+                            right: {
+                                lg: '-100px',
+                                xs: '10px'
+                            },
                             width: {
                                 lg: '50%',
                                 xs: '25%'
@@ -65,7 +76,11 @@ const Hero = () => {
                         <Box sx={{
                             position: 'absolute',
                             top: '-40px',
-                            right: '-100px'
+                            right: {
+                                xs: '-150px',
+                                sm: '-80px',
+                                lg: '-100px'
+                            }
                         }}>
                             <HeroCircularLayout />
                         </Box>
@@ -76,7 +91,10 @@ const Hero = () => {
                         </TagLine>
                         <Box className={styles.grid_image} sx={{
                             top: '60px',
-                            right: '-100px',
+                            right: {
+                                lg: '-100px',
+                                xs: '10px'
+                            },
                             width: {
                                 lg: '50%',
                                 xs: '25%'
@@ -98,7 +116,12 @@ const Hero = () => {
                         <Box sx={{
                             position: 'absolute',
                             top: '-40px',
-                            right: '-100px'
+                            right: {
+                                xs: '-150px',
+                                sm: '-80px',
+                                lg: '-100px'
+                            },
+
                         }}>
                             <HeroCircularLayout />
                         </Box>

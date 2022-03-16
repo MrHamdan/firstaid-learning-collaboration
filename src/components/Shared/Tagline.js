@@ -10,7 +10,9 @@ const TagLine = ({ children, fontSize, fontWeight }) => {
                     fontStyle: 'normal',
                     fontWeight: { fontWeight } || 900,
                     fontSize: {
-                        xs: '30px',
+                        xs: '20px',
+                        sm: '25px',
+                        md: '40px',
                         lg: fontSize || '55px',
                     },
                     lineHeight: '125%',
