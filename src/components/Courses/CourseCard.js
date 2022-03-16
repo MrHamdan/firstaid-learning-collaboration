@@ -1,40 +1,20 @@
 import { Box } from '@mui/system';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import PeopleIcon from '@mui/icons-material/People';
 import MilitaryTechIcon from '@mui/icons-material/MilitaryTech';
-import TagLine from '../shared/Tagline';
+import Link from 'next/link';
+import Image from 'next/image';
 import { Button, Typography } from '@mui/material';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import StarIcon from '@mui/icons-material/Star';
-import { useDispatch, useSelector } from 'react-redux';
-// import { addToCart, addCupon } from '../../redux/actions/main';
-import Link from 'next/link';
-import Image from 'next/image';
-
+import Tagline from '../shared/Tagline';
+import styles from '../../styles/Courses.module.css'
 
 const CourseCard = ({ course }) => {
-    const { cart } = useSelector(state => state)
-    const dispatch = useDispatch();
+
     const { id, title, coverImage, enrolledStudents, rating } = course;
     const [isAdded, setIsAdded] = useState(false);
 
-    useEffect(() => {
-        const added = cart.find((item) => (item.id === course.id));
-        if (added) {
-            setIsAdded(true);
-        }
-    }, [cart, course])
-
-    const handleAddToCart = (course) => {
-        course = {
-            ...course,
-            quantity: 1
-        }
-        const newCart = [...cart, course];
-        dispatch(addToCart(newCart));
-        dispatch(addCupon(false));
-        setIsAdded(true);
-    }
     return (
         <Box sx={{
             my: '30px',
@@ -46,27 +26,33 @@ const CourseCard = ({ course }) => {
         }}>
 
             <Box position='relative'>
-                <Typography sx={{
-                    padding: '5px 10px',
-                    position: 'absolute',
-                    bottom: '5px',
-                    right: '5px',
-                    backgroundColor: '#FFFFFF',
-                    borderRadius: '6.36097px',
-                    display: 'flex',
-                    alignItems: 'center',
-                    zIndex: 10
-                }}>
+                <Typography
+                    component='h1'
+                    sx={{
+                        padding: '5px 10px',
+                        position: 'absolute',
+                        bottom: '5px',
+                        right: '5px',
+                        backgroundColor: '#FFFFFF',
+                        borderRadius: '6.36097px',
+                        display: 'flex',
+                        alignItems: 'center',
+                        zIndex: 10
+                    }}
+                >
                     <StarIcon sx={{ color: '#FFCB00' }} />
-                    <TagLine text={rating} fontSize='15px' fontWeight={500} />
+                    <Tagline fontSize='15px' fontWeight={500} >{rating}</Tagline>
                 </Typography>
 
                 <Image width='500px' height='500px' src={coverImage} alt="" />
 
             </Box>
-            <Link href={`/courseoverview/${id}`} sx={{ cursor: 'pointer' }} passHref>
-                <TagLine fontSize="20px">{<div>{title}</div>}</TagLine>
-            </Link>
+            <Tagline fontSize="20px">
+                <Link href='/linktosinglecoursedetails' passHref>
+                    <a className={styles.link}>{title}</a>
+                </Link>
+            </Tagline>
+
 
 
             <Box sx={{
@@ -101,25 +87,26 @@ const CourseCard = ({ course }) => {
                         color: '#EA2E10',
                         fontWeight: 600,
                     }}
-                        onClick={() => handleAddToCart(course)}
                     >
                         <ShoppingCartIcon />
                         Add to Cart
                     </Button>
                     :
 
-                    <Link to='/cart' style={{ textDecoration: 'none' }}>
-                        <Button variant="outlined" sx={{
-                            width: '100%',
-                            mt: '50px',
-                            border: '2.54439px solid rgba(234, 46, 16, 0.2)',
-                            color: '#EA2E10',
-                            fontWeight: 600,
-                        }}
-                        >
+
+                    <Button variant="outlined" sx={{
+                        width: '100%',
+                        mt: '50px',
+                        border: '2.54439px solid rgba(234, 46, 16, 0.2)',
+                        color: '#EA2E10',
+                        fontWeight: 600,
+                    }}
+                    >
+                        <Link href='/cart' passHref>
                             Visit Cart
-                        </Button>
-                    </Link>
+                        </Link>
+                    </Button>
+
             }
 
 

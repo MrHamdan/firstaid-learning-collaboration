@@ -13,7 +13,7 @@
 // import supportIcon from '../../Images/supporticon.png'
 // import PrimaryButton from 'components/Shared/PrimaryButton';
 // import Link from 'next/link';
-// import TagLine from 'components/Shared/Tagline';
+// import Tagline from 'components/Shared/Tagline';
 // import Accordion from '@mui/material/Accordion';
 // import AccordionSummary from '@mui/material/AccordionSummary';
 // import AccordionDetails from '@mui/material/AccordionDetails';
@@ -293,14 +293,14 @@ const index = () => {
                         </ul>
                     </Box>
                     <Box sx={{ marginTop: '73px' }}>
-                        <TagLine>Course Overview</TagLine>
+                        <Tagline>Course Overview</Tagline>
                         <Typography sx={{ fontSize: '18px', fontWeight: '500', fontStyle: 'normal', lineHeight: '32px' }}>By the end of the course, learners will be able to: <br />
                             This infection control training course is designed to provide those who work in a healthcare or social care setting with the skills and knowledge to stop of the spread of bacteria and risk of infection in the workplace. <br />
                             Treating a casualty with First Aid is a hard but rewarding experience. Being able to help a child in distress or pain is an especially admirable talent and one that all parents or child-minders should ideally know. By the end of the course, you’ll know how to interact with a young casualty, how to keep them calm, and when to call an emergency. It should prove to hold invaluable information for keeping children and babies safe from illness, and potentially life-threatening conditions.<br />
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. At elit, gravida vitae ac elementum tellus. Justo quam vestibulum aenean pellentesque posuere eu. Euismod mattis mi dictum id. Pellentesque arcu sagittis, id et vitae convallis. Vitae quam et, urna quis nunc, enim leo sit phasellus. Lectus non id non pharetra, sed aliquet bibendum eleifend sagittis. Ac et volutpat facilisis scelerisque purus etiam interdum. Est amet, iaculis sem in mauris netus rutrum. Morbi vitae quis quis eu ut vel at sodales. Eros, purus velit ut vel vitae sit. At interdum sagittis, viverra vitae amet, justo arcu dolor, tortor.</Typography>
                     </Box>
                     <Box sx={{ marginTop: '99px' }}>
-                        <TagLine>Course Curriculam</TagLine>
+                        <Tagline>Course Curriculam</Tagline>
                         <Grid container spacing={2}>
                             <Grid item xs={12} xl={8}>
                                 <Item sx={{ backgroundColor: 'transparent', textAlign: 'left', boxShadow: '0' }}>
@@ -475,7 +475,7 @@ const index = () => {
                     <Grid container spacing={2}>
                         <Grid item xs={12} xl={6}>
                             <Item sx={{ backgroundColor: 'transparent', textAlign: 'left', boxShadow: '0', marginTop: '30px' }}>
-                                <TagLine>Assesment & Certification</TagLine>
+                                <Tagline>Assesment & Certification</Tagline>
                                 <Typography sx={{ margin: '45px 0px' }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. At elit, gravida vitae ac elementum tellus. Justo quam vestibulum aenean pellentesque posuere eu. Euismod mattis mi dictum id. Pellentesque arcu sagittis, id et vitae convallis. Vitae quam et, urna quis nunc, enim leo sit phasellus. Lectus non id non pharetra, sed aliquet bibendum eleifend sagittis. Ac et volutpat facilisis scelerisque purus etiam interdum. Est amet, iaculis sem in mauris netus rutrum. Morbi vitae quis quis eu ut vel at sodales. Eros, purus velit ut vel vitae sit. At interdum sagittis, viverra vitae amet, justo arcu dolor, tortor.</Typography>
                                 <PrimaryButton>BUY NOW</PrimaryButton>
                             </Item>
@@ -489,7 +489,7 @@ const index = () => {
             <Box sx={{ height: '800px' }}>
                 <Container maxWidth='xl'>
                     <Box sx={{ display: 'flex', position: 'relative', alignItems: 'center', marginTop: '40px' }} >
-                        <TagLine>Reviews of This Course</TagLine> <Box sx={{ marginLeft: '30px' }}><Image src={reviewDesign} />
+                        <Tagline>Reviews of This Course</Tagline> <Box sx={{ marginLeft: '30px' }}><Image src={reviewDesign} />
                             <Typography sx={{ position: 'absolute', left: '660px', top: '22px' }}><FaStar style={{
                                 color: '#FFB300'
                             }} /> 4.8 User Rating</Typography></Box>

@@ -2,7 +2,7 @@ import { Button, Container, Typography } from '@mui/material';
 import { Box } from '@mui/system';
 import HeroCircularLayout from 'components/Shared/HeroCircularLayout';
 import PrimaryButton from 'components/Shared/PrimaryButton';
-import TagLine from 'components/Shared/Tagline';
+import Tagline from 'components/Shared/Tagline';
 import React from 'react';
 import styles from '../../styles/Hero.module.css'
 import Image from 'next/image';
@@ -17,7 +17,7 @@ const Hero = () => {
         <Container sx={{ maxWidth: { xl: 'xl', lg: 'lg' } }}>
             <Box className={styles.hero_container}>
                 <Box className={styles.hero_grid}>
-                    <TagLine> <div>Engaging & <br /> Accessible Online Courses</div> </TagLine>
+                    <Tagline> <div>Engaging & <br /> Accessible Online Courses</div> </Tagline>
                     <PrimaryButton>Explore Now</PrimaryButton>
                     <Box className={styles.grid_image} sx={{
                         bottom: 0,
@@ -43,9 +43,9 @@ const Hero = () => {
                 </Box>
                 <Box>
                     <Box className={styles.hero_grid} sx={{ height: '250px' }}>
-                        <TagLine fontSize='35px'>
+                        <Tagline fontSize='35px'>
                             <div>Trustable First Aid <br /> Courses Online</div>
-                        </TagLine>
+                        </Tagline>
                         <Box component="span" sx={{ display: 'flex', alignItems: 'center', mt: 1, width: '50%' }}>
                             <ArrowIcon />
                             <Typography sx={{
@@ -86,9 +86,9 @@ const Hero = () => {
                         </Box>
                     </Box>
                     <Box className={styles.hero_grid} sx={{ height: '240px', mt: '10px' }}>
-                        <TagLine fontSize='35px'>
+                        <Tagline fontSize='35px'>
                             <div>Awesome Quizzes <br /> you can explore</div>
-                        </TagLine>
+                        </Tagline>
                         <Box className={styles.grid_image} sx={{
                             top: '60px',
                             right: {

@@ -1,4 +1,4 @@
-import { Container } from '@mui/material';
+import { Container, Typography } from '@mui/material';
 import { Box } from '@mui/system';
 import React, { useEffect, useRef } from 'react';
 import CourseCard from './CourseCard';
@@ -11,9 +11,9 @@ import { useDispatch, useSelector } from 'react-redux';
 
 
 
-const Courses = () => {
+const Courses = ({ courses }) => {
 
-    const courses = useSelector(state => state.courses);
+    // const courses = useSelector(state => state.courses);
     const dispatch = useDispatch();
     const sliderRef = useRef(null);
 
@@ -29,12 +29,12 @@ const Courses = () => {
                     xl: 'xl'
                 }
             }}>
-                <Tagline><div>Interacting First Aid Courses</div></Tagline>
+                <Tagline>Interacting First Aid Courses</Tagline>
                 <Box sx={{ display: 'flex', justifyContent: 'space-between', flexDirection: { xs: 'column', md: 'row' } }}>
                     <Content>
-                        <div>
+                        <Typography component='span'>
                             We are a company who is best known for offering awarding body accredited courses for anyone who wishes to <br /> take their professional life to the next level.
-                        </div>
+                        </Typography>
                     </Content>
                     <Box >
                         <CarouselButton sliderRef={sliderRef} />

@@ -1,7 +1,7 @@
 import { Typography } from '@mui/material';
 import React from 'react';
 
-const TagLine = ({ children, fontSize, fontWeight }) => {
+const Tagline = ({ children, fontSize, fontWeight }) => {
     return (
         <div>
             <Typography
@@ -24,4 +24,4 @@ const TagLine = ({ children, fontSize, fontWeight }) => {
     );
 };
 
-export default TagLine;
+export default Tagline;
