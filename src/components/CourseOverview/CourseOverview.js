@@ -14,7 +14,6 @@ const CourseOverview = () => {
             <CourseCertificate />
             <CourseReview />
             <CourseFaq />
-            {/* <ViewCourseBottom /> */}
             <ViewCourseBottom />
         </>
     )

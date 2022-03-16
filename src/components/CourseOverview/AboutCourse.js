@@ -39,7 +39,7 @@ const AboutCourse = () => {
                 <Container maxWidth='xl'>
                     <Box sx={{ flexGrow: 1 }}>
                         <Grid container spacing={2}>
-                            <Grid item xs={12} xl={7} md={12} sx={{ display: 'flex', alignItems: 'center' }}>
+                            <Grid item xs={12} xl={7} md={6} sx={{ display: 'flex', alignItems: 'center' }}>
                                 <Item sx={{ backgroundColor: 'transparent', textAlign: 'left', boxShadow: '0', marginTop: { xs: '200px', xl: '0px' } }}>
                                     <Typography sx={{ fontStyle: 'normal', fontWeight: '500', fontSize: { xs: '31px', xl: '36px' }, lineHeight: '145%', color: 'white', marginBottom: { xs: '0px', xl: '30px' } }}>
                                         Level 2 Food Hygiene and Safety for Catering
@@ -103,16 +103,16 @@ const AboutCourse = () => {
                                     </Grid>
                                 </Item>
                             </Grid>
-                            <Grid item xs={12} xl={5} md={12}>
+                            <Grid item xs={12} xl={5} md={6} sx={{ display: 'flex', alignItems: 'center' }}>
                                 <Item sx={{ backgroundColor: 'transparent', textAlign: 'left', boxShadow: '0' }}>
                                     <Image src={detailImg} />
                                     <Grid container spacing={2} sx={{ marginTop: { xl: '80px', xs: '0px' } }}>
-                                        <Grid item xs={2} xl={2} md={6} sx={{ display: 'flex', alignItems: 'center' }}>
+                                        <Grid item xs={2} xl={2} md={12} sx={{ display: 'flex', alignItems: 'center' }}>
                                             <Item sx={{ backgroundColor: 'transparent', textAlign: 'left', boxShadow: '0' }}>
                                                 <del>$100.00</del> <br /> <span>75% off</span>
                                             </Item>
                                         </Grid>
-                                        <Grid item xs={10} xl={10} md={6}>
+                                        <Grid item xs={10} xl={10} md={12}>
                                             <Item sx={{ backgroundColor: 'transparent', textAlign: 'left', boxShadow: '0', display: 'flex', justifyContent: 'space-evenly', alignItems: 'center' }}>
                                                 <Typography>£25.00</Typography>
                                                 <PrimaryButton>BUY NOW</PrimaryButton>
