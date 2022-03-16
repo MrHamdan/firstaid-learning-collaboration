@@ -5,8 +5,8 @@ const TagLine = ({ children, fontSize, fontWeight }) => {
     return (
         <div>
             <Typography
+                variant='h1'
                 sx={{
-                    fontFamily: 'Circular Std',
                     fontStyle: 'normal',
                     fontWeight: { fontWeight } || 900,
                     fontSize: {
