@@ -1,14 +1,5 @@
-import {
- Box,
- Button,
- Card,
- CardActions,
- CardContent,
- CardMedia,
- Container,
- Grid,
- Typography,
-} from "@mui/material";
+import { Container, Grid } from "@mui/material";
+import ViewCourseBottom from "components/Shared/ViewCourseBottom";
 import BlogsBanner from "./BlogsBanner";
 import BlogsPostsCard from "./BlogsPostsCard";
 import BlogsSideBar from "./BlogsSideBar";
@@ -31,6 +22,7 @@ const BlogsHome = () => {
      </Grid>
     </Grid>
    </Container>
+   <ViewCourseBottom />
   </>
  );
 };
