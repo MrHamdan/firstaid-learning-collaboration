@@ -4,7 +4,7 @@ import CourseCurriculam from './CourseCurriculam';
 import CourseCertificate from './CourseCertificate';
 import CourseReview from './CourseReview';
 import CourseFaq from './CourseFaq';
-import ViewCourseBottom from 'components/Shared/ViewCourseBottom';
+import ViewCourseBottom from './ViewCourseBottom';
 const CourseOverview = () => {
     return (
         <>
@@ -14,6 +14,7 @@ const CourseOverview = () => {
             <CourseCertificate />
             <CourseReview />
             <CourseFaq />
+            {/* <ViewCourseBottom /> */}
             <ViewCourseBottom />
         </>
     )
