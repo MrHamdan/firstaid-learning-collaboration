@@ -1,3 +1,5 @@
+
+
 // import { Box, Typography, Paper, Grid, Container, Button } from '@mui/material';
 // import Image from 'next/image';
 // import detailBg from '../../Images/detailbackground.png';
