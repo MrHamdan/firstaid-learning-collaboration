@@ -1,6 +1,6 @@
 import { Box, Button, Container, Typography } from "@mui/material";
 
-const BlogsBottomSlogan = () => {
+const ViewCourseBottom = () => {
  const Styles = {
   sloganBoxStyles: {
    background:
@@ -49,4 +49,4 @@ const BlogsBottomSlogan = () => {
  );
 };
 
-export default BlogsBottomSlogan;
+export default ViewCourseBottom;
