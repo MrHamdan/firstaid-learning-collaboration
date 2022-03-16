@@ -50,10 +50,10 @@ const CourseOverview = () => {
                                         <Grid item xs={12} xl={6}>
                                             <Item sx={{ backgroundColor: 'transparent', textAlign: 'left', boxShadow: '0' }}>
                                                 <Grid container spacing={2}>
-                                                    <Grid item xs={6}>
+                                                    <Grid item xs={6} xl={6}>
                                                         <Item sx={{ backgroundColor: 'transparent', textAlign: 'left', boxShadow: '0' }}><Image src={certificateIcon} /></Item>
                                                     </Grid>
-                                                    <Grid item xs={6}>
+                                                    <Grid item xs={6} xl={6}>
                                                         <Item sx={{ backgroundColor: 'transparent', textAlign: 'left', boxShadow: '0' }}><span sx={{ fontStyle: 'normal', fontWeight: '400', fontSize: '18px' }}>You will get</span> <br /> <span sx={{ fontStyle: 'normal', fontWeight: '400', fontSize: '18px' }}>Certificate</span></Item>
                                                     </Grid>
                                                 </Grid>
@@ -62,10 +62,10 @@ const CourseOverview = () => {
                                         <Grid item xs={12} xl={6}>
                                             <Item sx={{ backgroundColor: 'transparent', textAlign: 'left', boxShadow: '0' }}>
                                                 <Grid container spacing={2}>
-                                                    <Grid item xs={6}>
+                                                    <Grid item xs={6} xl={6}>
                                                         <Item sx={{ backgroundColor: 'transparent', textAlign: 'left', boxShadow: '0' }}><Image src={documentIcon} /></Item>
                                                     </Grid>
-                                                    <Grid item xs={6}>
+                                                    <Grid item xs={6} xl={6}>
                                                         <Item sx={{ backgroundColor: 'transparent', textAlign: 'left', boxShadow: '0' }}>
                                                             <span sx={{ fontStyle: 'normal', fontWeight: '400', fontSize: '18px' }}>You will get</span> <br /> <span sx={{ fontStyle: 'normal', fontWeight: '400', fontSize: '18px' }}>Certificate</span>
                                                         </Item>
@@ -76,10 +76,10 @@ const CourseOverview = () => {
                                         <Grid item xs={12} xl={6}>
                                             <Item sx={{ backgroundColor: 'transparent', textAlign: 'left', boxShadow: '0' }}>
                                                 <Grid container spacing={2}>
-                                                    <Grid item xs={6}>
+                                                    <Grid item xs={6} xl={6}>
                                                         <Item sx={{ backgroundColor: 'transparent', textAlign: 'left', boxShadow: '0' }}><Image src={clockIcon} /></Item>
                                                     </Grid>
-                                                    <Grid item xs={6}>
+                                                    <Grid item xs={6} xl={6}>
                                                         <Item sx={{ backgroundColor: 'transparent', textAlign: 'left', boxShadow: '0' }}><span sx={{ fontStyle: 'normal', fontWeight: '400', fontSize: '18px' }}>You will get</span> <br /> <span sx={{ fontStyle: 'normal', fontWeight: '400', fontSize: '18px' }}>Certificate</span></Item>
                                                     </Grid>
                                                 </Grid>
@@ -88,10 +88,10 @@ const CourseOverview = () => {
                                         <Grid item xs={12} xl={6}>
                                             <Item sx={{ backgroundColor: 'transparent', textAlign: 'left', boxShadow: '0' }}>
                                                 <Grid container spacing={2}>
-                                                    <Grid item xs={6}>
+                                                    <Grid item xs={6} xl={6}>
                                                         <Item sx={{ backgroundColor: 'transparent', textAlign: 'left', boxShadow: '0' }}><Image src={supportIcon} /></Item>
                                                     </Grid>
-                                                    <Grid item xs={6}>
+                                                    <Grid item xs={6} xl={6}>
                                                         <Item sx={{ backgroundColor: 'transparent', textAlign: 'left', boxShadow: '0' }}><span sx={{ fontStyle: 'normal', fontWeight: '400', fontSize: '18px' }}>You will get</span> <br /> <span sx={{ fontStyle: 'normal', fontWeight: '400', fontSize: '18px' }}>Certificate</span></Item>
                                                     </Grid>
                                                 </Grid>
@@ -117,12 +117,29 @@ const CourseOverview = () => {
                                         </Grid>
                                     </Grid>
                                 </Item>
-
                             </Grid>
                         </Grid>
                     </Box>
                 </Container>
-
+            </Box>
+            <Box sx={{ width: '100%', height: '1200px' }}>
+                <Container maxWidth='xl'>
+                    <Box sx={{ flexGrow: 1 }}>
+                        <Grid container spacing={2}>
+                            <Grid item xs={12} xl={12}>
+                                <Item>
+                                    <ul style={{ listStyle: 'none' }}>
+                                        <li style={{ marginRight: '100px' }}>Overview</li>
+                                        <li style={{ marginRight: '100px' }}>Curriculum</li>
+                                        <li style={{ marginRight: '100px' }}>Assessment & Certification</li>
+                                        <li style={{ marginRight: '100px' }}>Reviews</li>
+                                        <li style={{ marginRight: '100px' }}>FAQs</li>
+                                    </ul>
+                                </Item>
+                            </Grid>
+                        </Grid>
+                    </Box>
+                </Container>
             </Box>
         </>
     )
