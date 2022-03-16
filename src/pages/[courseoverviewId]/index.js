@@ -9,6 +9,7 @@ import certificateIcon from '../../Images/certificateicon.png'
 import documentIcon from '../../Images/documenticon.png'
 import clockIcon from '../../Images/clockicon.png'
 import supportIcon from '../../Images/supporticon.png'
+import PrimaryButton from 'components/Shared/PrimaryButton';
 
 const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -112,7 +113,7 @@ const CourseOverview = () => {
                                         <Grid item xs={10}>
                                             <Item sx={{ backgroundColor: 'transparent', textAlign: 'left', boxShadow: '0', display: 'flex', justifyContent: 'space-evenly', alignItems: 'center' }}>
                                                 <Typography>£25.00</Typography>
-                                                <Button>BUY NOW</Button>
+                                                <PrimaryButton>BUY NOW</PrimaryButton>
                                             </Item>
                                         </Grid>
                                     </Grid>
@@ -127,8 +128,8 @@ const CourseOverview = () => {
                     <Box sx={{ flexGrow: 1 }}>
                         <Grid container spacing={2}>
                             <Grid item xs={12} xl={12}>
-                                <Item>
-                                    <ul style={{ listStyle: 'none' }}>
+                                <Item sx={{ backgroundColor: 'transparent', textAlign: 'left', boxShadow: '0' }}>
+                                    <ul style={{ listStyle: 'none', display: 'flex' }}>
                                         <li style={{ marginRight: '100px' }}>Overview</li>
                                         <li style={{ marginRight: '100px' }}>Curriculum</li>
                                         <li style={{ marginRight: '100px' }}>Assessment & Certification</li>
