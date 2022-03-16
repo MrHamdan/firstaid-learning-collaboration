@@ -10,6 +10,7 @@ import documentIcon from '../../Images/documenticon.png'
 import clockIcon from '../../Images/clockicon.png'
 import supportIcon from '../../Images/supporticon.png'
 import PrimaryButton from 'components/Shared/PrimaryButton';
+import Link from 'next/link';
 
 const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -28,6 +29,18 @@ const Styles = {
         backgroundRepeat: 'no-repeat',
         height: { xl: '800.89px', xs: '1350px' },
         width: '100%',
+    }
+}
+const Style = {
+    ul: {
+        listStyle: 'none',
+        display: 'flex',
+        justifyContent: 'space-between',
+        width: '50%',
+        padding: '0 5px'
+    },
+    li: {
+        fontWeight: 500
     }
 }
 const CourseOverview = () => {
@@ -125,20 +138,43 @@ const CourseOverview = () => {
             </Box>
             <Box sx={{ width: '100%', height: '1200px' }}>
                 <Container maxWidth='xl'>
-                    <Box sx={{ flexGrow: 1 }}>
-                        <Grid container spacing={2}>
-                            <Grid item xs={12} xl={12}>
-                                <Item sx={{ backgroundColor: 'transparent', textAlign: 'left', boxShadow: '0' }}>
-                                    <ul style={{ listStyle: 'none', display: 'flex' }}>
-                                        <li style={{ marginRight: '100px' }}>Overview</li>
-                                        <li style={{ marginRight: '100px' }}>Curriculum</li>
-                                        <li style={{ marginRight: '100px' }}>Assessment & Certification</li>
-                                        <li style={{ marginRight: '100px' }}>Reviews</li>
-                                        <li style={{ marginRight: '100px' }}>FAQs</li>
-                                    </ul>
-                                </Item>
-                            </Grid>
-                        </Grid>
+                    <Box>
+                        <ul style={Style.ul}>
+                            <li style={Style.li}>
+                                <Link href="#" className='course-index-link' to="#overview"
+                                >
+                                    Overview
+                                </Link>
+                            </li>
+                            <li style={Style.li}>
+                                <Link href="#" className='course-index-link' to="#curriculam"
+                                >
+                                    Curriculam
+                                </Link>
+                            </li>
+                            <li style={Style.li}>
+                                <Link href="#" className='course-index-link' to="#certificate"
+                                >
+                                    Assesment & Certification
+                                </Link>
+                            </li>
+                            <li style={Style.li}>
+                                <Link href="#" className='course-index-link' to="#reviews"
+                                >
+                                    Reviews
+                                </Link></li>
+                            <li style={Style.li}>
+                                <Link href="#" className='course-index-link' to="#faqs"
+                                >
+                                    FAQs
+                                </Link>
+                            </li>
+                        </ul>
+                    </Box>
+                    <Box>
+                        <Typography>Course Overview</Typography>
+                        <Typography>By the end of the course, learners will be able to:</Typography>
+                        <Typography>This infection control training course is designed to provide those who work in a healthcare or social care setting with the skills and knowledge to stop of the spread of bacteria and risk of infection in the workplace. </Typography>
                     </Box>
                 </Container>
             </Box>
