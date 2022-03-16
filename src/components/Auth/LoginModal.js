@@ -100,10 +100,10 @@ const LoginModal = ({ handleClose }) => {
                         </Box>
                         <Box>
                             <Typography sx={Styles.label}>Email</Typography>
-                            <TextField onBlur={handleEmailChange} id="outlined-basic" variant="outlined" type="text" sx={Styles.form} />
+                            <TextField onBlur={handleEmailChange} variant="outlined" type="text" sx={Styles.form} />
 
                             <Typography sx={Styles.label}>Password</Typography>
-                            <TextField onBlur={handlePasswordChange} id="outlined-basic" variant="outlined" type='password' sx={Styles.form} />
+                            <TextField onBlur={handlePasswordChange} variant="outlined" type='password' sx={Styles.form} />
                             <AuthenticationButton onClick={handleRegistration} backgroundColor='#C63437' >{registered ? 'Log In' : 'Sign Up'}</AuthenticationButton>
                             <Typography sx={{
                                 fontWeight: 'bold',

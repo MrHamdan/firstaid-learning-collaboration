@@ -3,7 +3,6 @@ import Image from 'next/image';
 import React from 'react';
 
 const AuthenticationButton = ({ children, backgroundColor, icon, onClick }) => {
-    console.log(icon)
     return (
         <Box>
             <Button variant="contained" sx={{
