@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-
-
 // import { Box, Typography, Paper, Grid, Container, Button } from '@mui/material';
 // import Image from 'next/image';
 // import detailBg from '../../Images/detailbackground.png';
@@ -26,17 +22,13 @@
 // import certificate from '../../Images/certificate.png'
 // import reviewDesign from '../../Images/reviewdesign.png'
 
->>>>>>> 56b474330901206010678553bc3b3094be4c42cb
 import CourseOverview from "components/CourseOverview/CourseOverview";
 
-
 const index = () => {
-    return (
-        <>
-            <CourseOverview />
-<<<<<<< HEAD
-=======
-            {/* <Box sx={{ ...Styles.detailBackground, display: 'flex', alignItems: 'center' }}>
+ return (
+  <>
+   <CourseOverview />
+   {/* <Box sx={{ ...Styles.detailBackground, display: 'flex', alignItems: 'center' }}>
                 <Container maxWidth='xl'>
                     <Box sx={{ flexGrow: 1 }}>
                         <Grid container spacing={2}>
@@ -365,9 +357,8 @@ const index = () => {
                     </Box>
                 </Container>
             </Box> */}
->>>>>>> 56b474330901206010678553bc3b3094be4c42cb
-        </>
-    )
-}
+  </>
+ );
+};
 
 export default index;
