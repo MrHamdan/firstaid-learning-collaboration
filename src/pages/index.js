@@ -1,3 +1,4 @@
+import Courses from "components/Courses/Courses";
 import Hero from "components/Home/Hero";
 import Head from "next/head";
 import Image from "next/image";
@@ -8,6 +9,7 @@ export default function Home() {
   return (
     <div >
       <Hero />
+      <Courses />
     </div>
   );
 }
