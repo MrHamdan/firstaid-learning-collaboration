@@ -1,5 +1,6 @@
 const initialState={
     quiz:[],
+    finalAnswers: [],
     loading: true,
 }
 
@@ -11,6 +12,11 @@ export  const quizReducer =(state=initialState, action)=>{
                 quiz: action.payload,
                 loading: false
             }
+        case "SUBMIT_QUIZ":
+            return {
+                ...state,
+                finalAnswers: action.payload,
+            }   
         default:
             return state
     }

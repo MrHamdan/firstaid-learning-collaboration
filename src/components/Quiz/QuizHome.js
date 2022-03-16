@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { fetchQuiz } from "Redux/actions/quizAction";
+import Quiz from "./Quiz";
 
 
 
@@ -8,14 +9,14 @@ import { fetchQuiz } from "Redux/actions/quizAction";
 
 const QuizHome = () => {
   const dispatch = useDispatch()
-
-
   useEffect(()=>{
     dispatch(fetchQuiz())
   },[dispatch])
 
   return (
-    <div>QuizHome</div>
+    <>
+      <Quiz></Quiz>
+    </>
   )
 }
 
