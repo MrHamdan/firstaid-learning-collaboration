@@ -18,7 +18,7 @@ const viewCourseBackground = {
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
-        height: '288px',
+        height: { xl: '288px', xs: '700px' },
         width: '100%',
     }
 }
@@ -30,7 +30,7 @@ const ViewCourseBottom = () => {
                     <Box>
                         <Box sx={{ flexGrow: 1 }}>
                             <Grid container spacing={2}>
-                                <Grid item xs={8}>
+                                <Grid item xs={12} xl={8}>
                                     <Item sx={{ backgroundColor: 'transparent', textAlign: 'left', boxShadow: '0' }}>
                                         <Typography sx={{ fontStyle: 'normal', fontSize: '50px', lineHeight: '125%', color: 'white' }}>
                                             Be Confident! Have an wonder journey with our course
@@ -40,7 +40,7 @@ const ViewCourseBottom = () => {
                                         </Typography>
                                     </Item>
                                 </Grid>
-                                <Grid item xs={4}>
+                                <Grid item xs={12} xl={4}>
                                     <Item sx={{ backgroundColor: 'transparent', boxShadow: '0' }}>
                                         <Button sx={{ color: 'red', backgroundColor: 'white !important', marginTop: '50px', width: '241px', height: '75px', fontSize: '22px', borderRadius: '8px', fontWeight: '500' }}>View Course</Button>
                                     </Item>
