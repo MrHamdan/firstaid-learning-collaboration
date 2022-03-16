@@ -1,7 +1,18 @@
+import QuizHome from "components/Quiz/QuizHome"
+
+
+
+
+
 
 const index = () => {
+
+  
+    
   return (
-    <div>index</div>
+    <>
+            <QuizHome />
+    </>
   )
 }
 
