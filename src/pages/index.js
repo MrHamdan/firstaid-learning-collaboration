@@ -10,7 +10,6 @@ import styles from "../styles/Home.module.css";
 
 export default function Home({ courses }) {
   const dispatch = useDispatch();
-  console.log(courses);
   useEffect(() => {
     dispatch(fetchCourses(courses));
   }, [])
