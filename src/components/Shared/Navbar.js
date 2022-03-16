@@ -151,16 +151,14 @@ const Navbar = () => {
                             <Button>
                                 <FaShoppingCart onClick={gotoCart} style={{ ...Styles.navlink, fontSize: '25px' }} />
                             </Button>
-
-
-
                         </Box>
                     </Box>
                     <Box sx={{ flexGrow: 0 }}>
                         <PrimaryButton
                             onClick={!user.email ? handleOpen : logOut}
-                            text={!user.email ? "Login" : "Logout"}
-                        />
+                        >
+                            {!user.email ? "Login" : "Logout"}
+                        </PrimaryButton>
 
                         <LoginModal handleClose={handleClose} open={open} />
                     </Box>
