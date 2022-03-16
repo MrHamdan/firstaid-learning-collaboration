@@ -9,7 +9,7 @@ import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
 import {
     addSubTotal, addVat, addTotal, calculateDiscount, addCupon, increaseQuantity,
     decreaseQuantity, removeFromCart
-} from "../../redux/action"
+} from "../../Redux/actions/cartAction"
 
 const CartBox = () => {
     const state = useSelector(state => state);
@@ -26,7 +26,7 @@ const CartBox = () => {
 
     let finalTotal = 0;
     useEffect(() => {
-        cart.forEach(element => {
+        [cart].forEach(element => {
             total = total + element.quantity * parseFloat(element.regularPrice - element.regularPrice * .75)
             dispatch(addSubTotal(total));
             dispatch(addVat(subTotal * vat));
