@@ -1,173 +1,168 @@
+import { Box, Typography, Paper, Grid, Container, Button } from '@mui/material';
+import Image from 'next/image';
+import detailBg from '../../Images/detailbackground.png';
+import detailImg from '../../Images/detailimage.png';
+import styles from "../../styles/CourseOverview.module.css";
+import { FaStar } from "react-icons/fa";
+import { styled } from '@mui/material/styles';
+import certificateIcon from '../../Images/certificateicon.png'
+import documentIcon from '../../Images/documenticon.png'
+import clockIcon from '../../Images/clockicon.png'
+import supportIcon from '../../Images/supporticon.png'
+import PrimaryButton from 'components/Shared/PrimaryButton';
+import Link from 'next/link';
+import TagLine from 'components/Shared/Tagline';
+import Accordion from '@mui/material/Accordion';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import { HiPlusCircle } from "react-icons/hi"
+import { AiOutlineClockCircle } from "react-icons/ai"
+import certificateBg from '../../Images/certificatebackground.png'
+import certificate from '../../Images/certificate.png'
+import reviewDesign from '../../Images/reviewdesign.png'
 
 
-// import { Box, Typography, Paper, Grid, Container, Button } from '@mui/material';
-// import Image from 'next/image';
-// import detailBg from '../../Images/detailbackground.png';
-// import detailImg from '../../Images/detailimage.png';
-// import styles from "../../styles/CourseOverview.module.css";
-// import { FaStar } from "react-icons/fa";
-// import { styled } from '@mui/material/styles';
-// import certificateIcon from '../../Images/certificateicon.png'
-// import documentIcon from '../../Images/documenticon.png'
-// import clockIcon from '../../Images/clockicon.png'
-// import supportIcon from '../../Images/supporticon.png'
-// import PrimaryButton from 'components/Shared/PrimaryButton';
-// import Link from 'next/link';
-// import TagLine from 'components/Shared/Tagline';
-// import Accordion from '@mui/material/Accordion';
-// import AccordionSummary from '@mui/material/AccordionSummary';
-// import AccordionDetails from '@mui/material/AccordionDetails';
-// import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-// import { HiPlusCircle } from "react-icons/hi"
-// import { AiOutlineClockCircle } from "react-icons/ai"
-// import certificateBg from '../../Images/certificatebackground.png'
-// import certificate from '../../Images/certificate.png'
-// import reviewDesign from '../../Images/reviewdesign.png'
-
-import CourseOverview from "components/CourseOverview/CourseOverview";
+const Item = styled(Paper)(({ theme }) => ({
+    backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+    ...theme.typography.body2,
+    padding: theme.spacing(1),
+    textAlign: 'center',
+    color: theme.palette.text.secondary,
+}));
 
 
-// const Item = styled(Paper)(({ theme }) => ({
-//     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-//     ...theme.typography.body2,
-//     padding: theme.spacing(1),
-//     textAlign: 'center',
-//     color: theme.palette.text.secondary,
-// }));
+const Styles = {
+    detailBackground: {
+        backgroundImage: `url(${detailBg.src})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        height: { xl: '800.89px', xs: '1350px' },
+        width: '100%',
+    }
+}
+const Style = {
+    ul: {
+        listStyle: 'none',
+        display: 'flex',
+        justifyContent: 'space-between',
+        width: '50%',
+        padding: '0 5px'
+    },
+    li: {
+        fontWeight: 500
+    }
+}
 
+const modules = [
+    {
+        id: "1",
+        name: "Module 1",
+        video: [
+            {
+                id: "1",
+                name: 'Video 1'
+            },
+            {
+                id: "2",
+                name: "Video 2"
+            },
+            {
+                id: "3",
+                name: "Video 3"
+            },
+        ]
+    },
+    {
+        id: "2",
+        name: "Module 2",
+        video: [
+            {
+                id: "1",
+                name: 'Video 1'
+            },
+            {
+                id: "2",
+                name: "Video 2"
+            },
+            {
+                id: "3",
+                name: "Video 3"
+            },
+        ]
+    },
+    {
+        id: "3",
+        name: "Module 3",
+        video: [
+            {
+                id: "1",
+                name: 'Video 1'
+            },
+            {
+                id: "2",
+                name: "Video 2"
+            },
+            {
+                id: "3",
+                name: "Video 3"
+            },
+        ]
+    },
+    {
+        id: "4",
+        name: "Module 4",
+        video: [
+            {
+                id: "1",
+                name: 'Video 1'
+            },
+            {
+                id: "2",
+                name: "Video 2"
+            },
+            {
+                id: "3",
+                name: "Video 3"
+            },
+        ]
+    },
+    {
+        id: "5",
+        name: "Module 5",
+        video: [
+            {
+                id: "1",
+                name: 'Video 1'
+            },
+            {
+                id: "2",
+                name: "Video 2"
+            },
+            {
+                id: "3",
+                name: "Video 3"
+            },
+        ]
+    },
+]
 
-// const Styles = {
-//     detailBackground: {
-//         backgroundImage: `url(${detailBg.src})`,
-//         backgroundSize: 'cover',
-//         backgroundPosition: 'center',
-//         backgroundRepeat: 'no-repeat',
-//         height: { xl: '800.89px', xs: '1350px' },
-//         width: '100%',
-//     }
-// }
-// const Style = {
-//     ul: {
-//         listStyle: 'none',
-//         display: 'flex',
-//         justifyContent: 'space-between',
-//         width: '50%',
-//         padding: '0 5px'
-//     },
-//     li: {
-//         fontWeight: 500
-//     }
-// }
+const certificateBackground = {
+    certificateBg: {
+        backgroundImage: `url(${certificateBg.src})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        height: '100%',
+        width: '100%',
+    }
+}
 
-// const modules = [
-//     {
-//         id: "1",
-//         name: "Module 1",
-//         video: [
-//             {
-//                 id: "1",
-//                 name: 'Video 1'
-//             },
-//             {
-//                 id: "2",
-//                 name: "Video 2"
-//             },
-//             {
-//                 id: "3",
-//                 name: "Video 3"
-//             },
-//         ]
-//     },
-//     {
-//         id: "2",
-//         name: "Module 2",
-//         video: [
-//             {
-//                 id: "1",
-//                 name: 'Video 1'
-//             },
-//             {
-//                 id: "2",
-//                 name: "Video 2"
-//             },
-//             {
-//                 id: "3",
-//                 name: "Video 3"
-//             },
-//         ]
-//     },
-//     {
-//         id: "3",
-//         name: "Module 3",
-//         video: [
-//             {
-//                 id: "1",
-//                 name: 'Video 1'
-//             },
-//             {
-//                 id: "2",
-//                 name: "Video 2"
-//             },
-//             {
-//                 id: "3",
-//                 name: "Video 3"
-//             },
-//         ]
-//     },
-//     {
-//         id: "4",
-//         name: "Module 4",
-//         video: [
-//             {
-//                 id: "1",
-//                 name: 'Video 1'
-//             },
-//             {
-//                 id: "2",
-//                 name: "Video 2"
-//             },
-//             {
-//                 id: "3",
-//                 name: "Video 3"
-//             },
-//         ]
-//     },
-//     {
-//         id: "5",
-//         name: "Module 5",
-//         video: [
-//             {
-//                 id: "1",
-//                 name: 'Video 1'
-//             },
-//             {
-//                 id: "2",
-//                 name: "Video 2"
-//             },
-//             {
-//                 id: "3",
-//                 name: "Video 3"
-//             },
-//         ]
-//     },
-// ]
-
-// const certificateBackground = {
-//     certificateBg: {
-//         backgroundImage: `url(${certificateBg.src})`,
-//         backgroundSize: 'cover',
-//         backgroundPosition: 'center',
-//         backgroundRepeat: 'no-repeat',
-//         height: '100%',
-//         width: '100%',
-//     }
-// }
-
-const index = () => {
+const CourseOverview = () => {
     return (
         <>
-            <CourseOverview />
-            {/* <Box sx={{ ...Styles.detailBackground, display: 'flex', alignItems: 'center' }}>
+            <Box sx={{ ...Styles.detailBackground, display: 'flex', alignItems: 'center' }}>
                 <Container maxWidth='xl'>
                     <Box sx={{ flexGrow: 1 }}>
                         <Grid container spacing={2}>
@@ -490,14 +485,14 @@ const index = () => {
                 <Container maxWidth='xl'>
                     <Box sx={{ display: 'flex', position: 'relative', alignItems: 'center', marginTop: '40px' }} >
                         <TagLine>Reviews of This Course</TagLine> <Box sx={{ marginLeft: '30px' }}><Image src={reviewDesign} />
-                            <Typography sx={{ position: 'absolute', left: '660px', top: '22px' }}><FaStar style={{
+                            <Typography sx={{ position: 'absolute', left: { xl: '660px', xs: '200px' }, top: { xl: '22px', xs: '23px' } }}><FaStar style={{
                                 color: '#FFB300'
                             }} /> 4.8 User Rating</Typography></Box>
                     </Box>
                 </Container>
-            </Box> */}
+            </Box>
         </>
     )
 }
 
-export default index;
+export default CourseOverview;
