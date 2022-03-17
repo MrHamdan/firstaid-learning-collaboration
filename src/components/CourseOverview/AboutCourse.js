@@ -33,7 +33,7 @@ const Styles = {
 }
 
 
-const AboutCourse = () => {
+const AboutCourse = ({ course }) => {
     return (
         <>
             <Box sx={{ ...Styles.detailBackground }}>
@@ -42,7 +42,7 @@ const AboutCourse = () => {
                         <Grid container spacing={2}>
                             <Grid item xs={12} xl={6} md={12}>
                                 <Item sx={{ backgroundColor: 'transparent', textAlign: 'left', boxShadow: '0' }}>
-                                    <Typography sx={{ fontSize: '36px', fontStyle: 'normal', fontWeight: '500', color: 'white', lineHeight: '145%' }}>Level 2 Food Hygiene and Safety for Catering</Typography>
+                                    <Typography sx={{ fontSize: '36px', fontStyle: 'normal', fontWeight: '500', color: 'white', lineHeight: '145%' }}>{course.title}</Typography>
                                     <Typography sx={{ margin: '50px 0px' }}><span style={{ fontSize: '16px', fontStyle: 'normal', fontWeight: '400', color: 'white', lineHeight: '32px', marginRight: '20px' }}>4.8 <FaStar style={{
                                         color: '#FFB300'
                                     }} /></span> <span style={{ fontSize: '16px', fontStyle: 'normal', fontWeight: '400', color: 'white', lineHeight: '32px', marginTop: '50px', marginBottom: '29px', marginRight: '20px' }}>(50 REVIEWS)</span> <span style={{ fontSize: '16px', fontStyle: 'normal', fontWeight: '400', color: 'white', lineHeight: '32px', marginTop: '50px', marginBottom: '29px', marginRight: '20px' }}>6245 STUDENTS</span></Typography>

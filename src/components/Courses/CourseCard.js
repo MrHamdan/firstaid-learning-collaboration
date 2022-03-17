@@ -48,7 +48,7 @@ const CourseCard = ({ course }) => {
 
             </Box>
             <Tagline fontSize="20px">
-                <Link href='/linktosinglecoursedetails' passHref>
+                <Link href={`/course/${course.id}`} passHref>
                     <a className={styles.link}>{title}</a>
                 </Link>
             </Tagline>
