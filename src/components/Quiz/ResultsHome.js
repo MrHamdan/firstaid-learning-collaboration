@@ -22,7 +22,7 @@ const ResultsHome = () => {
   
   return (
       
-    <Container >
+    <Container sx={{my:1}}>
 
       <QuizResultHeader answer={answer} correctAnswerArray={correctAnswerArray} ></QuizResultHeader>
       <Answer  answer={answer}/>
