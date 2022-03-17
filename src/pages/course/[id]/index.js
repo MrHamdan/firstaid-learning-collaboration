@@ -9,7 +9,7 @@ const index = ({ course }) => {
 };
 
 export async function getStaticPaths() {
-    const res = await fetch('https://jsonplaceholder.typicode.com/posts');
+    const res = await fetch('https://tawsifhye.github.io/data/courses.json');
     const courses = await res.json();
     const paths = courses.map(course => ({
         params: { id: course.id.toString() }
@@ -18,14 +18,11 @@ export async function getStaticPaths() {
     return { paths, fallback: false };
 }
 
-export async function getStaticProps({ params }) {
-    const result = await fetch(`https://jsonplaceholder.typicode.com/posts/${params.id}`);
-    const course = await result.json();
-    return {
-        props: {
-            course,
-        },
-    };
+export async function getStaticProps(context) {
+    const res = await fetch('https://tawsifhye.github.io/data/courses.json');
+    const courses = await res.json();
+    const course = courses.find(course => course.id.toString() === context.params.id);
+    return { props: { course } };
 }
 
 export default index;

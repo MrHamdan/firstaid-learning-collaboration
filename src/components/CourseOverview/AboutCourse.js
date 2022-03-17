@@ -43,7 +43,7 @@ const AboutCourse = ({ course }) => {
                             <Grid item xs={12} xl={6} md={12}>
                                 <Item sx={{ backgroundColor: 'transparent', textAlign: 'left', boxShadow: '0' }}>
                                     <Typography sx={{ fontSize: '36px', fontStyle: 'normal', fontWeight: '500', color: 'white', lineHeight: '145%' }}>{course.title}</Typography>
-                                    <Typography sx={{ margin: '50px 0px' }}><span style={{ fontSize: '16px', fontStyle: 'normal', fontWeight: '400', color: 'white', lineHeight: '32px', marginRight: '20px' }}>4.8 <FaStar style={{
+                                    <Typography sx={{ margin: '50px 0px' }}><span style={{ fontSize: '16px', fontStyle: 'normal', fontWeight: '400', color: 'white', lineHeight: '32px', marginRight: '20px' }}>{course.rating} <FaStar style={{
                                         color: '#FFB300'
                                     }} /></span> <span style={{ fontSize: '16px', fontStyle: 'normal', fontWeight: '400', color: 'white', lineHeight: '32px', marginTop: '50px', marginBottom: '29px', marginRight: '20px' }}>(50 REVIEWS)</span> <span style={{ fontSize: '16px', fontStyle: 'normal', fontWeight: '400', color: 'white', lineHeight: '32px', marginTop: '50px', marginBottom: '29px', marginRight: '20px' }}>6245 STUDENTS</span></Typography>
                                     <Typography sx={{ fontSize: '18px', fontStyle: 'normal', fontWeight: '400', color: 'white', lineHeight: '145%' }}>We are a company who is best known for offering awarding body accredited courses for anyone who wishes to take their professional life to the next level.</Typography>
@@ -110,10 +110,19 @@ const AboutCourse = ({ course }) => {
                                 <Item sx={{ backgroundColor: 'transparent', boxShadow: '0' }}>
                                     <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-around' }}>
                                         <Box>
-                                            <del>$100.00</del> <br /> <span>75% off</span>
+                                            <Typography sx={{
+                                                fonWeight: 500,
+                                                fontSize: '26.88px',
+                                                lineHeight: '115.4%',
+                                                alignItems: 'center',
+                                                textDecorationLine: 'line-through',
+                                                color: '#595959'
+                                            }}>
+                                                ${course?.regularPrice}
+                                            </Typography> <br /> <span>75% off</span>
                                         </Box>
                                         <Box>
-                                            <span>£25.00</span>
+                                            <span>£{parseFloat(course?.regularPrice - course?.regularPrice * .75).toFixed(2)}</span>
                                         </Box>
                                         <Box>
                                             <PrimaryButton>BUY NOW</PrimaryButton>
