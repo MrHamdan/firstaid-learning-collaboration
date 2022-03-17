@@ -115,8 +115,8 @@ const Quiz = () => {
                             md:6
                         },fontSize:{
                             xs: '16px',
-                            sm: '20px',
-                            md: '24px'
+                                sm: '16px',
+                                md: '16px'
                         } ,fontWeight:'800',color:"#fff",'&:hover':{
                             background:"#DB4040 ",
                         } }} variant='contained' onClick={goBack} >Prev</Button>
@@ -130,8 +130,8 @@ const Quiz = () => {
                                 md:6
                             },fontSize:{
                                 xs: '16px',
-                                sm: '20px',
-                                md: '24px'
+                                sm: '16px',
+                                md: '16px'
                             } ,fontWeight:'800',color:"#fff",'&:hover':{
                                 background:"#DB4040 ",
                             } }} onClick={submitQuiz} disabled={!isSelected} variant='contained'>Submit</Button>
@@ -140,11 +140,11 @@ const Quiz = () => {
                             <Button  sx={{background:"red",px:{
                                 xs:2,
                                 sm:4,
-                                md:6
+                                md:4
                             },fontSize:{
                                 xs: '16px',
-                                sm: '20px',
-                                md: '24px'
+                                sm: '16px',
+                                md: '16px'
                             } ,fontWeight:'800',color:"#fff",'&:hover':{
                                 background:"#DB4040 ",
                             } }} onClick={goNext} disabled={index === quiz.length - 1 || !isSelected}>Next</Button>
