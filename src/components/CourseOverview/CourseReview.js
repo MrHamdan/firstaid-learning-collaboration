@@ -32,7 +32,7 @@ const CourseReview = () => {
                     <Box sx={{ flexGrow: 1, paddingTop: '100px' }}>
                         <Grid container spacing={2}>
                             <Grid item xs={12} xl={6} md={12}>
-                                <Item>
+                                <Item sx={{ boxShadow: '0px 15.8px 36.86px rgba(90, 141, 217, 0.1)', borderRadius: '19.0829px' }}>
                                     <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                                         <Box sx={{ display: 'flex', alignItems: 'center' }}>
                                             <Box>
@@ -50,7 +50,7 @@ const CourseReview = () => {
                                 </Item>
                             </Grid>
                             <Grid item xs={12} xl={6} md={12}>
-                                <Item>
+                                <Item sx={{ boxShadow: '0px 15.8px 36.86px rgba(90, 141, 217, 0.1)', borderRadius: '19.0829px' }}>
                                     <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                                         <Box sx={{ display: 'flex', alignItems: 'center' }}>
                                             <Box>
@@ -68,7 +68,7 @@ const CourseReview = () => {
                                 </Item>
                             </Grid>
                             <Grid item xs={12} xl={6} md={12}>
-                                <Item>
+                                <Item sx={{ boxShadow: '0px 15.8px 36.86px rgba(90, 141, 217, 0.1)', borderRadius: '19.0829px' }}>
                                     <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                                         <Box sx={{ display: 'flex', alignItems: 'center' }}>
                                             <Box>
@@ -86,7 +86,7 @@ const CourseReview = () => {
                                 </Item>
                             </Grid>
                             <Grid item xs={12} xl={6} md={12}>
-                                <Item>
+                                <Item sx={{ boxShadow: '0px 15.8px 36.86px rgba(90, 141, 217, 0.1)', borderRadius: '19.0829px' }}>
                                     <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                                         <Box sx={{ display: 'flex', alignItems: 'center' }}>
                                             <Box>
