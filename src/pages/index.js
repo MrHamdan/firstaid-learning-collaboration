@@ -29,10 +29,7 @@ export default function Home({ courses, freeResources }) {
 }
 
 export async function getStaticProps() {
- // https://tawsifhye.github.io/data/courses.json
-
- const res = await fetch("https://tawsifhye.github.io/data/courses.json");
- const courses = await res.json();
+  // https://tawsifhye.github.io/data/courses.json
 
   const courseResponse = await fetch('https://tawsifhye.github.io/data/courses.json');
   const courses = await courseResponse.json();
