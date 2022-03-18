@@ -2,6 +2,7 @@ import Courses from "components/Courses/Courses";
 import Freeresources from "components/Home/Freeresources";
 import Hero from "components/Home/Hero";
 import TipsSection from "components/Home/TipsSection";
+import LatestNews from "components/Shared/LatestNews";
 import StudentReviewSection from "components/Shared/StudentReviewSection";
 import Head from "next/head";
 import Image from "next/image";
@@ -23,6 +24,7 @@ export default function Home({ courses, freeResources }) {
       <Freeresources freeResources={freeResources} />
       <TipsSection />
       <StudentReviewSection />
+      <LatestNews />
     </div>
   );
 
