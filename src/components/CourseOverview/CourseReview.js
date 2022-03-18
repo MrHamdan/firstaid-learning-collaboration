@@ -1,7 +1,7 @@
 import { Box, Typography, Paper, Container, Grid } from '@mui/material';
 import Image from 'next/image';
 import { FaStar } from "react-icons/fa";
-import TagLine from 'components/Shared/Tagline';
+import Tagline from 'components/Shared/Tagline';
 import reviewDesign from '../../Images/reviewdesign.png'
 import { styled } from '@mui/material/styles';
 import conorOne from '../../Images/conorone.png'
@@ -24,7 +24,7 @@ const CourseReview = () => {
             <Box sx={{ height: '800px' }}>
                 <Container maxWidth='xl'>
                     <Box sx={{ display: 'flex', position: 'relative', alignItems: 'center', marginTop: '40px' }} >
-                        <TagLine>Reviews of This Course</TagLine> <Box sx={{ marginLeft: '30px' }}><Image src={reviewDesign} />
+                        <Tagline>Reviews of This Course</Tagline> <Box sx={{ marginLeft: '30px' }}><Image src={reviewDesign} />
                             <Typography sx={{ position: 'absolute', left: { xl: '680px', xs: '200px' }, top: { xl: '22px', xs: '23px' } }}><FaStar style={{
                                 color: '#FFB300'
                             }} /> 4.8 User Rating</Typography></Box>

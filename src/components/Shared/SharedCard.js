@@ -1,6 +1,6 @@
 import { Button, Card, CardContent } from '@mui/material';
 import { Box } from '@mui/system';
-import TagLine from './Tagline';
+import Tagline from './Tagline';
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -14,7 +14,7 @@ const SharedCard = ({ resource }) => {
                 <Image src={resource.icon} alt="" width="10px" height="10px" layout='responsive' />
             </Box>
             <CardContent sx={{ mt: '20px' }}>
-                <TagLine fontWeight={500} fontSize='20px'>{resource.title}</TagLine>
+                <Tagline fontWeight={500} fontSize='20px'>{resource.title}</Tagline>
                 {
                     !resource?.link ?
 

@@ -2,6 +2,7 @@ import { async } from "@firebase/util";
 import Courses from "components/Courses/Courses";
 import Freeresources from "components/Home/Freeresources";
 import Hero from "components/Home/Hero";
+import TipsSection from "components/Home/TipsSection";
 import Head from "next/head";
 import Image from "next/image";
 import { useEffect } from "react";
@@ -19,6 +20,7 @@ export default function Home({ courses, freeResources }) {
       <Hero />
       <Courses courses={courses} />
       <Freeresources freeResources={freeResources} />
+      <TipsSection />
     </div>
   );
 }
