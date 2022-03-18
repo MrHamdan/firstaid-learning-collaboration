@@ -9,7 +9,7 @@ import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import coursefaqBg from '../../Images/faqbackground.png';
 import { Container } from '@mui/material';
-import TagLine from 'components/Shared/Tagline';
+import Tagline from 'components/Shared/Tagline';
 import AddIcon from '@mui/icons-material/Add';
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -36,7 +36,7 @@ const CourseFaq = () => {
             <Box sx={{ ...coursefaqbackground.coursefaqBg }}>
                 <Container maxWidth='xl'>
                     <Box sx={{ paddingTop: '100px' }}>
-                        <TagLine>FAQs</TagLine>
+                        <Tagline>FAQs</Tagline>
                         <Box sx={{ flexGrow: 1, marginTop: '75px' }}>
                             <Grid container spacing={2}>
                                 <Grid item xs={12} xl={6}>
