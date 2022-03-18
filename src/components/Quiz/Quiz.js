@@ -84,9 +84,17 @@ const Quiz = () => {
             showQuestion &&
 
             <Card sx={{
-               width: '900px', p: 2,
+               width:{
+                     xs:'100%',
+                        sm:'50%',
+                        md: '900px'
+               }, p: 2,
                 boxShadow: '-8px 4px 19px 0 rgb(0 0 0 / 12%)',
-                padding: '60px 80px',
+                padding: {
+                    xs: '2 2',
+                    sm: '2  2',
+                    md: '60px 80px'
+                },
                 borderRadius: '20px',
                 mb: 5,
                 
@@ -101,16 +109,44 @@ const Quiz = () => {
                     <Typography sx={{ fontWeight: 600,fontSize:"26px" }}>Question {index + 1}/{quiz.length}</Typography>
 
                    { index>0  &&
-                        <Button variant='contained' onClick={goBack} >Prev</Button>
+                        <Button sx={{background:"red",px:{
+                            xs:2,
+                            sm:4,
+                            md:6
+                        },fontSize:{
+                            xs: '16px',
+                                sm: '16px',
+                                md: '16px'
+                        } ,fontWeight:'800',color:"#fff",'&:hover':{
+                            background:"#DB4040 ",
+                        } }} variant='contained' onClick={goBack} >Prev</Button>
                    }
                     {
                         index === quiz.length - 1 ?
 
-                            <Button onClick={submitQuiz} disabled={!isSelected} variant='contained'>Submit</Button>
+                            <Button sx={{background:"red",px:{
+                                xs:2,
+                                sm:4,
+                                md:6
+                            },fontSize:{
+                                xs: '16px',
+                                sm: '16px',
+                                md: '16px'
+                            } ,fontWeight:'800',color:"#fff",'&:hover':{
+                                background:"#DB4040 ",
+                            } }} onClick={submitQuiz} disabled={!isSelected} variant='contained'>Submit</Button>
 
                 :
-                            <Button  sx={{background:"red",px:2 ,fontWeight:'800',color:"#fff",'&:hover':{
-                                background:"#fff",
+                            <Button  sx={{background:"red",px:{
+                                xs:2,
+                                sm:4,
+                                md:4
+                            },fontSize:{
+                                xs: '16px',
+                                sm: '16px',
+                                md: '16px'
+                            } ,fontWeight:'800',color:"#fff",'&:hover':{
+                                background:"#DB4040 ",
                             } }} onClick={goNext} disabled={index === quiz.length - 1 || !isSelected}>Next</Button>
 
                     }

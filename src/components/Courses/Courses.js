@@ -7,19 +7,15 @@ import CarouselButton from '../shared/CarouselButton';
 import Content from '../shared/Content';
 import Tagline from '../shared/Tagline'
 import { useDispatch, useSelector } from 'react-redux';
-// import { fetchCourse } from '../../redux/actions/main';
+
 
 
 
 const Courses = ({ courses }) => {
-
-    // const courses = useSelector(state => state.courses);
     const dispatch = useDispatch();
     const sliderRef = useRef(null);
 
-    /* useEffect(() => {
-        dispatch(fetchCourse());
-    }, [dispatch]); */
+
     return (
         <div>
             <Container sx={{
