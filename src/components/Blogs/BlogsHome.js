@@ -4,7 +4,7 @@ import BlogsBanner from "./BlogsBanner";
 import BlogsPostsCard from "./BlogsPostsCard";
 import BlogsSideBar from "./BlogsSideBar";
 
-const BlogsHome = () => {
+const BlogsHome = ({ blogsData }) => {
  return (
   <>
    <BlogsBanner />
@@ -15,7 +15,9 @@ const BlogsHome = () => {
      sx={{ dispaly: "flex", justifyContent: "space-between" }}
     >
      <Grid item xs={12} md={7}>
-      <BlogsPostsCard />
+      {blogsData.map((blog) => (
+       <BlogsPostsCard key={blog.id} blog={blog} />
+      ))}
      </Grid>
      <Grid item xs={12} md={4}>
       <BlogsSideBar />
