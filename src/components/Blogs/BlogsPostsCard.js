@@ -19,7 +19,12 @@ const BlogsPostsCard = () => {
    color: "#435770",
    my: { xs: 1, md: 2 },
   },
-  cardTitleText: { color: "#272D4E", letterSpacing: { xs: "0px", md: "1px" } },
+  cardTitleText: {
+   color: "#272D4E",
+   fontSize: "1.6rem",
+   fontWeight: "bold",
+   letterSpacing: { xs: "0px", md: "1px" },
+  },
   readBtn: { color: "#ED3B45", fontWeight: "bold" },
  };
 
@@ -39,12 +44,7 @@ const BlogsPostsCard = () => {
       17 March, 2022
      </Typography>
     </Typography>
-    <Typography
-     gutterBottom
-     variant="h5"
-     component="div"
-     sx={Styles.cardTitleText}
-    >
+    <Typography gutterBottom variant="h1" sx={Styles.cardTitleText}>
      How to make a website look more attractive with llustrations
     </Typography>
     <Typography variant="body2" sx={{ color: "#435770" }}>
