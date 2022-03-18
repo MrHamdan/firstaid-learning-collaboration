@@ -3,6 +3,7 @@ import Courses from "components/Courses/Courses";
 import Freeresources from "components/Home/Freeresources";
 import Hero from "components/Home/Hero";
 import TipsSection from "components/Home/TipsSection";
+import StudentReviewSection from "components/Shared/StudentReviewSection";
 import Head from "next/head";
 import Image from "next/image";
 import { useEffect } from "react";
@@ -21,6 +22,7 @@ export default function Home({ courses, freeResources }) {
       <Courses courses={courses} />
       <Freeresources freeResources={freeResources} />
       <TipsSection />
+      <StudentReviewSection />
     </div>
   );
 }
