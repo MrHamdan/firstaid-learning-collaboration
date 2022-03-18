@@ -1,4 +1,3 @@
-import { async } from "@firebase/util";
 import Courses from "components/Courses/Courses";
 import Freeresources from "components/Home/Freeresources";
 import Hero from "components/Home/Hero";
