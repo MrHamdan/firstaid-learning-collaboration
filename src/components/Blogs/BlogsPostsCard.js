@@ -9,7 +9,8 @@ import {
 } from "@mui/material";
 import cover1 from "../../images/blogs-cover-1.png";
 
-const BlogsPostsCard = () => {
+const BlogsPostsCard = ({ blog }) => {
+ console.log(blog);
  const Styles = {
   card: { maxWidth: "100%", pb: "1em", mb: 5 },
   cardMedia: { borderRadius: "8px" },
@@ -19,7 +20,12 @@ const BlogsPostsCard = () => {
    color: "#435770",
    my: { xs: 1, md: 2 },
   },
-  cardTitleText: { color: "#272D4E", letterSpacing: { xs: "0px", md: "1px" } },
+  cardTitleText: {
+   color: "#272D4E",
+   fontSize: "1.6rem",
+   fontWeight: "bold",
+   letterSpacing: { xs: "0px", md: "1px" },
+  },
   readBtn: { color: "#ED3B45", fontWeight: "bold" },
  };
 
@@ -35,17 +41,12 @@ const BlogsPostsCard = () => {
    <CardContent>
     <Typography gutterBottom variant="body1" sx={Styles.cardDateContainer}>
      <CalendarMonthIcon />
-     <Typography variant="span" sx={{ mt: "2px" }}>
-      17 March, 2022
+     <Typography variant="span" sx={{ mt: "2px", ml: "4px" }}>
+      {blog.postDate}
      </Typography>
     </Typography>
-    <Typography
-     gutterBottom
-     variant="h5"
-     component="div"
-     sx={Styles.cardTitleText}
-    >
-     How to make a website look more attractive with llustrations
+    <Typography gutterBottom variant="h1" sx={Styles.cardTitleText}>
+     {blog.mainTitle}
     </Typography>
     <Typography variant="body2" sx={{ color: "#435770" }}>
      Leverage agile frameworks to provide a robust synopsis for high level

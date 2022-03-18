@@ -11,6 +11,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchCourses } from "Redux/actions/fetchCourses";
 import styles from "../styles/Home.module.css";
 
+
 export default function Home({ courses, freeResources }) {
   const dispatch = useDispatch();
   useEffect(() => {
@@ -25,11 +26,14 @@ export default function Home({ courses, freeResources }) {
       <StudentReviewSection />
     </div>
   );
+
 }
 
 export async function getStaticProps() {
+ // https://tawsifhye.github.io/data/courses.json
 
-  // https://tawsifhye.github.io/data/courses.json
+ const res = await fetch("https://tawsifhye.github.io/data/courses.json");
+ const courses = await res.json();
 
   const courseResponse = await fetch('https://tawsifhye.github.io/data/courses.json');
   const courses = await courseResponse.json();
@@ -45,3 +49,4 @@ export async function getStaticProps() {
     }
   }
 }
+
