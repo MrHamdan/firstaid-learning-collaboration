@@ -5,12 +5,13 @@ import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import Link from 'next/link';
 import Image from 'next/image';
 const SharedCard = ({ resource }) => {
-    console.log(resource)
+    console.log(resource.icon)
     return (
 
         <Card sx={{ maxWidth: 300, pt: '30px', mt: '20px' }}>
-            <Box sx={{ backgroundColor: '#FDE3E0', width: '60px', borderRadius: '50%', padding: '40px', mx: 'auto' }}>
-                <Image width='1000px' height='1000px' src={resource.icon} alt="" />
+            {/* sx={{ backgroundColor: '#FDE3E0', width: '60px', borderRadius: '50%', padding: '40px', mx: 'auto' }} */}
+            <Box sx={{ backgroundColor: '#FDE3E0', width: "150px", borderRadius: '50%', padding: '40px', mx: 'auto' }} >
+                <Image src={resource.icon} alt="" width="10px" height="10px" layout='responsive' />
             </Box>
             <CardContent sx={{ mt: '20px' }}>
                 <TagLine fontWeight={500} fontSize='20px'>{resource.title}</TagLine>
