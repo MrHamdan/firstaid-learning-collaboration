@@ -9,8 +9,12 @@ import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import coursefaqBg from '../../Images/faqbackground.png';
 import { Container } from '@mui/material';
+<<<<<<< HEAD
+=======
 import Tagline from 'components/Shared/Tagline';
+>>>>>>> db4228d71a86596e4688617337f613954d90c98e
 import AddIcon from '@mui/icons-material/Add';
+import Tagline from 'components/Shared/Tagline';
 
 const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -26,7 +30,7 @@ const coursefaqbackground = {
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
-        height: { xl: '689px', xs: '800px' },
+        height: '100%',
         width: '100%',
     }
 }
@@ -35,7 +39,11 @@ const CourseFaq = () => {
         <>
             <Box sx={{ ...coursefaqbackground.coursefaqBg }}>
                 <Container maxWidth='xl'>
+<<<<<<< HEAD
+                    <Box sx={{ padding: '100px 0px' }}>
+=======
                     <Box sx={{ paddingTop: '100px' }}>
+>>>>>>> db4228d71a86596e4688617337f613954d90c98e
                         <Tagline>FAQs</Tagline>
                         <Box sx={{ flexGrow: 1, marginTop: '75px' }}>
                             <Grid container spacing={2}>

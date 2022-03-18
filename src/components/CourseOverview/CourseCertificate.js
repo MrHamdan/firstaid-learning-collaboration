@@ -2,9 +2,13 @@ import { Box, Typography, Paper, Grid, Container } from '@mui/material';
 import Image from 'next/image';
 import { styled } from '@mui/material/styles';
 import PrimaryButton from 'components/Shared/PrimaryButton';
+<<<<<<< HEAD
+=======
 import Tagline from 'components/Shared/Tagline';
+>>>>>>> db4228d71a86596e4688617337f613954d90c98e
 import certificateBg from '../../Images/certificatebackground.png'
 import certificate from '../../Images/certificate.png'
+import Tagline from 'components/Shared/Tagline';
 
 const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
