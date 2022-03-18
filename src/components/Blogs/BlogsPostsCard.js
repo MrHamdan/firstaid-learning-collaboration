@@ -10,7 +10,6 @@ import {
 import cover1 from "../../images/blogs-cover-1.png";
 
 const BlogsPostsCard = ({ blog }) => {
- console.log(blog);
  const Styles = {
   card: { maxWidth: "100%", pb: "1em", mb: 5 },
   cardMedia: { borderRadius: "8px" },
