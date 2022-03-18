@@ -1,16 +1,18 @@
 import { Typography } from '@mui/material';
 import React from 'react';
 
-const TagLine = ({ children, fontSize, fontWeight }) => {
+const Tagline = ({ children, fontSize, fontWeight }) => {
     return (
         <div>
             <Typography
+                variant='h1'
                 sx={{
-                    fontFamily: 'Circular Std',
                     fontStyle: 'normal',
                     fontWeight: { fontWeight } || 900,
                     fontSize: {
-                        xs: '30px',
+                        xs: '20px',
+                        sm: '25px',
+                        md: '40px',
                         lg: fontSize || '55px',
                     },
                     lineHeight: '125%',
@@ -22,4 +24,4 @@ const TagLine = ({ children, fontSize, fontWeight }) => {
     );
 };
 
-export default TagLine;
+export default Tagline;

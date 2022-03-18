@@ -3,27 +3,31 @@ import Link from "next/link";
 import blogsBanner from "../../images/blogs-banner.png";
 
 const BlogsBanner = () => {
+ const Styles = {
+  bannerContainer: {
+   background: `url(${blogsBanner.src})`,
+   minHeight: "287px",
+   display: "flex",
+   justifyContent: "center",
+   alignItems: "center",
+  },
+  textWrapper: { color: "#fff", mb: 2 },
+  linkColor: {
+   color: "#fff",
+  },
+  blogsBlodText: { color: "#fff", fontWeight: "bold", fontSize: "3em" },
+ };
+
  return (
-  <Box
-   sx={{
-    background: `url(${blogsBanner.src})`,
-    minHeight: "287px",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-   }}
-  >
+  <Box sx={Styles.bannerContainer}>
    <Box sx={{ textAlign: "center" }}>
-    <Typography sx={{ color: "#fff", mb: 2 }}>
+    <Typography sx={Styles.textWrapper}>
      <Link href="/">
-      <a style={{ color: "#fff" }}>Home </a>
+      <a style={Styles.linkColor}>Home </a>
      </Link>
      / Blogs
     </Typography>
-    <Typography
-     variant="h2"
-     sx={{ color: "#fff", fontWeight: "bold", fontSize: "3em" }}
-    >
+    <Typography variant="h2" sx={Styles.blogsBlodText}>
      Blogs
     </Typography>
    </Box>

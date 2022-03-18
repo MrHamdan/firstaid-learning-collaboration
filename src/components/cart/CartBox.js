@@ -12,7 +12,7 @@ import {
 } from "../../Redux/actions/cartAction"
 
 const CartBox = () => {
-    const state = useSelector(state => state);
+    const state = useSelector(state => state.cart);
     const dispatch = useDispatch();
 
     const { cart, subTotal, totalVat, totalPrice, discountPrice, cuponUsed } = state;
@@ -26,14 +26,14 @@ const CartBox = () => {
 
     let finalTotal = 0;
     useEffect(() => {
-        [cart].forEach(element => {
+        cart?.forEach(element => {
             total = total + element.quantity * parseFloat(element.regularPrice - element.regularPrice * .75)
             dispatch(addSubTotal(total));
             dispatch(addVat(subTotal * vat));
             finalTotal = total + totalVat;
             dispatch(addTotal(finalTotal));
         });
-        if (!cart.length) {
+        if (!cart?.length) {
             dispatch(addSubTotal(0));
             dispatch(addVat(0));
             dispatch(addTotal(0));
@@ -100,7 +100,7 @@ const CartBox = () => {
                                 </TableRow>
                             </TableHead>
                             <TableBody>
-                                {cart?.map((item) => (
+                                {cart.map((item) => (
                                     <TableRow
                                         key={item.id}
                                         sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
@@ -119,6 +119,8 @@ const CartBox = () => {
                                         <TableCell align="right"><ClearIcon onClick={() => deleteItem(item)} /> </TableCell>
                                     </TableRow>
                                 ))}
+
+                                
                             </TableBody>
                         </Table>
                     </TableContainer>
