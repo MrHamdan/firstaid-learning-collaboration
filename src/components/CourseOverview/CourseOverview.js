@@ -10,7 +10,7 @@ const CourseOverview = ({ course }) => {
         <>
             <AboutCourse course={course} />
             <CourseLink />
-            <CourseCurriculam />
+            <CourseCurriculam course={course} />
             <CourseCertificate />
             <CourseReview />
             <CourseFaq />
