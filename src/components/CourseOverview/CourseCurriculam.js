@@ -33,11 +33,7 @@ const CourseCurriculam = () => {
                     </Box>
                     <Box sx={{ marginTop: '99px' }}>
                         <Tagline>Course Curriculam</Tagline>
-<<<<<<< HEAD
                         <Grid container spacing={2} sx={{ marginTop: '53px' }}>
-=======
-                        <Grid container spacing={2}>
->>>>>>> db4228d71a86596e4688617337f613954d90c98e
                             <Grid item xs={12} xl={8}>
                                 <Item sx={{ backgroundColor: 'transparent', textAlign: 'left', boxShadow: '0' }}>
                                     <Accordion>
