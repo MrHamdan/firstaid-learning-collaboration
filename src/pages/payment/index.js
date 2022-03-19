@@ -1,8 +1,10 @@
-const payment = () => {
+import Payment from "components/Payment/Payment";
+
+const index = () => {
     return (
         <>
-        
+            <Payment />
         </>
     );
 }
-export default payment;
+export default index;
