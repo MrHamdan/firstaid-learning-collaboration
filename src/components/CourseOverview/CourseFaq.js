@@ -9,10 +9,6 @@ import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import coursefaqBg from '../../Images/faqbackground.png';
 import { Container } from '@mui/material';
-<<<<<<< HEAD
-=======
-import Tagline from 'components/Shared/Tagline';
->>>>>>> db4228d71a86596e4688617337f613954d90c98e
 import AddIcon from '@mui/icons-material/Add';
 import Tagline from 'components/Shared/Tagline';
 
@@ -39,11 +35,7 @@ const CourseFaq = () => {
         <>
             <Box sx={{ ...coursefaqbackground.coursefaqBg }}>
                 <Container maxWidth='xl'>
-<<<<<<< HEAD
                     <Box sx={{ padding: '100px 0px' }}>
-=======
-                    <Box sx={{ paddingTop: '100px' }}>
->>>>>>> db4228d71a86596e4688617337f613954d90c98e
                         <Tagline>FAQs</Tagline>
                         <Box sx={{ flexGrow: 1, marginTop: '75px' }}>
                             <Grid container spacing={2}>

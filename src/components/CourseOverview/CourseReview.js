@@ -1,10 +1,6 @@
 import { Box, Typography, Paper, Container, Grid } from '@mui/material';
 import Image from 'next/image';
 import { FaStar } from "react-icons/fa";
-<<<<<<< HEAD
-=======
-import Tagline from 'components/Shared/Tagline';
->>>>>>> db4228d71a86596e4688617337f613954d90c98e
 import reviewDesign from '../../Images/reviewdesign.png'
 import { styled } from '@mui/material/styles';
 import conorOne from '../../Images/conorone.png'
