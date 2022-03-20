@@ -1,8 +1,6 @@
 import { Box, Typography, Paper, Grid, Container } from '@mui/material';
 import Image from 'next/image';
 import detailBg from '../../Images/detailbackground.png';
-import detailImg from '../../Images/detailimage.png';
-import styles from "../../styles/CourseOverview.module.css";
 import { FaStar } from "react-icons/fa";
 import { styled } from '@mui/material/styles';
 import certificateIcon from '../../Images/certificateicon.png'
@@ -50,9 +48,9 @@ const AboutCourse = ({ course }) => {
                                 </Item>
                             </Grid>
                             <Grid item xs={12} xl={6} md={12}>
-                                <Item sx={{ backgroundColor: 'transparent', boxShadow: '0' }}><Image src={detailImg} /></Item>
+                                <Item sx={{ backgroundColor: 'transparent', boxShadow: '0' }}><Image src={course.coverImage} width={589} height={425} /></Item>
                             </Grid>
-                            <Grid item xs={12} xl={6} md={12}>
+                            <Grid item xs={12} xl={6} md={12} sx={{ marginTop: { xs: '120px', xl: '0px' } }}>
                                 <Item sx={{ backgroundColor: 'transparent', boxShadow: '0' }}>
                                     <Grid container spacing={2}>
                                         <Grid item xs={12} xl={6} md={6}>
@@ -62,7 +60,7 @@ const AboutCourse = ({ course }) => {
                                                         <Image src={certificateIcon} />
                                                     </Box>
                                                     <Box sx={{ textAlign: 'left', marginLeft: '30px' }}>
-                                                        <span>You will Get</span> <br /> <span>Certificate of Completion</span>
+                                                        <span style={{ fontStyle: 'normal', fontSize: '16px', fontWeight: '400', lineHeight: '26px', color: 'rgba(76, 112, 138, 0.9)' }}>You will Get</span> <br /> <span style={{ fontStyle: 'normal', fontSize: '18px', fontWeight: '500', lineHeight: '26px', color: 'rgba(26, 60, 85, 0.9)' }}>Certificate of Completion</span>
                                                     </Box>
                                                 </Box>
                                             </Item>
@@ -74,7 +72,7 @@ const AboutCourse = ({ course }) => {
                                                         <Image src={documentIcon} />
                                                     </Box>
                                                     <Box sx={{ textAlign: 'left', marginLeft: '30px' }}>
-                                                        <span>Renewal Requirements</span> <br /> <span>Check with your Employer</span>
+                                                        <span style={{ fontStyle: 'normal', fontSize: '16px', fontWeight: '400', lineHeight: '26px', color: 'rgba(76, 112, 138, 0.9)' }}>Renewal Requirements</span> <br /> <span style={{ fontStyle: 'normal', fontSize: '18px', fontWeight: '500', lineHeight: '26px', color: 'rgba(26, 60, 85, 0.9)' }}>Check with your Employer</span>
                                                     </Box>
                                                 </Box>
                                             </Item>
@@ -86,7 +84,7 @@ const AboutCourse = ({ course }) => {
                                                         <Image src={clockIcon} />
                                                     </Box>
                                                     <Box sx={{ textAlign: 'left', marginLeft: '30px' }}>
-                                                        <span>Course Duration</span> <br /> <span>4 Hours 32 Minutes</span>
+                                                        <span style={{ fontStyle: 'normal', fontSize: '16px', fontWeight: '400', lineHeight: '26px', color: 'rgba(76, 112, 138, 0.9)' }}>Course Duration</span> <br /> <span style={{ fontStyle: 'normal', fontSize: '18px', fontWeight: '500', lineHeight: '26px', color: 'rgba(26, 60, 85, 0.9)' }}>4 Hours 32 Minutes</span>
                                                     </Box>
                                                 </Box>
                                             </Item>
@@ -98,7 +96,7 @@ const AboutCourse = ({ course }) => {
                                                         <Image src={supportIcon} />
                                                     </Box >
                                                     <Box sx={{ textAlign: 'left', marginLeft: '30px' }}>
-                                                        <span>Support</span> <br /> <span>24/7 Customer Support</span>
+                                                        <span style={{ fontStyle: 'normal', fontSize: '16px', fontWeight: '400', lineHeight: '26px', color: 'rgba(76, 112, 138, 0.9)' }}>Support</span> <br /> <span style={{ fontStyle: 'normal', fontSize: '18px', fontWeight: '500', lineHeight: '26px', color: 'rgba(26, 60, 85, 0.9)' }}>24/7 Customer Support</span>
                                                     </Box>
                                                 </Box>
                                             </Item>
@@ -109,20 +107,21 @@ const AboutCourse = ({ course }) => {
                             <Grid item xs={12} xl={6} md={12} sx={{ marginTop: '90px' }}>
                                 <Item sx={{ backgroundColor: 'transparent', boxShadow: '0' }}>
                                     <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-around' }}>
-                                        <Box>
+                                        <Box sx={{ textAlign: 'left' }}>
                                             <Typography sx={{
                                                 fonWeight: 500,
                                                 fontSize: '26.88px',
                                                 lineHeight: '115.4%',
                                                 alignItems: 'center',
                                                 textDecorationLine: 'line-through',
-                                                color: '#595959'
+                                                color: '#595959',
+                                                fontStyle: 'normal',
                                             }}>
-                                                ${course?.regularPrice}
-                                            </Typography> <br /> <span>75% off</span>
+                                                ${course?.regularPrice}.00
+                                            </Typography> <br /> <span style={{ fontStyle: 'normal', fontWeight: '700', fontSize: '16px', color: '#EA2E10' }}>75% off</span>
                                         </Box>
                                         <Box>
-                                            <span>£{parseFloat(course?.regularPrice - course?.regularPrice * .75).toFixed(2)}</span>
+                                            <span style={{ fontStyle: 'normal', fontWeight: '700', fontSize: '44.8px', lineHeight: '115.4%', color: '#EA2E10' }}>£{parseFloat(course?.regularPrice - course?.regularPrice * .75).toFixed(2)}</span>
                                         </Box>
                                         <Box>
                                             <PrimaryButton>BUY NOW</PrimaryButton>

@@ -22,3 +22,21 @@ a {
 * {
  box-sizing: border-box;
 }
+
+.list-ul{
+    border-bottom: 1px solid #e6e6e6;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+
+.list-ul li:hover{
+    border-bottom: 5px solid #EA2E10;
+}
+
+@media screen and (max-width: 768px) {
+  .list-ul{
+    flex-direction: column;
+  }
+}
