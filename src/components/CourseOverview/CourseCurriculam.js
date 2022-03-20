@@ -22,7 +22,7 @@ const Item = styled(Paper)(({ theme }) => ({
 const CourseCurriculam = ({ course }) => {
     return (
         <>
-            <Box sx={{ width: '100%', height: { xl: '1400px', xs: '2200px' } }}>
+            <Box sx={{ width: '100%', height: { xl: '1400px', xs: '1500px' } }}>
                 <Container maxWidth='xl'>
                     <Box sx={{ marginTop: '73px' }}>
                         <Tagline>Course Overview</Tagline>

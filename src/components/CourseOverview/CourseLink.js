@@ -7,11 +7,15 @@ const Style = {
         listStyle: 'none',
         display: 'flex',
         justifyContent: 'space-between',
-        width: '50%',
-        padding: '0 5px'
+        width: '80%',
     },
     li: {
-        fontWeight: 500
+        fontWeight: 500,
+        fontStyle: 'normal',
+        fontSize:'24px',
+        lineHeight: '145%',
+        color:'#272D4E',
+        marginRight:'30px'
     }
 }
 
@@ -19,9 +23,9 @@ const Style = {
 const CourseLink = () => {
     return (
         <>
-            <Box sx={{ marginTop: '45px' }}>
+            <Box sx={{ marginTop: '73px', marginBottom: '96px'}}>
                 <Container maxWidth='xl'>
-                    <ul style={Style.ul}>
+                    <ul style={Style.ul} className='list-ul'>
                         <li style={Style.li}>
                             <Link href="#" className='course-index-link' to="#overview"
                             >
