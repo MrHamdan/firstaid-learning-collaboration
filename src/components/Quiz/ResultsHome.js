@@ -2,6 +2,7 @@ import { Box, Container } from "@mui/material";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux"
 import Answer from "./Answer";
+import QuizCourse from "./QuizCourse";
 import QuizResultHeader from "./QuizResultHeader";
 
 
@@ -56,6 +57,7 @@ const ResultsHome = () => {
 
       <QuizResultHeader answer={answer} correctAnswerArray={correctAnswerArray} ></QuizResultHeader>
       <Answer  answer={answer}/>
+      <QuizCourse level={level}></QuizCourse>
         
     </Container>
   )
