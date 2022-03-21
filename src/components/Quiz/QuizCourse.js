@@ -1,21 +1,23 @@
 import { Box, Button, Container, Typography } from "@mui/material"
 import CourseCard from "components/Courses/CourseCard"
 
-import Carousel from "components/shared/Carousel"
+
 import Link from "next/link"
 import React, { useEffect, useState } from "react"
-import { useSelector } from "react-redux"
 
 
-const QuizCourse = ({ level }) => {
-  const courses = useSelector(state => state.allCourses.courses)
+
+const QuizCourse = ({ level, courses }) => {
+
   const [courseByquizLvl, setCourseByQuizlvl] = useState([])
 
+
   useEffect(() => {
-    const courseByLevel = courses.filter(course => course.level === level)
+    const courseByLevel = courses?.filter(course => course.level === level)
     setCourseByQuizlvl(courseByLevel);
-  }, [level, courses])
-  console.log(courseByquizLvl);
+  }, [level])
+
+
   return (
     <Box sx={{ my: 3 }}>
       <Container>
