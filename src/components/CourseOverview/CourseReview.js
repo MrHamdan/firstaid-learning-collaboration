@@ -39,27 +39,22 @@ const CourseReview = () => {
                                                 <Image src={conorOne} alt="" />
                                             </Box>
                                             <Box sx={{ marginTop: '-60px', textAlign: 'left' }}>
-                                                <span style={{ fontStyle: 'normal', fontSize: { xl: '24px', xs: '24px' }, lineHeight: '160%', fontWeight: '500', color: '#272D4E' }}>Connor Morgan</span> <br />
-                                                <FaStar style={{
+                                                <Box sx={{ fontSize: { xl: '24px', xs: '16px' }, marginTop: '20px' }}><span style={{ fontStyle: 'normal', lineHeight: '160%', fontWeight: '500', color: '#272D4E' }}>Connor Morgan</span></Box> <br />
+                                                <Box sx={{ fontSize: { xl: '24px', xs: '16px' }, marginTop: '-10px' }}><FaStar style={{
                                                     color: '#FFB300',
-                                                    fontSize: { xl: '24px', xs: '13px' }
                                                 }} /><FaStar style={{
                                                     color: '#FFB300',
-                                                    fontSize: { xl: '24px', xs: '13px' }
                                                 }} /><FaStar style={{
                                                     color: '#FFB300',
-                                                    fontSize: { xl: '24px', xs: '13px' }
                                                 }} /><FaStar style={{
                                                     color: '#FFB300',
-                                                    fontSize: { xl: '24px', xs: '13px' }
                                                 }} /><FaStar style={{
                                                     color: '#FFB300',
-                                                    fontSize: { xl: '24px', xs: '13px' }
-                                                }} />
+                                                }} /></Box>
                                             </Box>
                                         </Box>
                                         <Box sx={{ marginTop: '-80px', marginRight: '30px' }}>
-                                            <Typography>3 days Ago</Typography>
+                                            <Typography sx={{ marginTop: '10px' }}>3 days Ago</Typography>
                                         </Box>
                                     </Box>
                                     <Box><Typography sx={{ textAlign: 'left', marginLeft: '40px', marginTop: '-50px' }}>This course has some very interesting tips that one can apply when communicating with your customers. Some of these tips are extremely valuable and useful! This is by far one of the best.</Typography></Box>
@@ -73,27 +68,22 @@ const CourseReview = () => {
                                                 <Image src={conorTwo} alt="" />
                                             </Box>
                                             <Box sx={{ marginTop: '-60px', textAlign: 'left' }}>
-                                                <span style={{ fontStyle: 'normal', fontSize: { xl: '24px', xs: '24px' }, lineHeight: '160%', fontWeight: '500', color: '#272D4E' }}>Connor Morgan</span> <br />
-                                                <FaStar style={{
+                                                <Box sx={{ fontSize: { xl: '24px', xs: '16px' }, marginTop: '20px' }}><span style={{ fontStyle: 'normal', lineHeight: '160%', fontWeight: '500', color: '#272D4E' }}>Connor Morgan</span></Box> <br />
+                                                <Box sx={{ fontSize: { xl: '24px', xs: '16px' }, marginTop: '-10px' }}><FaStar style={{
                                                     color: '#FFB300',
-                                                    fontSize: { xl: '24px', xs: '13px' }
                                                 }} /><FaStar style={{
                                                     color: '#FFB300',
-                                                    fontSize: { xl: '24px', xs: '13px' }
                                                 }} /><FaStar style={{
                                                     color: '#FFB300',
-                                                    fontSize: { xl: '24px', xs: '13px' }
                                                 }} /><FaStar style={{
                                                     color: '#FFB300',
-                                                    fontSize: { xl: '24px', xs: '13px' }
                                                 }} /><FaStar style={{
                                                     color: '#FFB300',
-                                                    fontSize: { xl: '24px', xs: '13px' }
-                                                }} />
+                                                }} /></Box>
                                             </Box>
                                         </Box>
                                         <Box sx={{ marginTop: '-80px', marginRight: '30px' }}>
-                                            <Typography>3 days Ago</Typography>
+                                            <Typography sx={{ marginTop: '10px' }}>3 days Ago</Typography>
                                         </Box>
                                     </Box>
                                     <Box><Typography sx={{ textAlign: 'left', marginLeft: '40px', marginTop: '-50px' }}>This course has some very interesting tips that one can apply when communicating with your customers. Some of these tips are extremely valuable and useful! This is by far one of the best.</Typography></Box>
@@ -107,27 +97,22 @@ const CourseReview = () => {
                                                 <Image src={conorThree} alt="" />
                                             </Box>
                                             <Box sx={{ marginTop: '-60px', textAlign: 'left' }}>
-                                                <span style={{ fontStyle: 'normal', fontSize: { xl: '24px', xs: '24px' }, lineHeight: '160%', fontWeight: '500', color: '#272D4E' }}>Connor Morgan</span> <br />
-                                                <FaStar style={{
+                                                <Box sx={{ fontSize: { xl: '24px', xs: '16px' }, marginTop: '20px' }}><span style={{ fontStyle: 'normal', lineHeight: '160%', fontWeight: '500', color: '#272D4E' }}>Connor Morgan</span></Box> <br />
+                                                <Box sx={{ fontSize: { xl: '24px', xs: '16px' }, marginTop: '-10px' }}><FaStar style={{
                                                     color: '#FFB300',
-                                                    fontSize: { xl: '24px', xs: '13px' }
                                                 }} /><FaStar style={{
                                                     color: '#FFB300',
-                                                    fontSize: { xl: '24px', xs: '13px' }
                                                 }} /><FaStar style={{
                                                     color: '#FFB300',
-                                                    fontSize: { xl: '24px', xs: '13px' }
                                                 }} /><FaStar style={{
                                                     color: '#FFB300',
-                                                    fontSize: { xl: '24px', xs: '13px' }
                                                 }} /><FaStar style={{
                                                     color: '#FFB300',
-                                                    fontSize: { xl: '24px', xs: '13px' }
-                                                }} />
+                                                }} /></Box>
                                             </Box>
                                         </Box>
                                         <Box sx={{ marginTop: '-80px', marginRight: '30px' }}>
-                                            <Typography>3 days Ago</Typography>
+                                            <Typography sx={{ marginTop: '10px' }}>3 days Ago</Typography>
                                         </Box>
                                     </Box>
                                     <Box><Typography sx={{ textAlign: 'left', marginLeft: '40px', marginTop: '-50px' }}>This course has some very interesting tips that one can apply when communicating with your customers. Some of these tips are extremely valuable and useful! This is by far one of the best.</Typography></Box>
@@ -141,27 +126,22 @@ const CourseReview = () => {
                                                 <Image src={conorFour} alt="" />
                                             </Box>
                                             <Box sx={{ marginTop: '-60px', textAlign: 'left' }}>
-                                                <span style={{ fontStyle: 'normal', fontSize: { xl: '24px', xs: '24px' }, lineHeight: '160%', fontWeight: '500', color: '#272D4E' }}>Connor Morgan</span> <br />
-                                                <FaStar style={{
+                                                <Box sx={{ fontSize: { xl: '24px', xs: '16px' }, marginTop: '20px' }}><span style={{ fontStyle: 'normal', lineHeight: '160%', fontWeight: '500', color: '#272D4E' }}>Connor Morgan</span></Box> <br />
+                                                <Box sx={{ fontSize: { xl: '24px', xs: '16px' }, marginTop: '-10px' }}><FaStar style={{
                                                     color: '#FFB300',
-                                                    fontSize: { xl: '24px', xs: '13px' }
                                                 }} /><FaStar style={{
                                                     color: '#FFB300',
-                                                    fontSize: { xl: '24px', xs: '13px' }
                                                 }} /><FaStar style={{
                                                     color: '#FFB300',
-                                                    fontSize: { xl: '24px', xs: '13px' }
                                                 }} /><FaStar style={{
                                                     color: '#FFB300',
-                                                    fontSize: { xl: '24px', xs: '13px' }
                                                 }} /><FaStar style={{
                                                     color: '#FFB300',
-                                                    fontSize: { xl: '24px', xs: '13px' }
-                                                }} />
+                                                }} /></Box>
                                             </Box>
                                         </Box>
                                         <Box sx={{ marginTop: '-80px', marginRight: '30px' }}>
-                                            <Typography>3 days Ago</Typography>
+                                            <Typography sx={{ marginTop: '10px' }}>3 days Ago</Typography>
                                         </Box>
                                     </Box>
                                     <Box><Typography sx={{ textAlign: 'left', marginLeft: '40px', marginTop: '-50px' }}>This course has some very interesting tips that one can apply when communicating with your customers. Some of these tips are extremely valuable and useful! This is by far one of the best.</Typography></Box>
