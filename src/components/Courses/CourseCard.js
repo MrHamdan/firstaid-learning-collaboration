@@ -1,5 +1,5 @@
 import { Box } from '@mui/system';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import PeopleIcon from '@mui/icons-material/People';
 import MilitaryTechIcon from '@mui/icons-material/MilitaryTech';
 import Link from 'next/link';
@@ -9,11 +9,35 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import StarIcon from '@mui/icons-material/Star';
 import Tagline from '../shared/Tagline';
 import styles from '../../styles/Courses.module.css'
+import { useDispatch, useSelector } from 'react-redux';
+import { addCupon, addToCart } from 'Redux/actions/cartAction';
 
 const CourseCard = ({ course }) => {
 
     const { id, title, coverImage, enrolledStudents, rating } = course;
     const [isAdded, setIsAdded] = useState(false);
+
+    const { cart } = useSelector((state) => state.cart);
+    const dispatch = useDispatch();
+
+
+    useEffect(() => {
+        const added = cart.find((item) => item.id === course.id);
+        if (added) {
+            setIsAdded(true);
+        }
+    }, [cart, course]);
+
+    const handleAddToCart = (course) => {
+        course = {
+            ...course,
+            quantity: 1,
+        };
+        const newCart = [...cart, course];
+        dispatch(addToCart(newCart));
+        dispatch(addCupon(false));
+        setIsAdded(true);
+    };
 
     return (
         <Box sx={{
@@ -87,6 +111,7 @@ const CourseCard = ({ course }) => {
                         color: '#EA2E10',
                         fontWeight: 600,
                     }}
+                        onClick={() => handleAddToCart(course)}
                     >
                         <ShoppingCartIcon />
                         Add to Cart
