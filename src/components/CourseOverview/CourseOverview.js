@@ -5,12 +5,12 @@ import CourseCertificate from './CourseCertificate';
 import CourseReview from './CourseReview';
 import CourseFaq from './CourseFaq';
 import ViewCourseBottom from './ViewCourseBottom';
-const CourseOverview = () => {
+const CourseOverview = ({ course }) => {
     return (
         <>
-            <AboutCourse />
+            <AboutCourse course={course} />
             <CourseLink />
-            <CourseCurriculam />
+            <CourseCurriculam course={course} />
             <CourseCertificate />
             <CourseReview />
             <CourseFaq />

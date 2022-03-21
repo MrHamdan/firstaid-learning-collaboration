@@ -3,10 +3,18 @@ import { Box, FormControl, FormControlLabel, Radio, RadioGroup } from "@mui/mate
 
 const Question = ({quiz,handleOnChange,index}) => {
   return (
-    <Box  sx={{width:"700px"}}>
+    <Box  sx={{width:{
+        xs: "100%",
+        sm: "100%",
+        md: "700px",
+    }}}>
                    
                     <FormControl sx={{
-                        m: 3,
+                        m: {
+                            xs: "0",
+                            sm: "0",
+                            md: 3
+                        },
                         width:"100%"
                     }} variant="standard">
 

@@ -18,6 +18,10 @@ const Courses = ({ courses }) => {
     const dispatch = useDispatch();
     const sliderRef = useRef(null);
  
+    const dispatch = useDispatch();
+    const sliderRef = useRef(null);
+
+
     return (
         <div>
             <Container sx={{
