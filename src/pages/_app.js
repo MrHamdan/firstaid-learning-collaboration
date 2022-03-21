@@ -16,7 +16,13 @@ function MyApp({ Component, pageProps }) {
                 <AuthProvider>
                     <Elements stripe={stripePromise}>
                         <Navbar />
-                        <NextNProgress color='red' />
+                        <NextNProgress
+                            color="red"
+                            startPosition={0.3}
+                            stopDelayMs={200}
+                            height={3}
+                            showOnShallow={true}
+                            />
                         <Component {...pageProps} />
                         <Footer />
                     </Elements>
