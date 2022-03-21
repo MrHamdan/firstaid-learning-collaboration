@@ -10,6 +10,7 @@ import {
     addSubTotal, addVat, addTotal, calculateDiscount, addCupon, increaseQuantity,
     decreaseQuantity, removeFromCart
 } from "../../Redux/actions/cartAction"
+import Link from 'next/link';
 
 const CartBox = () => {
     const state = useSelector(state => state.cart);
@@ -120,7 +121,7 @@ const CartBox = () => {
                                     </TableRow>
                                 ))}
 
-                                
+
                             </TableBody>
                         </Table>
                     </TableContainer>
@@ -196,7 +197,7 @@ const CartBox = () => {
                         <Typography>${!cuponUsed ? totalPrice : discountPrice}</Typography>
                         {/* <Typography>${totalPrice}</Typography> */}
                     </Box>
-                    <Button variant="contained">Proceed To Checkout</Button>
+                    <Link href='/payment'><Button variant="contained">Proceed To Checkout</Button></Link>
                 </Box>
             </Container>
 
