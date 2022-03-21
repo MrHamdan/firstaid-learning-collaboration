@@ -1,9 +1,9 @@
 import BlogDetailsHome from "components/BlogDetails/BlogDetailsHome";
 
-const index = ({ blog }) => {
+const index = ({ blog, allBlogsData }) => {
  return (
   <>
-   <BlogDetailsHome blog={blog} />
+   <BlogDetailsHome blog={blog} allBlogsData={allBlogsData} />
   </>
  );
 };
@@ -23,5 +23,9 @@ export async function getStaticProps(context) {
  const res = await fetch("https://tawsifhye.github.io/data/blogs.json");
  const blogs = await res.json();
  const blog = blogs.find((blog) => blog.id.toString() === context.params.id);
- return { props: { blog } };
+
+ const allBlogsRes = await fetch("https://tawsifhye.github.io/data/blogs.json");
+ const allBlogsData = await allBlogsRes.json();
+
+ return { props: { blog, allBlogsData } };
 }

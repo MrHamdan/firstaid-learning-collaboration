@@ -6,7 +6,7 @@ import BlogDetailsResponseCard from "./BlogDetailsResponseCard";
 const BlogDetailsResponses = () => {
  return (
   <>
-   <Box sx={{ display: { md: "flex" }, alignItems: "center" }}>
+   <Box sx={{ display: { md: "flex" }, alignItems: "center", mt: 10 }}>
     <Typography
      variant="h4"
      sx={{ color: "#272D4E", fontWeight: "bold", mb: { xs: 5, md: 0 } }}
@@ -60,7 +60,7 @@ const BlogDetailsResponses = () => {
    </Box>
 
    <Box sx={{ mb: 15 }}>
-    <Grid container spacing={4} sx={{ my: 6 }}>
+    <Grid container spacing={4} sx={{ mb: 5, mt: 2 }}>
      {Array.from(Array(4)).map((_, index) => (
       <Grid key={index} item xs={12} md={6}>
        <BlogDetailsResponseCard />

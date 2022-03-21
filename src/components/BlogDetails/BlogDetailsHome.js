@@ -4,8 +4,9 @@ import BlogDetailsBanner from "./BlogDetailsBanner";
 import BlogDetailsContent from "./BlogDetailsContent";
 import BlogDetailsResponses from "./BlogDetailsResponses";
 import BlogsDetailsSideBar from "./BlogDetailsSidebar";
+import SimilarBlogs from "./SimilarBlogs";
 
-const BlogDetailsHome = ({ blog }) => {
+const BlogDetailsHome = ({ blog, allBlogsData }) => {
  console.log(blog);
  return (
   <>
@@ -24,6 +25,7 @@ const BlogDetailsHome = ({ blog }) => {
      </Grid>
     </Grid>
     <BlogDetailsResponses />
+    <SimilarBlogs blogsData={allBlogsData} />
    </Container>
   </>
  );
