@@ -1,0 +1,10 @@
+.slick_dots {
+    color: red;
+}
+
+.slick-center .slick-current {
+    width: 0 30px;
+    top: 50%;
+    transform: scale();
+    transform-origin: center center;
+}

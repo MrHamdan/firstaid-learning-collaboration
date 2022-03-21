@@ -61,7 +61,7 @@ const Quiz = () => {
             level: quiz[index].level,
             
         }
-        
+        console.log(answer);
         const newArr = [...selectedAnswer, answer];
         setSelectedAnswer(newArr);
     }
