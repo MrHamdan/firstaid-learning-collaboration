@@ -11,6 +11,9 @@ import {
     decreaseQuantity, removeFromCart
 } from "../../Redux/actions/cartAction"
 import Link from 'next/link';
+import Image from 'next/image';
+import AddIcon from '@mui/icons-material/Add';
+import RemoveIcon from '@mui/icons-material/Remove';
 
 const CartBox = () => {
     const state = useSelector(state => state.cart);
@@ -93,35 +96,22 @@ const CartBox = () => {
                             <TableHead>
                                 <TableRow>
                                     <TableCell sx={{ fontWeight: 'bold' }}>Course Name</TableCell>
-                                    <TableCell align="right" sx={{ fontWeight: 'bold' }}>Regular Price</TableCell>
-                                    <TableCell align="right" sx={{ fontWeight: 'bold' }}>Discount Price</TableCell>
-                                    <TableCell align="right" sx={{ fontWeight: 'bold' }}>Quantity</TableCell>
-                                    <TableCell align="right" sx={{ fontWeight: 'bold' }}>Total</TableCell>
-                                    <TableCell align="right" sx={{ fontWeight: 'bold' }}></TableCell>
+                                    <TableCell align="center" sx={{ fontWeight: 'bold' }}>Price</TableCell>
+                                    <TableCell align="center" sx={{ fontWeight: 'bold' }}>Quantity</TableCell>
+                                    <TableCell align="center" sx={{ fontWeight: 'bold' }}>Total</TableCell>
+                                    <TableCell align="center" sx={{ fontWeight: 'bold' }}></TableCell>
                                 </TableRow>
                             </TableHead>
                             <TableBody>
                                 {cart.map((item) => (
-                                    <TableRow
-                                        key={item.id}
-                                        sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-                                    >
-                                        <TableCell component="th" scope="row">
-                                            {item.title}
-                                        </TableCell>
-                                        <TableCell align="right">${item.regularPrice}</TableCell>
-                                        <TableCell align="right">${parseFloat(item.regularPrice - item.regularPrice * .75)}</TableCell>
-                                        <TableCell align="right">
-                                            <AiOutlinePlus onClick={() => handleQuantity(item, 'increase')} />
-                                            {item.quantity}
-                                            <AiOutlineMinus onClick={() => handleQuantity(item, 'decrease')} />
-                                        </TableCell>
-                                        <TableCell align="right">${parseFloat(item.regularPrice - item.regularPrice * .75) * item.quantity}</TableCell>
-                                        <TableCell align="right"><ClearIcon onClick={() => deleteItem(item)} /> </TableCell>
+                                    <TableRow item={item.id} sx={{ "&:last-child td, &:last-child th": { border: 0 } }}>
+                                        <TableCell align="left" sx={{ display: 'flex', alignItems: 'center', fontSize: '16px', fontFamily: 'Inter', fontWeight: '500', fontStyle: 'normal' }}> <img style={{ width: '60px', height: '60px', borderRadius: '6px', marginRight: '20px' }} src={item.coverImage} alt="" /> {item.title}</TableCell>
+                                        <TableCell align="center" sx={{ fontSize: '16px', fontFamily: 'Inter', fontWeight: '500', fontStyle: 'normal' }}>$ {item.regularPrice}</TableCell>
+                                        <TableCell align="center" sx={{ fontSize: '16px', fontFamily: 'Inter', fontWeight: '500', fontStyle: 'normal' }}><Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-around', border: '1px solid #9D9D9D', borderRadius: '10px' }}><RemoveIcon sx={{ cursor: 'pointer' }} onClick={() => handleQuantity(item, 'decrease')}></RemoveIcon>{item.quantity}<AddIcon sx={{ cursor: 'pointer' }} onClick={() => handleQuantity(item, 'increase')}></AddIcon></Box></TableCell>
+                                        <TableCell align="center" sx={{ fontSize: '16px', fontFamily: 'Inter', fontWeight: '500', fontStyle: 'normal' }}>$ {parseFloat(item.regularPrice - item.regularPrice * .75) * item.quantity}</TableCell>
+                                        <TableCell align="center" sx={{ fontSize: '16px', fontFamily: 'Inter', fontWeight: '500', fontStyle: 'normal' }}><ClearIcon sx={{ cursor: 'pointer' }} onClick={() => deleteItem(item)}></ClearIcon></TableCell>
                                     </TableRow>
                                 ))}
-
-
                             </TableBody>
                         </Table>
                     </TableContainer>
