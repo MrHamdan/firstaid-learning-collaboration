@@ -1,8 +1,10 @@
 import paymentBg from '../../Images/paymentbackground.png';
 
-import { Box, Button, Container, FormControl, Grid, MenuItem, Paper, Select, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, TextField, Typography } from '@mui/material';
+import { Box, Button, Container, FormControl, Grid, InputLabel, MenuItem, Paper, Select, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, TextField, Typography } from '@mui/material';
+import React, { useContext, useState } from 'react';
 import { styled } from '@mui/material/styles';
-import { useElements, useStripe, CardNumberElement, CardExpiryElement, CardCvcElement } from '@stripe/react-stripe-js';
+import { loadStripe } from '@stripe/stripe-js';
+import { CardElement, Elements, useElements, useStripe, CardNumberElement, CardExpiryElement, CardCvcElement } from '@stripe/react-stripe-js';
 import Swal from 'sweetalert2';
 import { useSelector } from 'react-redux';
 
@@ -76,18 +78,25 @@ const Payment = () => {
     const elements = useElements();
 
     const handleSubmit = async (event) => {
+        // Block native form submission.
         event.preventDefault();
 
         if (!stripe || !elements) {
+            // Stripe.js has not loaded yet. Make sure to disable
+            // form submission until Stripe.js has loaded.
             return;
         }
 
+        // Get a reference to a mounted CardElement. Elements knows how
+        // to find your CardElement because there can only ever be one of
+        // each type of element.
         const card = elements.getElement(CardNumberElement);
 
         if (card == null) {
             return;
         }
 
+        // Use your card Element with other Stripe.js APIs
         const { error, paymentMethod } = await stripe.createPaymentMethod({
             type: 'card',
             card,
