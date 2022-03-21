@@ -155,23 +155,23 @@ const Payment = () => {
                                                                     <TableCell sx={{ display: 'flex', alignItems: 'center' }}><img style={{ width: '60px', height: '60px', borderRadius: '6px', marginRight: '20px' }} src={item.coverImage} alt="" /> {item.title}</TableCell>
                                                                     <TableCell align="right"></TableCell>
                                                                     <TableCell align="right"></TableCell>
-                                                                    <TableCell align="right">£ {item.regularPrice}</TableCell>
+                                                                    <TableCell align="right">$ {item.regularPrice}</TableCell>
                                                                 </TableRow>
                                                             ))}
 
                                                             <TableRow>
                                                                 <TableCell rowSpan={3} />
                                                                 <TableCell colSpan={2}>Subtotal</TableCell>
-                                                                <TableCell align="right">£{subTotal}</TableCell>
+                                                                <TableCell align="right">$ {subTotal}</TableCell>
                                                             </TableRow>
                                                             <TableRow>
                                                                 <TableCell>Vat</TableCell>
                                                                 <TableCell align="right"></TableCell>
-                                                                <TableCell align="right">{totalVat}</TableCell>
+                                                                <TableCell align="right">$ {totalVat}</TableCell>
                                                             </TableRow>
                                                             <TableRow>
                                                                 <TableCell colSpan={2}>Total</TableCell>
-                                                                <TableCell align="right">{!cuponUsed ? totalPrice : discountPrice}</TableCell>
+                                                                <TableCell align="right">$ {!cuponUsed ? totalPrice : discountPrice}</TableCell>
                                                             </TableRow>
                                                         </TableBody>
                                                     </Table>
