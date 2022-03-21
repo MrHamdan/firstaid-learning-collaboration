@@ -6,6 +6,7 @@ import { wrapper } from "Redux/store";
 import "../styles/globals.css";
 import { loadStripe } from '@stripe/stripe-js';
 import { Elements } from '@stripe/react-stripe-js';
+import NextNProgress from "nextjs-progressbar";
 
 function MyApp({ Component, pageProps }) {
     const stripePromise = loadStripe('pk_test_51KVpuCIKMgAbdTMPUw8kiLqO37bzqZ6cQmmERtdlFqeDNmD8ddI93NfZ2rrdIvY5qdmKedq83vagoJKpIXZovuzv00Mf8M56uZ');
@@ -15,6 +16,7 @@ function MyApp({ Component, pageProps }) {
                 <AuthProvider>
                     <Elements stripe={stripePromise}>
                         <Navbar />
+                        <NextNProgress />
                         <Component {...pageProps} />
                         <Footer />
                     </Elements>
