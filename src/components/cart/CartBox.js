@@ -18,7 +18,7 @@ import RemoveIcon from '@mui/icons-material/Remove';
 const CartBox = () => {
     const state = useSelector(state => state.cart);
     const dispatch = useDispatch();
-
+    
     const { cart, subTotal, totalVat, totalPrice, discountPrice, cuponUsed } = state;
     const vat = 0.15;
 
