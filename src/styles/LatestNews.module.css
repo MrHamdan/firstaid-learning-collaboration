@@ -2,9 +2,17 @@
     color: red;
 }
 
-.slick-center .slick-current {
-    width: 0 30px;
-    top: 50%;
-    transform: scale();
-    transform-origin: center center;
+.slick_center {
+    -webkit-transform: scale(1.25);
+    -moz-transform: scale(1.25);
+    transform: scale(1.25);
+}
+
+.slick_list {
+    padding: 45px 60px !important;
+    margin-left: 30px !important;
+}
+
+.slick_track {
+    width: fit-content !important;
 }

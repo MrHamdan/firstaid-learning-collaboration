@@ -2,41 +2,48 @@
 
 html,
 body {
- padding: 0;
- margin: 0;
- font-family: "Lato", sans-serif;
+  padding: 0;
+  margin: 0;
+  font-family: "Lato", sans-serif;
 }
 
 h1,
 h2,
 h3,
 h4 {
- font-family: "Manrope", sans-serif;
+  font-family: "Manrope", sans-serif;
 }
 
 a {
- text-decoration: none;
- color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
 * {
- box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-.list-ul{
-    border-bottom: 1px solid #e6e6e6;
-    padding-left: 10px;
-    padding-right: 10px;
+.list-ul {
+  border-bottom: 1px solid #e6e6e6;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 
 
-.list-ul li:hover{
-    border-bottom: 5px solid #EA2E10;
+.list-ul li:hover {
+  border-bottom: 5px solid #EA2E10;
 }
+
+/* .slick-center {
+  -webkit-transform: scale(1.25);
+  -moz-transform: scale(1.25);
+  transform: scale(1.25);
+} */
+
 
 @media screen and (max-width: 768px) {
-  .list-ul{
+  .list-ul {
     flex-direction: column;
   }
 }

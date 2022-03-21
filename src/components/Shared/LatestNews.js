@@ -1,5 +1,5 @@
 import { Box, Container, Typography } from '@mui/material';
-import React from 'react';
+import React, { useRef } from 'react';
 import Slider from 'react-slick';
 import Carousel from '../shared/Carousel';
 import TagLine from '../shared/Tagline';
@@ -10,29 +10,60 @@ import styles from "../../styles/LatestNews.module.css"
 
 const settings = {
     dots: true,
-    className: "center",
-    dotsClass: `${styles.slick_dots}`,
+    className: "slick-center ",
+    // dotsClass: `${styles.slick_dots}`,
+    arrows: false,
+    dots: true,
+    infinite: false,
     centerMode: true,
-    centerPadding: '40%',
-    infinite: true,
-    slidesToShow: 1,
-    speed: 500
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    initialSlide: 1,
+    speed: 500,
+    responsive: [
+        {
+            breakpoint: 1024,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                infinite: false,
+            }
+        },
+        {
+            breakpoint: 600,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                initialSlide: 0,
+                infinite: false,
+            }
+        },
+        {
+            breakpoint: 480,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                infinite: false,
+            }
+        }
+    ]
 };
 
 const LatestNews = ({ newses }) => {
+
+    const sliderRef = useRef(null);
+    console.log(sliderRef);
     return (
         <Box sx={{ backgroundColor: '#FFF6F6', padding: '50px 0' }} >
             <Typography sx={{ textAlign: 'center', padding: '50px 0' }} ><TagLine>Our Latest News</TagLine></Typography>
-            <Container>
-                <Box>
-                    <Slider {...settings}>
-                        {
-                            newses.map(news =>
-                                <NewsCard key={news.id} news={news} />
-                            )
-                        }
-                    </Slider>
-                </Box>
+            <Container sx={{ maxWidth: { xl: 'xl', lg: 'lg' } }}>
+                <Slider ref={sliderRef} {...settings}>
+                    {
+                        newses.map(news =>
+                            <NewsCard key={news.id} news={news} />
+                        )
+                    }
+                </Slider>
             </Container >
         </Box >
     );
