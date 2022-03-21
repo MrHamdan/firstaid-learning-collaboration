@@ -7,9 +7,12 @@ import {
  CardMedia,
  Typography,
 } from "@mui/material";
+import Link from "next/link";
 import cover1 from "../../images/blogs-cover-1.png";
 
 const BlogsPostsCard = ({ blog }) => {
+ console.log(blog.title);
+
  const Styles = {
   card: { maxWidth: "100%", pb: "1em", mb: 5 },
   cardMedia: { borderRadius: "8px" },
@@ -54,9 +57,11 @@ const BlogsPostsCard = ({ blog }) => {
     </Typography>
    </CardContent>
    <CardActions>
-    <Button size="small" sx={Styles.readBtn}>
-     Read More
-    </Button>
+    <Link href={`/blogs/${blog.id}`} passHref>
+     <Button size="small" sx={Styles.readBtn}>
+      Read More
+     </Button>
+    </Link>
    </CardActions>
   </Card>
  );
