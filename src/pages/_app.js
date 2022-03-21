@@ -16,7 +16,7 @@ function MyApp({ Component, pageProps }) {
                 <AuthProvider>
                     <Elements stripe={stripePromise}>
                         <Navbar />
-                        <NextNProgress />
+                        <NextNProgress color='red' />
                         <Component {...pageProps} />
                         <Footer />
                     </Elements>
