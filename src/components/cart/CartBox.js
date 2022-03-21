@@ -84,12 +84,12 @@ const CartBox = () => {
                 <Box sx={{
                     background: '#FFFFFF',
                     borderRadius: '10px',
-                    width: 500,
+                    width: 770,
                     p: 3
                 }}>
                     <Typography variant='h4'>Shopping Cart</Typography>
                     <TableContainer >
-                        <Table sx={{ width: 500 }} aria-label="simple table">
+                        <Table sx={{ width: 600 }} aria-label="simple table">
                             <TableHead>
                                 <TableRow>
                                     <TableCell sx={{ fontWeight: 'bold' }}>Course Name</TableCell>
@@ -133,6 +133,7 @@ const CartBox = () => {
                         background: "#ED3B45",
                         borderRadius: "10px",
                         position: "relative",
+                        width: 400,
                     }}
                 >
                     <Typography
@@ -198,10 +199,10 @@ const CartBox = () => {
                         {/* <Typography>${totalPrice}</Typography> */}
                     </Box>
                     <Link href='/payment'><Button variant="contained">Proceed To Checkout</Button></Link>
-                </Box>
-            </Container>
+                </Box >
+            </Container >
 
-        </Box>
+        </Box >
 
 
     );
