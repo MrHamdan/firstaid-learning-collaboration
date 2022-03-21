@@ -162,16 +162,16 @@ const Payment = () => {
                                                             <TableRow>
                                                                 <TableCell rowSpan={3} />
                                                                 <TableCell colSpan={2}>Subtotal</TableCell>
-                                                                <TableCell align="right">£ {subTotal}</TableCell>
+                                                                <TableCell align="right">£{subTotal}</TableCell>
                                                             </TableRow>
                                                             <TableRow>
                                                                 <TableCell>Vat</TableCell>
                                                                 <TableCell align="right"></TableCell>
-                                                                <TableCell align="right">£ {totalVat}</TableCell>
+                                                                <TableCell align="right">{totalVat}</TableCell>
                                                             </TableRow>
                                                             <TableRow>
                                                                 <TableCell colSpan={2}>Total</TableCell>
-                                                                <TableCell align="right"> £ {!cuponUsed ? totalPrice : discountPrice}</TableCell>
+                                                                <TableCell align="right">{!cuponUsed ? totalPrice : discountPrice}</TableCell>
                                                             </TableRow>
                                                         </TableBody>
                                                     </Table>

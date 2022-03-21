@@ -197,7 +197,7 @@ const CartBox = () => {
                         <Typography>${!cuponUsed ? totalPrice : discountPrice}</Typography>
                         {/* <Typography>${totalPrice}</Typography> */}
                     </Box>
-                    <Link href="/payment"><Button variant="contained">Proceed To Checkout</Button></Link>
+                    <Link href='/payment'><Button variant="contained">Proceed To Checkout</Button></Link>
                 </Box>
             </Container>
 

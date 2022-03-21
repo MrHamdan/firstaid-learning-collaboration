@@ -42,7 +42,7 @@ const Courses = ({ courses }) => {
                         content={courses?.map(course => (
                             <CourseCard key={course.id} course={course} />
                         ))}
-                        />
+                    />
                 </Box>
 
 
