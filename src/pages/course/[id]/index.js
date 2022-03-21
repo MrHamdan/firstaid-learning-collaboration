@@ -1,8 +1,13 @@
 import CourseOverview from "components/CourseOverview/CourseOverview";
+import Head from "next/head";
 
 const index = ({ course }) => {
     return (
         <>
+            <Head>
+                <title>Course Overview</title>
+                <link rel="shortcut icon" href="favicon2.ico"></link>
+            </Head>
             <CourseOverview course={course} />
         </>
     );
