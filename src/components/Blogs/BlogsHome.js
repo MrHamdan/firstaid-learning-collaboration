@@ -6,7 +6,6 @@ import BlogsPostsCard from "./BlogsPostsCard";
 import BlogsSideBar from "./BlogsSideBar";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import SimilarBlogs from "./SimilarBlogs";
 
 const BlogsHome = ({ blogsData }) => {
  const [currentPage, setCurrentPage] = useState(1);
@@ -70,7 +69,6 @@ const BlogsHome = ({ blogsData }) => {
      />
     )}
    />
-    <SimilarBlogs blogsData={blogsData}/>
    <ViewCourseBottom />
   </>
  );
