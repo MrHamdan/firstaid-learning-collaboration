@@ -17,7 +17,7 @@ function MyApp({ Component, pageProps }) {
                     <Elements stripe={stripePromise}>
                         <Navbar />
                         <NextNProgress
-                            color="red"
+                            color='red'
                             startPosition={0.3}
                             stopDelayMs={200}
                             height={3}

@@ -145,7 +145,7 @@ const CartBox = () => {
                     <TextField
                         variant="outlined"
                         placeholder="Coupon Code"
-                        sx={{ width: "100%", background: "#fff" }}
+                        sx={{ width: "100%", background: "#fff", borderRadius: "10px" }}
                         onBlur={handleCuponChange}
                     />
 
@@ -153,7 +153,7 @@ const CartBox = () => {
                         variant="contained"
                         onClick={handleDiscount}
                         disabled={cuponUsed}
-                        sx={{ position: "absolute", right: "20px", height: "55px" }}
+                        sx={{ position: "absolute", right: "20px", height: "51px", width: '116px', marginTop: '2px', borderRadius: '8px' }}
                     >
                         Apply
                     </Button>
