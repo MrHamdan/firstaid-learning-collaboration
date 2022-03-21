@@ -24,7 +24,7 @@ const CourseReview = () => {
             <Box sx={{ height: { xl: '800px', xs: '1450px' } }}>
                 <Container maxWidth='xl'>
                     <Box sx={{ display: 'flex', position: 'relative', alignItems: 'center', marginTop: '40px' }} >
-                        <Tagline>Reviews of This Course</Tagline> <Box sx={{ marginLeft: '30px' }}><Image src={reviewDesign} />
+                        <Tagline>Reviews of This Course</Tagline> <Box sx={{ marginLeft: '30px' }}><Image src={reviewDesign} alt="" />
                             <Typography sx={{ position: 'absolute', left: { xl: '630px', xs: '180px', md: '630px' }, top: { xl: '16px', xs: '5px', md: '16px' }, color: 'white', fontSize: { xl: '30px', xs: '16px' }, fontStyle: 'normal', fontWeight: '400', lineHeight: '40px' }}><FaStar style={{
                                 color: '#FFB300'
                             }} /> 4.8 User Rating</Typography></Box>
@@ -36,25 +36,25 @@ const CourseReview = () => {
                                     <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                                         <Box sx={{ display: 'flex', alignItems: 'center' }}>
                                             <Box>
-                                                <Image src={conorOne} />
+                                                <Image src={conorOne} alt="" />
                                             </Box>
                                             <Box sx={{ marginTop: '-60px', textAlign: 'left' }}>
                                                 <span style={{ fontStyle: 'normal', fontSize: { xl: '24px', xs: '24px' }, lineHeight: '160%', fontWeight: '500', color: '#272D4E' }}>Connor Morgan</span> <br />
                                                 <FaStar style={{
                                                     color: '#FFB300',
-                                                    fontSize: {xl:'24px', xs:'13px'}
+                                                    fontSize: { xl: '24px', xs: '13px' }
                                                 }} /><FaStar style={{
                                                     color: '#FFB300',
-                                                    fontSize: {xl:'24px', xs:'13px'}
+                                                    fontSize: { xl: '24px', xs: '13px' }
                                                 }} /><FaStar style={{
                                                     color: '#FFB300',
-                                                    fontSize: {xl:'24px', xs:'13px'}
+                                                    fontSize: { xl: '24px', xs: '13px' }
                                                 }} /><FaStar style={{
                                                     color: '#FFB300',
-                                                    fontSize: {xl:'24px', xs:'13px'}
+                                                    fontSize: { xl: '24px', xs: '13px' }
                                                 }} /><FaStar style={{
                                                     color: '#FFB300',
-                                                    fontSize: {xl:'24px', xs:'13px'}
+                                                    fontSize: { xl: '24px', xs: '13px' }
                                                 }} />
                                             </Box>
                                         </Box>
@@ -70,25 +70,25 @@ const CourseReview = () => {
                                     <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                                         <Box sx={{ display: 'flex', alignItems: 'center' }}>
                                             <Box>
-                                                <Image src={conorTwo} />
+                                                <Image src={conorTwo} alt="" />
                                             </Box>
                                             <Box sx={{ marginTop: '-60px', textAlign: 'left' }}>
                                                 <span style={{ fontStyle: 'normal', fontSize: { xl: '24px', xs: '24px' }, lineHeight: '160%', fontWeight: '500', color: '#272D4E' }}>Connor Morgan</span> <br />
                                                 <FaStar style={{
                                                     color: '#FFB300',
-                                                    fontSize: {xl:'24px', xs:'13px'}
+                                                    fontSize: { xl: '24px', xs: '13px' }
                                                 }} /><FaStar style={{
                                                     color: '#FFB300',
-                                                    fontSize: {xl:'24px', xs:'13px'}
+                                                    fontSize: { xl: '24px', xs: '13px' }
                                                 }} /><FaStar style={{
                                                     color: '#FFB300',
-                                                    fontSize: {xl:'24px', xs:'13px'}
+                                                    fontSize: { xl: '24px', xs: '13px' }
                                                 }} /><FaStar style={{
                                                     color: '#FFB300',
-                                                    fontSize: {xl:'24px', xs:'13px'}
+                                                    fontSize: { xl: '24px', xs: '13px' }
                                                 }} /><FaStar style={{
                                                     color: '#FFB300',
-                                                    fontSize: {xl:'24px', xs:'13px'}
+                                                    fontSize: { xl: '24px', xs: '13px' }
                                                 }} />
                                             </Box>
                                         </Box>
@@ -104,25 +104,25 @@ const CourseReview = () => {
                                     <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                                         <Box sx={{ display: 'flex', alignItems: 'center' }}>
                                             <Box>
-                                                <Image src={conorThree} />
+                                                <Image src={conorThree} alt="" />
                                             </Box>
                                             <Box sx={{ marginTop: '-60px', textAlign: 'left' }}>
                                                 <span style={{ fontStyle: 'normal', fontSize: { xl: '24px', xs: '24px' }, lineHeight: '160%', fontWeight: '500', color: '#272D4E' }}>Connor Morgan</span> <br />
                                                 <FaStar style={{
                                                     color: '#FFB300',
-                                                    fontSize: {xl:'24px', xs:'13px'}
+                                                    fontSize: { xl: '24px', xs: '13px' }
                                                 }} /><FaStar style={{
                                                     color: '#FFB300',
-                                                    fontSize: {xl:'24px', xs:'13px'}
+                                                    fontSize: { xl: '24px', xs: '13px' }
                                                 }} /><FaStar style={{
                                                     color: '#FFB300',
-                                                    fontSize: {xl:'24px', xs:'13px'}
+                                                    fontSize: { xl: '24px', xs: '13px' }
                                                 }} /><FaStar style={{
                                                     color: '#FFB300',
-                                                    fontSize: {xl:'24px', xs:'13px'}
+                                                    fontSize: { xl: '24px', xs: '13px' }
                                                 }} /><FaStar style={{
                                                     color: '#FFB300',
-                                                    fontSize: {xl:'24px', xs:'13px'}
+                                                    fontSize: { xl: '24px', xs: '13px' }
                                                 }} />
                                             </Box>
                                         </Box>
@@ -138,25 +138,25 @@ const CourseReview = () => {
                                     <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                                         <Box sx={{ display: 'flex', alignItems: 'center' }}>
                                             <Box>
-                                                <Image src={conorFour} />
+                                                <Image src={conorFour} alt="" />
                                             </Box>
                                             <Box sx={{ marginTop: '-60px', textAlign: 'left' }}>
                                                 <span style={{ fontStyle: 'normal', fontSize: { xl: '24px', xs: '24px' }, lineHeight: '160%', fontWeight: '500', color: '#272D4E' }}>Connor Morgan</span> <br />
                                                 <FaStar style={{
                                                     color: '#FFB300',
-                                                    fontSize: {xl:'24px', xs:'13px'}
+                                                    fontSize: { xl: '24px', xs: '13px' }
                                                 }} /><FaStar style={{
                                                     color: '#FFB300',
-                                                    fontSize: {xl:'24px', xs:'13px'}
+                                                    fontSize: { xl: '24px', xs: '13px' }
                                                 }} /><FaStar style={{
                                                     color: '#FFB300',
-                                                    fontSize: {xl:'24px', xs:'13px'}
+                                                    fontSize: { xl: '24px', xs: '13px' }
                                                 }} /><FaStar style={{
                                                     color: '#FFB300',
-                                                    fontSize: {xl:'24px', xs:'13px'}
+                                                    fontSize: { xl: '24px', xs: '13px' }
                                                 }} /><FaStar style={{
                                                     color: '#FFB300',
-                                                    fontSize: {xl:'24px', xs:'13px'}
+                                                    fontSize: { xl: '24px', xs: '13px' }
                                                 }} />
                                             </Box>
                                         </Box>

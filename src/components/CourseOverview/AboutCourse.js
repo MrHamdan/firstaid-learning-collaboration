@@ -84,7 +84,7 @@ const AboutCourse = ({ course }) => {
                                             <Item sx={{ backgroundColor: 'transparent', boxShadow: '0' }}>
                                                 <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: { xs: 'center', xl: 'left' } }}>
                                                     <Box>
-                                                        <Image src={certificateIcon} />
+                                                        <Image src={certificateIcon} alt="" />
                                                     </Box>
                                                     <Box sx={{ textAlign: 'left', marginLeft: '30px' }}>
                                                         <span style={{ fontStyle: 'normal', fontSize: '16px', fontWeight: '400', lineHeight: '26px', color: 'rgba(76, 112, 138, 0.9)' }}>You will Get</span> <br /> <span style={{ fontStyle: 'normal', fontSize: '18px', fontWeight: '500', lineHeight: '26px', color: 'rgba(26, 60, 85, 0.9)' }}>Certificate of Completion</span>
@@ -96,7 +96,7 @@ const AboutCourse = ({ course }) => {
                                             <Item sx={{ backgroundColor: 'transparent', boxShadow: '0' }}>
                                                 <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', justifyContent: { xs: 'center', xl: 'left' } }}>
                                                     <Box>
-                                                        <Image src={documentIcon} />
+                                                        <Image src={documentIcon} alt="" />
                                                     </Box>
                                                     <Box sx={{ textAlign: 'left', marginLeft: '30px' }}>
                                                         <span style={{ fontStyle: 'normal', fontSize: '16px', fontWeight: '400', lineHeight: '26px', color: 'rgba(76, 112, 138, 0.9)' }}>Renewal Requirements</span> <br /> <span style={{ fontStyle: 'normal', fontSize: '18px', fontWeight: '500', lineHeight: '26px', color: 'rgba(26, 60, 85, 0.9)' }}>Check with your Employer</span>
@@ -108,7 +108,7 @@ const AboutCourse = ({ course }) => {
                                             <Item sx={{ backgroundColor: 'transparent', boxShadow: '0' }}>
                                                 <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', justifyContent: { xs: 'center', xl: 'left' } }}>
                                                     <Box>
-                                                        <Image src={clockIcon} />
+                                                        <Image src={clockIcon} alt="" />
                                                     </Box>
                                                     <Box sx={{ textAlign: 'left', marginLeft: '30px' }}>
                                                         <span style={{ fontStyle: 'normal', fontSize: '16px', fontWeight: '400', lineHeight: '26px', color: 'rgba(76, 112, 138, 0.9)' }}>Course Duration</span> <br /> <span style={{ fontStyle: 'normal', fontSize: '18px', fontWeight: '500', lineHeight: '26px', color: 'rgba(26, 60, 85, 0.9)' }}>4 Hours 32 Minutes</span>
@@ -120,7 +120,7 @@ const AboutCourse = ({ course }) => {
                                             <Item sx={{ backgroundColor: 'transparent', boxShadow: '0' }}>
                                                 <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', justifyContent: { xs: 'center', xl: 'left' } }}>
                                                     <Box>
-                                                        <Image src={supportIcon} />
+                                                        <Image src={supportIcon} alt="" />
                                                     </Box >
                                                     <Box sx={{ textAlign: 'left', marginLeft: '30px' }}>
                                                         <span style={{ fontStyle: 'normal', fontSize: '16px', fontWeight: '400', lineHeight: '26px', color: 'rgba(76, 112, 138, 0.9)' }}>Support</span> <br /> <span style={{ fontStyle: 'normal', fontSize: '18px', fontWeight: '500', lineHeight: '26px', color: 'rgba(26, 60, 85, 0.9)' }}>24/7 Customer Support</span>
