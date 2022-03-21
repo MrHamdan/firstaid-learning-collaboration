@@ -12,7 +12,7 @@ import { fetchCourses } from "Redux/actions/fetchCourses";
 import styles from "../styles/Home.module.css";
 
 
-export default function Home({ courses, freeResources }) {
+export default function Home({ courses, freeResources, newses }) {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchCourses(courses));
@@ -24,7 +24,7 @@ export default function Home({ courses, freeResources }) {
       <Freeresources freeResources={freeResources} />
       <TipsSection />
       <StudentReviewSection />
-      <LatestNews />
+      <LatestNews newses={newses} />
     </div>
   );
 
@@ -36,14 +36,18 @@ export async function getStaticProps() {
   const courseResponse = await fetch('https://tawsifhye.github.io/data/courses.json');
   const courses = await courseResponse.json();
 
-  const freeResouresResponse = await fetch('  https://tawsifhye.github.io/data/freeresources.json');
+  const freeResouresResponse = await fetch('https://tawsifhye.github.io/data/freeresources.json');
   const freeResources = await freeResouresResponse.json();
+
+  const latestNewsResponse = await fetch('https://tawsifhye.github.io/data/latestnews.json');
+  const newses = await latestNewsResponse.json();
 
 
   return {
     props: {
       courses,
-      freeResources
+      freeResources,
+      newses
     }
   }
 }

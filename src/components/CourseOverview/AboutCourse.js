@@ -8,6 +8,10 @@ import documentIcon from '../../Images/documenticon.png'
 import clockIcon from '../../Images/clockicon.png'
 import supportIcon from '../../Images/supporticon.png'
 import PrimaryButton from 'components/Shared/PrimaryButton';
+import { useDispatch, useSelector } from 'react-redux';
+import { useEffect, useState } from 'react';
+import { addCupon, addToCart } from 'Redux/actions/cartAction';
+import Link from 'next/link';
 
 const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -32,6 +36,29 @@ const Styles = {
 
 
 const AboutCourse = ({ course }) => {
+
+    const { cart } = useSelector((state) => state.cart);
+    const dispatch = useDispatch();
+    const { id, title, coverImage, enrolledStudents, rating } = course;
+    const [isAdded, setIsAdded] = useState(false);
+
+    useEffect(() => {
+        const added = cart.find((item) => item.id === course.id);
+        if (added) {
+            setIsAdded(true);
+        }
+    }, [cart, course]);
+
+    const handleAddToCart = (course) => {
+        course = {
+            ...course,
+            quantity: 1,
+        };
+        const newCart = [...cart, course];
+        dispatch(addToCart(newCart));
+        dispatch(addCupon(false));
+        setIsAdded(true);
+    };
     return (
         <>
             <Box sx={{ ...Styles.detailBackground }}>
@@ -48,7 +75,7 @@ const AboutCourse = ({ course }) => {
                                 </Item>
                             </Grid>
                             <Grid item xs={12} xl={6} md={12}>
-                                <Item sx={{ backgroundColor: 'transparent', boxShadow: '0' }}><Image src={course.coverImage} width={589} height={425} /></Item>
+                                <Item sx={{ backgroundColor: 'transparent', boxShadow: '0' }}><Image src={course.coverImage} width={589} height={425} alt="" /></Item>
                             </Grid>
                             <Grid item xs={12} xl={6} md={12} sx={{ marginTop: { xs: '120px', xl: '0px' } }}>
                                 <Item sx={{ backgroundColor: 'transparent', boxShadow: '0' }}>
@@ -57,7 +84,7 @@ const AboutCourse = ({ course }) => {
                                             <Item sx={{ backgroundColor: 'transparent', boxShadow: '0' }}>
                                                 <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: { xs: 'center', xl: 'left' } }}>
                                                     <Box>
-                                                        <Image src={certificateIcon} />
+                                                        <Image src={certificateIcon} alt="" />
                                                     </Box>
                                                     <Box sx={{ textAlign: 'left', marginLeft: '30px' }}>
                                                         <span style={{ fontStyle: 'normal', fontSize: '16px', fontWeight: '400', lineHeight: '26px', color: 'rgba(76, 112, 138, 0.9)' }}>You will Get</span> <br /> <span style={{ fontStyle: 'normal', fontSize: '18px', fontWeight: '500', lineHeight: '26px', color: 'rgba(26, 60, 85, 0.9)' }}>Certificate of Completion</span>
@@ -69,7 +96,7 @@ const AboutCourse = ({ course }) => {
                                             <Item sx={{ backgroundColor: 'transparent', boxShadow: '0' }}>
                                                 <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', justifyContent: { xs: 'center', xl: 'left' } }}>
                                                     <Box>
-                                                        <Image src={documentIcon} />
+                                                        <Image src={documentIcon} alt="" />
                                                     </Box>
                                                     <Box sx={{ textAlign: 'left', marginLeft: '30px' }}>
                                                         <span style={{ fontStyle: 'normal', fontSize: '16px', fontWeight: '400', lineHeight: '26px', color: 'rgba(76, 112, 138, 0.9)' }}>Renewal Requirements</span> <br /> <span style={{ fontStyle: 'normal', fontSize: '18px', fontWeight: '500', lineHeight: '26px', color: 'rgba(26, 60, 85, 0.9)' }}>Check with your Employer</span>
@@ -81,7 +108,7 @@ const AboutCourse = ({ course }) => {
                                             <Item sx={{ backgroundColor: 'transparent', boxShadow: '0' }}>
                                                 <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', justifyContent: { xs: 'center', xl: 'left' } }}>
                                                     <Box>
-                                                        <Image src={clockIcon} />
+                                                        <Image src={clockIcon} alt="" />
                                                     </Box>
                                                     <Box sx={{ textAlign: 'left', marginLeft: '30px' }}>
                                                         <span style={{ fontStyle: 'normal', fontSize: '16px', fontWeight: '400', lineHeight: '26px', color: 'rgba(76, 112, 138, 0.9)' }}>Course Duration</span> <br /> <span style={{ fontStyle: 'normal', fontSize: '18px', fontWeight: '500', lineHeight: '26px', color: 'rgba(26, 60, 85, 0.9)' }}>4 Hours 32 Minutes</span>
@@ -93,7 +120,7 @@ const AboutCourse = ({ course }) => {
                                             <Item sx={{ backgroundColor: 'transparent', boxShadow: '0' }}>
                                                 <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', justifyContent: { xs: 'center', xl: 'left' } }}>
                                                     <Box>
-                                                        <Image src={supportIcon} />
+                                                        <Image src={supportIcon} alt="" />
                                                     </Box >
                                                     <Box sx={{ textAlign: 'left', marginLeft: '30px' }}>
                                                         <span style={{ fontStyle: 'normal', fontSize: '16px', fontWeight: '400', lineHeight: '26px', color: 'rgba(76, 112, 138, 0.9)' }}>Support</span> <br /> <span style={{ fontStyle: 'normal', fontSize: '18px', fontWeight: '500', lineHeight: '26px', color: 'rgba(26, 60, 85, 0.9)' }}>24/7 Customer Support</span>
@@ -124,7 +151,25 @@ const AboutCourse = ({ course }) => {
                                             <span style={{ fontStyle: 'normal', fontWeight: '700', fontSize: '44.8px', lineHeight: '115.4%', color: '#EA2E10' }}>£{parseFloat(course?.regularPrice - course?.regularPrice * .75).toFixed(2)}</span>
                                         </Box>
                                         <Box>
-                                            <PrimaryButton>BUY NOW</PrimaryButton>
+                                            {!isAdded ? (
+                                                <Link
+                                                    href="/cart"
+                                                    style={{ textDecoration: "none" }}
+                                                    passHref
+                                                >
+                                                    <PrimaryButton onClick={() => handleAddToCart(course)}>
+                                                        BUY NOW
+                                                    </PrimaryButton>
+                                                </Link>
+                                            ) : (
+                                                <Link
+                                                    href="/cart"
+                                                    style={{ textDecoration: "none" }}
+                                                    passHref
+                                                >
+                                                    <PrimaryButton>Added</PrimaryButton>
+                                                </Link>
+                                            )}
                                         </Box>
                                     </Box>
                                 </Item>
