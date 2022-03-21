@@ -40,7 +40,7 @@ const CourseFaq = () => {
                         <Box sx={{ flexGrow: 1, marginTop: '75px' }}>
                             <Grid container spacing={2}>
                                 <Grid item xs={12} xl={6}>
-                                    <Item sx={{ backgroundColor: 'transparent', textAlign: 'left', boxShadow: '0px 16px 37px rgba(90, 141, 217, 0.1)' }}><Accordion>
+                                    <Item sx={{ backgroundColor: 'transparent', textAlign: 'left', boxShadow: '0px 0px 0px rgba(90, 141, 217, 0.1)' }}><Accordion sx={{ marginBottom: '20px', boxShadow: '0px 16px 37px rgba(90, 141, 217, 0.1)', borderRadius: '8px' }}>
                                         <AccordionSummary
                                             expandIcon={<AddIcon />}
                                             aria-controls="panel1a-content"
@@ -55,7 +55,7 @@ const CourseFaq = () => {
                                             </Typography>
                                         </AccordionDetails>
                                     </Accordion>
-                                        <Accordion>
+                                        <Accordion sx={{ marginBottom: '20px', boxShadow: '0px 16px 37px rgba(90, 141, 217, 0.1)', borderRadius: '8px' }}>
                                             <AccordionSummary
                                                 expandIcon={<AddIcon />}
                                                 aria-controls="panel2a-content"
@@ -70,7 +70,7 @@ const CourseFaq = () => {
                                                 </Typography>
                                             </AccordionDetails>
                                         </Accordion>
-                                        <Accordion>
+                                        <Accordion sx={{ marginBottom: '20px', boxShadow: '0px 16px 37px rgba(90, 141, 217, 0.1)', borderRadius: '8px' }}>
                                             <AccordionSummary
                                                 expandIcon={<AddIcon />}
                                                 aria-controls="panel2a-content"
@@ -87,7 +87,7 @@ const CourseFaq = () => {
                                         </Accordion></Item>
                                 </Grid>
                                 <Grid item xs={12} xl={6}>
-                                    <Item sx={{ backgroundColor: 'transparent', textAlign: 'left', boxShadow: '0px 16px 37px rgba(90, 141, 217, 0.1)' }}><Accordion>
+                                    <Item sx={{ backgroundColor: 'transparent', textAlign: 'left', boxShadow: '0px 0px 0px rgba(90, 141, 217, 0.1)' }}><Accordion sx={{ marginBottom: '20px', boxShadow: '0px 16px 37px rgba(90, 141, 217, 0.1)', borderRadius: '8px' }}>
                                         <AccordionSummary
                                             expandIcon={<AddIcon />}
                                             aria-controls="panel1a-content"
@@ -102,7 +102,7 @@ const CourseFaq = () => {
                                             </Typography>
                                         </AccordionDetails>
                                     </Accordion>
-                                        <Accordion>
+                                        <Accordion sx={{ marginBottom: '20px', boxShadow: '0px 16px 37px rgba(90, 141, 217, 0.1)', borderRadius: '8px' }}>
                                             <AccordionSummary
                                                 expandIcon={<AddIcon />}
                                                 aria-controls="panel2a-content"
@@ -117,7 +117,7 @@ const CourseFaq = () => {
                                                 </Typography>
                                             </AccordionDetails>
                                         </Accordion>
-                                        <Accordion>
+                                        <Accordion sx={{ marginBottom: '20px', boxShadow: '0px 16px 37px rgba(90, 141, 217, 0.1)', borderRadius: '8px' }}>
                                             <AccordionSummary
                                                 expandIcon={<AddIcon />}
                                                 aria-controls="panel2a-content"
@@ -132,7 +132,7 @@ const CourseFaq = () => {
                                                 </Typography>
                                             </AccordionDetails>
                                         </Accordion>
-                                        <Accordion>
+                                        <Accordion sx={{ marginBottom: '20px', boxShadow: '0px 16px 37px rgba(90, 141, 217, 0.1)', borderRadius: '8px' }}>
                                             <AccordionSummary
                                                 expandIcon={<AddIcon />}
                                                 aria-controls="panel2a-content"
