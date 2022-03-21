@@ -8,6 +8,10 @@ import documentIcon from '../../Images/documenticon.png'
 import clockIcon from '../../Images/clockicon.png'
 import supportIcon from '../../Images/supporticon.png'
 import PrimaryButton from 'components/Shared/PrimaryButton';
+import { useDispatch, useSelector } from 'react-redux';
+import { useEffect, useState } from 'react';
+import { addCupon, addToCart } from 'Redux/actions/cartAction';
+import Link from 'next/link';
 
 const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -32,6 +36,29 @@ const Styles = {
 
 
 const AboutCourse = ({ course }) => {
+
+    const { cart } = useSelector((state) => state.cart);
+    const dispatch = useDispatch();
+    const { id, title, coverImage, enrolledStudents, rating } = course;
+    const [isAdded, setIsAdded] = useState(false);
+
+    useEffect(() => {
+        const added = cart.find((item) => item.id === course.id);
+        if (added) {
+            setIsAdded(true);
+        }
+    }, [cart, course]);
+
+    const handleAddToCart = (course) => {
+        course = {
+            ...course,
+            quantity: 1,
+        };
+        const newCart = [...cart, course];
+        dispatch(addToCart(newCart));
+        dispatch(addCupon(false));
+        setIsAdded(true);
+    };
     return (
         <>
             <Box sx={{ ...Styles.detailBackground }}>
@@ -48,7 +75,7 @@ const AboutCourse = ({ course }) => {
                                 </Item>
                             </Grid>
                             <Grid item xs={12} xl={6} md={12}>
-                                <Item sx={{ backgroundColor: 'transparent', boxShadow: '0' }}><Image src={course.coverImage} width={589} height={425} /></Item>
+                                <Item sx={{ backgroundColor: 'transparent', boxShadow: '0' }}><Image src={course.coverImage} width={589} height={425} alt="" /></Item>
                             </Grid>
                             <Grid item xs={12} xl={6} md={12} sx={{ marginTop: { xs: '120px', xl: '0px' } }}>
                                 <Item sx={{ backgroundColor: 'transparent', boxShadow: '0' }}>
@@ -124,7 +151,25 @@ const AboutCourse = ({ course }) => {
                                             <span style={{ fontStyle: 'normal', fontWeight: '700', fontSize: '44.8px', lineHeight: '115.4%', color: '#EA2E10' }}>£{parseFloat(course?.regularPrice - course?.regularPrice * .75).toFixed(2)}</span>
                                         </Box>
                                         <Box>
-                                            <PrimaryButton>BUY NOW</PrimaryButton>
+                                            {!isAdded ? (
+                                                <Link
+                                                    href="/cart"
+                                                    style={{ textDecoration: "none" }}
+                                                    passHref
+                                                >
+                                                    <PrimaryButton onClick={() => handleAddToCart(course)}>
+                                                        BUY NOW
+                                                    </PrimaryButton>
+                                                </Link>
+                                            ) : (
+                                                <Link
+                                                    href="/cart"
+                                                    style={{ textDecoration: "none" }}
+                                                    passHref
+                                                >
+                                                    <PrimaryButton>Added</PrimaryButton>
+                                                </Link>
+                                            )}
                                         </Box>
                                     </Box>
                                 </Item>

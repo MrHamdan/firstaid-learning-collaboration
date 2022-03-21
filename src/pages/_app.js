@@ -22,7 +22,7 @@ function MyApp({ Component, pageProps }) {
                             stopDelayMs={200}
                             height={3}
                             showOnShallow={true}
-                            />
+                        />
                         <Component {...pageProps} />
                         <Footer />
                     </Elements>
