@@ -15,6 +15,7 @@ const settings = {
     arrows: false,
     dots: true,
     infinite: false,
+    centerMode: true,
     slidesToShow: 3,
     slidesToScroll: 1,
     initialSlide: 1,

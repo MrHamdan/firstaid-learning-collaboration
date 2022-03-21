@@ -16,9 +16,3 @@
 .slick_track {
     width: fit-content !important;
 }
-
-.slick-center {
-    -webkit-transform: scale(1.25);
-    -moz-transform: scale(1.25);
-    transform: scale(1.25);
-}

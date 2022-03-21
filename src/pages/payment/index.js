@@ -6,7 +6,7 @@ const index = () => {
         <>
             <Head>
                 <title>Payment</title>
-                <link rel="shortcut icon" href="favicon2.ico"></link>
+                <link rel="shortcut icon" href=""></link>
             </Head>
             <Payment />
         </>

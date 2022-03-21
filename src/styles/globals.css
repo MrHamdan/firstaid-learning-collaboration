@@ -35,7 +35,11 @@ a {
   border-bottom: 5px solid #EA2E10;
 }
 
-
+/* .slick-center {
+  -webkit-transform: scale(1.25);
+  -moz-transform: scale(1.25);
+  transform: scale(1.25);
+} */
 
 
 @media screen and (max-width: 768px) {
