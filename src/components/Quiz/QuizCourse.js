@@ -3,20 +3,21 @@ import CourseCard from "components/Courses/CourseCard"
 
 
 import Link from "next/link"
-import React, { useEffect, useState } from "react"
+import React,{ useEffect, useState } from "react"
 
 
 
-const QuizCourse = ({ level, courses }) => {
-
-  const [courseByquizLvl, setCourseByQuizlvl] = useState([])
-
-
-  useEffect(() => {
-    const courseByLevel = courses?.filter(course => course.level === level)
-    setCourseByQuizlvl(courseByLevel);
-  }, [level])
-
+const QuizCourse = ({level , courses}) => {
+ 
+    const [courseByquizLvl,setCourseByQuizlvl]=useState([])
+ 
+    
+       useEffect(() => {
+        const courseByLevel = courses?.filter(course => course.level === level)
+        setCourseByQuizlvl(courseByLevel);
+       },[level])
+   
+   
 
   return (
     <Box sx={{ my: 3 }}>

@@ -6,7 +6,7 @@ import QuizCourse from "./QuizCourse";
 import QuizResultHeader from "./QuizResultHeader";
 
 
-const ResultsHome = () => {
+const ResultsHome = ({courses}) => {
 
   const answer = useSelector(state => state.allQuiz.finalAnswers)
   const [level,setLevel]=useState();
@@ -57,7 +57,7 @@ const ResultsHome = () => {
 
       <QuizResultHeader answer={answer} correctAnswerArray={correctAnswerArray} ></QuizResultHeader>
       <Answer  answer={answer}/>
-        <QuizCourse level={level}/>
+        <QuizCourse level={level} courses={courses}/>
     </Container>
   )
 }

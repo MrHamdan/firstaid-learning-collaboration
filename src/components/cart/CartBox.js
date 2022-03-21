@@ -18,7 +18,7 @@ import RemoveIcon from '@mui/icons-material/Remove';
 const CartBox = () => {
     const state = useSelector(state => state.cart);
     const dispatch = useDispatch();
-    
+
     const { cart, subTotal, totalVat, totalPrice, discountPrice, cuponUsed } = state;
     const vat = 0.15;
 
@@ -188,7 +188,7 @@ const CartBox = () => {
                         <Typography>${!cuponUsed ? totalPrice : discountPrice}</Typography>
                         {/* <Typography>${totalPrice}</Typography> */}
                     </Box>
-                    <Link href='/payment'><Button variant="contained">Proceed To Checkout</Button></Link>
+                    <Link href='/payment'><a ><Button variant="contained" sx={{width:'100%'}}>Proceed To Checkout</Button></a></Link>
                 </Box >
             </Container >
 
