@@ -8,31 +8,8 @@ const initialState = {
 }
 
 export const cartReducer = (state = initialState, action) => {
-    if (action.type === 'LOAD_COURSE') {
-        return {
-            ...state,
-            courses: action.payload
-        }
-    }
-    else if (action.type === 'LOAD_FREE_RESOURCE') {
-        return {
-            ...state,
-            freeResources: action.payload
-        }
-    }
-    else if (action.type === 'LOAD_QUIZ') {
-        return {
-            ...state,
-            quizzes: action.payload
-        }
-    }
-    else if (action.type === 'SUBMIT_QUIZ') {
-        return {
-            ...state,
-            finalAnswers: action.payload
-        }
-    }
-    else if (action.type === 'ADD_TO_CART') {
+
+    if (action.type === 'ADD_TO_CART') {
         return {
             ...state,
             cart: action.payload
