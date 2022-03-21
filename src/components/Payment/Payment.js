@@ -1,42 +1,14 @@
 import paymentBg from '../../Images/paymentbackground.png';
 
-import { Box, Button, Container, FormControl, Grid, InputLabel, MenuItem, Paper, Select, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, TextField, Typography } from '@mui/material';
+import { Box, Button, Container, FormControl, Grid, MenuItem, Paper, Select, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, TextField, Typography } from '@mui/material';
 import React, { useContext, useState } from 'react';
 import { styled } from '@mui/material/styles';
-import { loadStripe } from '@stripe/stripe-js';
-import { CardElement, Elements, useElements, useStripe, CardNumberElement, CardExpiryElement, CardCvcElement } from '@stripe/react-stripe-js';
+import { useElements, useStripe, CardNumberElement, CardExpiryElement, CardCvcElement } from '@stripe/react-stripe-js';
 import Swal from 'sweetalert2';
 import { useSelector } from 'react-redux';
 
 
-const TAX_RATE = 0.07;
 
-function ccyFormat(num) {
-    return `${num.toFixed(2)}`;
-}
-
-function priceRow(qty, unit) {
-    return qty * unit;
-}
-
-function createRow(desc, qty, unit) {
-    const price = priceRow(qty, unit);
-    return { desc, qty, unit, price };
-}
-
-function subtotal(items) {
-    return items.map(({ price }) => price).reduce((sum, i) => sum + i, 0);
-}
-
-const rows = [
-    createRow('Paperclips (Box)', 100, 1.15),
-    createRow('Paper (Case)', 10, 45.99),
-    createRow('Waste Basket', 2, 17.99),
-];
-
-const invoiceSubtotal = subtotal(rows);
-const invoiceTaxes = TAX_RATE * invoiceSubtotal;
-const invoiceTotal = invoiceTaxes + invoiceSubtotal;
 
 
 
@@ -61,10 +33,10 @@ const Styles = {
 }
 
 const Payment = () => {
-    const { cart, subTotal, totalVat, totalPrice, discountPrice, cuponUsed } = useSelector(state => state);
+    const { cart, subTotal, totalVat, totalPrice, cuponUsed, discountPrice } = useSelector(state => state.cart);
     const vat = 0.15;
 
-
+    console.log(cart);
 
 
     const [country, setCountry] = React.useState('');
@@ -78,25 +50,21 @@ const Payment = () => {
     const elements = useElements();
 
     const handleSubmit = async (event) => {
-        // Block native form submission.
+
         event.preventDefault();
 
         if (!stripe || !elements) {
-            // Stripe.js has not loaded yet. Make sure to disable
-            // form submission until Stripe.js has loaded.
             return;
         }
 
-        // Get a reference to a mounted CardElement. Elements knows how
-        // to find your CardElement because there can only ever be one of
-        // each type of element.
+
         const card = elements.getElement(CardNumberElement);
 
         if (card == null) {
             return;
         }
 
-        // Use your card Element with other Stripe.js APIs
+
         const { error, paymentMethod } = await stripe.createPaymentMethod({
             type: 'card',
             card,
@@ -176,34 +144,34 @@ const Payment = () => {
                                                         <TableHead>
                                                             <TableRow>
                                                                 <TableCell align="left" colSpan={3}>
-                                                                    Details
+                                                                    Course Name
                                                                 </TableCell>
                                                                 <TableCell align="right">Subtotal</TableCell>
                                                             </TableRow>
                                                         </TableHead>
                                                         <TableBody>
-                                                            {rows.map((row) => (
-                                                                <TableRow key={row.desc}>
-                                                                    <TableCell>{row.desc}</TableCell>
+                                                            {cart.map((item) => (
+                                                                <TableRow key={item.id}>
+                                                                    <TableCell sx={{ display: 'flex', alignItems: 'center' }}><img style={{ width: '60px', height: '60px', borderRadius: '6px', marginRight: '20px' }} src={item.coverImage} alt="" /> {item.title}</TableCell>
                                                                     <TableCell align="right"></TableCell>
                                                                     <TableCell align="right"></TableCell>
-                                                                    <TableCell align="right">{ccyFormat(row.price)}</TableCell>
+                                                                    <TableCell align="right">£ {item.regularPrice}</TableCell>
                                                                 </TableRow>
                                                             ))}
 
                                                             <TableRow>
                                                                 <TableCell rowSpan={3} />
                                                                 <TableCell colSpan={2}>Subtotal</TableCell>
-                                                                <TableCell align="right">{ccyFormat(invoiceSubtotal)}</TableCell>
+                                                                <TableCell align="right">£ {subTotal}</TableCell>
                                                             </TableRow>
                                                             <TableRow>
                                                                 <TableCell>Vat</TableCell>
                                                                 <TableCell align="right"></TableCell>
-                                                                <TableCell align="right">{ccyFormat(invoiceTaxes)}</TableCell>
+                                                                <TableCell align="right">£ {totalVat}</TableCell>
                                                             </TableRow>
                                                             <TableRow>
                                                                 <TableCell colSpan={2}>Total</TableCell>
-                                                                <TableCell align="right">{ccyFormat(invoiceTotal)}</TableCell>
+                                                                <TableCell align="right"> £ {!cuponUsed ? totalPrice : discountPrice}</TableCell>
                                                             </TableRow>
                                                         </TableBody>
                                                     </Table>
