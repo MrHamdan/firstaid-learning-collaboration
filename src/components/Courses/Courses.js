@@ -42,7 +42,7 @@ const Courses = ({ courses }) => {
                         content={courses?.map(course => (
                             <CourseCard key={course.id} course={course} />
                         ))}
-                    />
+                        />
                 </Box>
 
 
@@ -52,3 +52,12 @@ const Courses = ({ courses }) => {
 };
 
 export default Courses;
+
+
+// <Box sx={{ backgroundColor: '#FEF9F7', mt: '30px', padding: '10px' }}>
+//                     <Carousel sliderRef={sliderRef}
+//                         content={courses?.map(course => (
+//                             <CourseCard key={course.id} course={course} />
+//                         ))}
+//                     />
+//                 </Box>
