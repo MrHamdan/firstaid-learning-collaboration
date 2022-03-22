@@ -7,182 +7,89 @@ import Content from "../shared/Content";
 import Carousel from "../shared/Carousel";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 const reviews = [
- {
-  id: "1",
-  review:
-   "Whenever I think of quality education now, I think of them instantly. I’ve done so many courses in my free time and learned so much! Thank you, for redefining online education for me!",
-  name: "Ellison Morkel",
- },
- {
-  id: "2",
-  review:
-   "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et libero recusandae unde labore numquam at optio deleniti. Dicta, modi cum!",
-  name: "Morne Morkel",
- },
- {
-  id: "3",
-  review:
-   "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam repudiandae, nulla praesentium tenetur neque assumenda ex harum repellat eius facere id laudantium necessitatibus laboriosam nemo!",
-  name: "Jhon Doe",
- },
+    {
+        id: "1",
+        review:
+            "Whenever I think of quality education now, I think of them instantly. I’ve done so many courses in my free time and learned so much! Thank you, for redefining online education for me!",
+        name: "Ellison Morkel",
+    },
+    {
+        id: "2",
+        review:
+            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et libero recusandae unde labore numquam at optio deleniti. Dicta, modi cum!",
+        name: "Morne Morkel",
+    },
+    {
+        id: "3",
+        review:
+            "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam repudiandae, nulla praesentium tenetur neque assumenda ex harum repellat eius facere id laudantium necessitatibus laboriosam nemo!",
+        name: "Jhon Doe",
+    },
 ];
 
 const StudentReviewSection = () => {
- const sliderRef = React.useRef(null);
- return (
-  <Box
-   sx={{
-    mt: "50px",
-    background:
-     "linear-gradient(180deg, rgba(255, 246, 246, 0) 0%, rgba(255, 246, 246, 0.8) 75.15%)",
-   }}
-  >
-   <Typography textAlign="center">
-    {" "}
-    <Tagline>
-     {
-      <div>
-       We Value Our Students, <br />
-       Let’s Hear from them
-      </div>
-     }
-    </Tagline>
-   </Typography>
-
-   <Container sx={{ maxWidth: { xl: "xl", lg: "lg" } }}>
-    <Box sx={{ mx: "auto", textAlign: "center", padding: "20px 10px" }}>
-     <Box sx={{ position: "relative" }}>
-      <Carousel
-       sliderRef={sliderRef}
-       slidesToShow={1}
-       slidesToScroll={1}
-       content={reviews.map((data) => (
-        <Card
-         key={data.id}
-         sx={{
-          maxWidth: 400,
-          minWidth: 100,
-          boxShadow: "0px 18px 52.8537px rgba(234, 46, 16, 0.09)",
-          borderRadius: "20px",
-          padding: "50px",
-          backgroundImage: `url(${quote})`,
-          backgroundSize: "25%",
-          backgroundRepeat: "no-repeat",
-          backgroundPosition: "center",
-          marginTop: "50px",
-          zIndex: 100,
-         }}
+    const sliderRef = React.useRef(null);
+    return (
+        <Box
+            sx={{
+                mt: "50px",
+                background:
+                    "linear-gradient(180deg, rgba(255, 246, 246, 0) 0%, rgba(255, 246, 246, 0.8) 75.15%)",
+            }}
         >
-<<<<<<< HEAD
-            <Typography textAlign="center"> <Tagline>{<div>We Value Our Students, <br />Let’s Hear from them</div>}</Tagline></Typography>
-
+            <Typography textAlign="center">
+                {" "}
+                <Tagline>
+                    {
+                        <div>
+                            We Value Our Students, <br />
+                            Let’s Hear from them
+                        </div>
+                    }
+                </Tagline>
+            </Typography>
 
             <Container sx={{ maxWidth: { xl: "xl", lg: "lg" } }}>
+                <Box sx={{ mx: "auto", textAlign: "center", padding: "20px 10px" }}>
+                    <Box sx={{ position: "relative" }}>
+                        <Carousel
+                            sliderRef={sliderRef}
+                            slidesToShow={1}
+                            slidesToScroll={1}
+                            content={reviews.map((data) => (
+                                <Card
+                                    key={data.id}
+                                    sx={{
+                                        maxWidth: 400,
+                                        minWidth: 100,
+                                        boxShadow: "0px 18px 52.8537px rgba(234, 46, 16, 0.09)",
+                                        borderRadius: "20px",
+                                        padding: "50px",
+                                        backgroundImage: `url(${quote})`,
+                                        backgroundSize: "25%",
+                                        backgroundRepeat: "no-repeat",
+                                        backgroundPosition: "center",
+                                        marginTop: "50px",
+                                        zIndex: 100,
+                                    }}
+                                >
+                                    <br /> <br />
+                                    <Typography style={{ width: "100%" }}>
+                                        <Content fontSize="20px">{data.review} </Content>
+                                    </Typography>
+                                    <br />
+                                    <Typography>
+                                        {" "}
+                                        <span>- </span>{" "}
+                                        <span>
+                                            <Tagline fontSize="20px">{data.name}</Tagline>
+                                        </span>
+                                    </Typography>
+                                </Card>
+                            ))}
+                        />
 
-                <Box sx={{ mx: 'auto', textAlign: 'center', padding: '20px 10px', position: 'relative' }}>
-
-
-                    <Carousel sliderRef={sliderRef} slidesToShow={1} slidesToScroll={1}
-
-                        content={reviews.map(data => (
-                            <Card key={data.id} sx={{
-                                maxWidth: 400,
-                                minWidth: 100,
-                                boxShadow: '0px 18px 52.8537px rgba(234, 46, 16, 0.09)',
-                                borderRadius: '20px',
-                                padding: '50px',
-                                backgroundImage: `url(${quote})`,
-                                backgroundSize: '25%',
-                                backgroundRepeat: 'no-repeat',
-                                backgroundPosition: 'center',
-                                marginTop: '50px',
-                                zIndex: 100,
-                            }}>
-                                <br /> <br />
-                                <Typography style={{ width: '100%' }}><Content fontSize='20px' >{data.review} </Content></Typography>
-                                <br />
-                                <Typography> <span>- </span> <span><Tagline fontSize='20px'>{data.name}</Tagline></span></Typography>
-                            </Card>
-                        ))
-                        }
-                    />
-
-                    <ArrowRightAltIcon sx={{
-                        transform: 'rotate(180deg)',
-                        color: '#B3AEAE',
-                        fontSize: '40px',
-                        '&:active': {
-                            color: '#EA2E10',
-                            transform: 'rotate(180deg) scaleX(1.5)'
-                        }
-                    }}
-                        onClick={() => sliderRef?.current?.slickPrev()}
-                    />
-                    <ArrowRightAltIcon sx={{
-                        color: '#B3AEAE',
-                        fontSize: '40px',
-                        '&:active': {
-                            color: '#EA2E10',
-                            transform: 'scaleX(1.5)'
-                        }
-                    }}
-                        onClick={() => sliderRef?.current?.slickNext()}
-                    />
-
-                    <Box
-                        component="img"
-                        sx={{
-                            bottom: '50px',
-                            left: '700px',
-                            width: '200px',
-                            display: {
-                                xs: 'none',
-                                lg: 'block'
-                            },
-                            position: 'absolute',
-                            zIndex: -1,
-                        }}
-                        src={dot_bg.src}
-                    />
-                    <Box
-                        component="img"
-                        sx={{
-                            top: '50px',
-                            right: '700px',
-                            width: '200px',
-                            position: 'absolute',
-                            display: {
-                                xs: 'none',
-                                lg: 'block'
-                            },
-                            zIndex: -1
-                        }}
-                        src={dot_bg.src}
-                    />
-                </Box>
-
-
-            </Container>
-        </Box>
-    );
-=======
-         <br /> <br />
-         <Typography style={{ width: "100%" }}>
-          <Content fontSize="20px">{data.review} </Content>
-         </Typography>
-         <br />
-         <Typography>
-          {" "}
-          <span>- </span>{" "}
-          <span>
-           <Tagline fontSize="20px">{data.name}</Tagline>
-          </span>
-         </Typography>
-        </Card>
-       ))}
-      />
-
-      {/* <Avatar sx={{
+                        {/* <Avatar sx={{
                             width: '136px',
                             height: '136px',
                             position: 'absolute',
@@ -259,67 +166,66 @@ const StudentReviewSection = () => {
                             }
                         }}
                             src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" /> */}
-     </Box>
+                    </Box>
 
-     <ArrowRightAltIcon
-      sx={{
-       transform: "rotate(180deg)",
-       color: "#B3AEAE",
-       fontSize: "40px",
-       "&:active": {
-        color: "#EA2E10",
-        transform: "rotate(180deg) scaleX(1.5)",
-       },
-      }}
-      onClick={() => sliderRef?.current?.slickPrev()}
-     />
-     <ArrowRightAltIcon
-      sx={{
-       color: "#B3AEAE",
-       fontSize: "40px",
-       "&:active": {
-        color: "#EA2E10",
-        transform: "scaleX(1.5)",
-       },
-      }}
-      onClick={() => sliderRef?.current?.slickNext()}
-     />
+                    <ArrowRightAltIcon
+                        sx={{
+                            transform: "rotate(180deg)",
+                            color: "#B3AEAE",
+                            fontSize: "40px",
+                            "&:active": {
+                                color: "#EA2E10",
+                                transform: "rotate(180deg) scaleX(1.5)",
+                            },
+                        }}
+                        onClick={() => sliderRef?.current?.slickPrev()}
+                    />
+                    <ArrowRightAltIcon
+                        sx={{
+                            color: "#B3AEAE",
+                            fontSize: "40px",
+                            "&:active": {
+                                color: "#EA2E10",
+                                transform: "scaleX(1.5)",
+                            },
+                        }}
+                        onClick={() => sliderRef?.current?.slickNext()}
+                    />
 
-     <Box
-      component="img"
-      sx={{
-       bottom: "50px",
-       left: "170px",
-       width: "200px",
-       display: {
-        xs: "none",
-        md: "block",
-       },
-       position: "absolute",
-       zIndex: -1,
-      }}
-      src={dot_bg}
-     />
-     <Box
-      component="img"
-      sx={{
-       top: "90px",
-       right: "190px",
-       width: "200px",
-       position: "absolute",
-       display: {
-        xs: "none",
-        md: "block",
-       },
-       zIndex: -1,
-      }}
-      src={dot_bg}
-     />
-    </Box>
-   </Container>
-  </Box>
- );
->>>>>>> hamim
+                    <Box
+                        component="img"
+                        sx={{
+                            bottom: "50px",
+                            left: "170px",
+                            width: "200px",
+                            display: {
+                                xs: "none",
+                                md: "block",
+                            },
+                            position: "absolute",
+                            zIndex: -1,
+                        }}
+                        src={dot_bg}
+                    />
+                    <Box
+                        component="img"
+                        sx={{
+                            top: "90px",
+                            right: "190px",
+                            width: "200px",
+                            position: "absolute",
+                            display: {
+                                xs: "none",
+                                md: "block",
+                            },
+                            zIndex: -1,
+                        }}
+                        src={dot_bg}
+                    />
+                </Box>
+            </Container>
+        </Box>
+    );
 };
 
 export default StudentReviewSection;
