@@ -1,5 +1,5 @@
-import React from 'react';
-import Slider from 'react-slick';
+import React from "react";
+import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -55,5 +55,6 @@ const Carousel = ({ content, sliderRef, slidesToShow, slidesToScroll, arrows, do
 
     );
 };
+
 
 export default Carousel;
