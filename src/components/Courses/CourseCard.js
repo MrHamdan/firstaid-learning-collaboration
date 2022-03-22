@@ -45,7 +45,7 @@ const CourseCard = ({ course }) => {
             mr: '10px',
             padding: '10px',
             background: '#FFFFFF',
-            boxShadow: '0px 45.799px 106.864px rgba(234, 46, 16, 0.06)',
+            boxShadow: '0px 0px 50px rgba(234, 46, 16, 0.06)',
             borderRadius: '19.0829px'
         }}>
 

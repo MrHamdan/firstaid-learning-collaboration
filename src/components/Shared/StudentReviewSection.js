@@ -6,6 +6,20 @@ import dot_bg from '../../images/dot-bg.png'
 import Content from '../shared/Content';
 import Carousel from '../shared/Carousel';
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
+import reviewpeople from '../../images/reviewpeople.png'
+
+
+const Styles = {
+    reviewpeopleBackground: {
+        backgroundImage: `url(${reviewpeople.src})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        height: { xl: '1209px', xs: '800px' },
+        width: '100%',
+    }
+}
+
 const reviews = [
     {
         id: "1",
@@ -28,102 +42,78 @@ const StudentReviewSection = () => {
 
     const sliderRef = React.useRef(null);
     return (
-        <Box
-            sx={{
-                mt: '50px',
-                background: 'linear-gradient(180deg, rgba(255, 246, 246, 0) 0%, rgba(255, 246, 246, 0.8) 75.15%)',
-            }}
-        >
-            <Typography textAlign="center"> <Tagline>{<div>We Value Our Students, <br />Let’s Hear from them</div>}</Tagline></Typography>
-
-
-            <Container sx={{ maxWidth: { xl: "xl", lg: "lg" } }}>
-
-                <Box sx={{ mx: 'auto', textAlign: 'center', padding: '20px 10px', position: 'relative' }}>
-
-
-                    <Carousel sliderRef={sliderRef} slidesToShow={1} slidesToScroll={1}
-
-                        content={reviews.map(data => (
-                            <Card key={data.id} sx={{
-                                maxWidth: 400,
-                                minWidth: 100,
-                                boxShadow: '0px 18px 52.8537px rgba(234, 46, 16, 0.09)',
-                                borderRadius: '20px',
-                                padding: '50px',
-                                backgroundImage: `url(${quote})`,
-                                backgroundSize: '25%',
-                                backgroundRepeat: 'no-repeat',
-                                backgroundPosition: 'center',
-                                marginTop: '50px',
-                                zIndex: 100,
-                            }}>
-                                <br /> <br />
-                                <Typography style={{ width: '100%' }}><Content fontSize='20px' >{data.review} </Content></Typography>
-                                <br />
-                                <Typography> <span>- </span> <span><Tagline fontSize='20px'>{data.name}</Tagline></span></Typography>
-                            </Card>
-                        ))
-                        }
-                    />
-
-                    <ArrowRightAltIcon sx={{
-                        transform: 'rotate(180deg)',
-                        color: '#B3AEAE',
-                        fontSize: '40px',
-                        '&:active': {
-                            color: '#EA2E10',
-                            transform: 'rotate(180deg) scaleX(1.5)'
-                        }
+        <>
+            <Box sx={{ ...Styles.reviewpeopleBackground }}>
+                <Box
+                    sx={{
+                        paddingTop: '200px'
                     }}
-                        onClick={() => sliderRef?.current?.slickPrev()}
-                    />
-                    <ArrowRightAltIcon sx={{
-                        color: '#B3AEAE',
-                        fontSize: '40px',
-                        '&:active': {
-                            color: '#EA2E10',
-                            transform: 'scaleX(1.5)'
-                        }
-                    }}
-                        onClick={() => sliderRef?.current?.slickNext()}
-                    />
+                >
+                    <Typography textAlign="center"> <Tagline>{<div>We Value Our Students, <br />Let’s Hear from them</div>}</Tagline></Typography>
 
-                    <Box
-                        component="img"
-                        sx={{
-                            bottom: '50px',
-                            left: '450px',
-                            width: '200px',
-                            display: {
-                                xs: 'none',
-                                md: 'block'
-                            },
-                            position: 'absolute',
-                            zIndex: -1,
-                        }}
-                        src={dot_bg.src}
-                    />
-                    <Box
-                        component="img"
-                        sx={{
-                            top: '50px',
-                            right: '450px',
-                            width: '200px',
-                            position: 'absolute',
-                            display: {
-                                xs: 'none',
-                                lg: 'block'
-                            },
-                            zIndex: -1
-                        }}
-                        src={dot_bg.src}
-                    />
+
+                    <Container sx={{ maxWidth: { xl: "xl", lg: "lg" } }}>
+
+                        <Box sx={{ mx: 'auto', textAlign: 'center', padding: '20px 10px', position: 'relative' }}>
+
+
+                            <Carousel sliderRef={sliderRef} slidesToShow={1} slidesToScroll={1}
+
+                                content={reviews.map(data => (
+                                    <Card key={data.id} sx={{
+                                        maxWidth: 730,
+                                        minWidth: 100,
+                                        maxHeight: 439,
+                                        minHeight: 100,
+                                        boxShadow: '0px 0px 50px rgba(234, 46, 16, 0.09)',
+                                        borderRadius: '20px',
+                                        padding: '50px',
+                                        backgroundImage: `url(${quote})`,
+                                        backgroundSize: '25%',
+                                        backgroundRepeat: 'no-repeat',
+                                        backgroundPosition: 'center',
+                                        marginTop: '50px',
+                                        zIndex: 100,
+                                    }}>
+                                        <br /> <br />
+                                        <Typography style={{ width: '100%' }}><Content fontSize='20px' >{data.review} </Content></Typography>
+                                        <br />
+                                        <Typography> <span>- </span> <span><Tagline fontSize='20px'>{data.name}</Tagline></span></Typography>
+                                    </Card>
+                                ))
+                                }
+                            />
+
+                            <ArrowRightAltIcon sx={{
+                                transform: 'rotate(180deg)',
+                                color: '#B3AEAE',
+                                fontSize: '40px',
+                                '&:active': {
+                                    color: '#EA2E10',
+                                    transform: 'rotate(180deg) scaleX(1.5)'
+                                }
+                            }}
+                                onClick={() => sliderRef?.current?.slickPrev()}
+                            />
+                            <ArrowRightAltIcon sx={{
+                                color: '#B3AEAE',
+                                fontSize: '40px',
+                                '&:active': {
+                                    color: '#EA2E10',
+                                    transform: 'scaleX(1.5)'
+                                }
+                            }}
+                                onClick={() => sliderRef?.current?.slickNext()}
+                            />
+
+
+                        </Box>
+
+
+                    </Container>
                 </Box>
-
-
-            </Container>
-        </Box>
+            </Box>
+        </>
     );
 };
 
