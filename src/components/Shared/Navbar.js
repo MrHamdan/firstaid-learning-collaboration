@@ -21,7 +21,6 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import { FaShoppingCart } from "react-icons/fa";
-import logo from "../../../public/assets/images/logo.png";
 import PrimaryButton from "./PrimaryButton";
 import SegmentRoundedIcon from "@mui/icons-material/SegmentRounded";
 import SearchIcon from "@mui/icons-material/Search";
@@ -126,7 +125,7 @@ const Navbar = () => {
                 >
                     <Toolbar disableGutters>
                         <Typography variant="h6" noWrap component="div" sx={Styles.logoContainer}>
-                            <Image src={logo} alt="" />
+                            <Image src="/assets/images/logo.png" width="200px" height="50px" alt="" />
                         </Typography>
 
                         {user.email && (
@@ -140,7 +139,7 @@ const Navbar = () => {
                                 component="div"
                                 sx={{ display: { xs: "flex", md: "none" }, maxWidth: "220px" }}
                             >
-                                <Image src={logo} alt="" />
+                                <Image src="/assets/images/logo.png" width="200px" height="50px" alt="" />
                             </Typography>
                         </Box>
 
@@ -223,7 +222,7 @@ const Navbar = () => {
             <Drawer open={state} onClose={() => setState(false)}>
                 <Box sx={{ width: 250 }}>
                     <Box sx={{ width: "150px", m: "2em auto" }}>
-                        <Image src={logo} alt="site logo" />
+                        <Image src="/assets/images/logo.png" width="200px" height="50px" alt="" />
                     </Box>
                     <Paper component="form" sx={{ px: 1, mx: 1 }}>
                         <IconButton type="submit" sx={{}} aria-label="search">
