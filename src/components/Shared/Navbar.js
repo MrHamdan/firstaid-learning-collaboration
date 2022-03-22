@@ -248,10 +248,12 @@ const Navbar = () => {
                     </Link>
                     <Divider />
                     <Button sx={Styles.navLinkMobile}>
-                        <FaShoppingCart
-                            onClick={gotoCart}
-                            style={{ fontSize: "1.2rem", marginTop: "5px" }}
-                        />
+                        <Badge badgeContent={cart.length} color="error">
+                            <FaShoppingCart
+                                onClick={gotoCart}
+                                style={{ ...Styles.navlink, fontSize: "25px" }}
+                            />
+                        </Badge>
                     </Button>
                     <Box sx={Styles.navLinkMobile}>
                         <PrimaryButton onClick={!user.email ? handleOpen : logOut}>
