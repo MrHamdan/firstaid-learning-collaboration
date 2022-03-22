@@ -8,93 +8,49 @@ import Content from "../shared/Content";
 import Tagline from "../shared/Tagline";
 
 const Courses = ({ courses }) => {
-<<<<<<< HEAD
-    const sliderRef = useRef(null);
-
-    return (
-
-        <Container sx={{
-            mt: '50px',
-            maxWidth: {
-                lg: 'lg',
-                xl: 'xl'
-            }
-        }} id="courses">
-            <Tagline>Interacting First Aid Courses</Tagline>
-            <Box sx={{ display: 'flex', justifyContent: 'space-between', flexDirection: { xs: 'column', md: 'row' } }}>
-                <Content>
-                    <Typography component='span'>
-                        We are a company who is best known for offering awarding body accredited courses for anyone who wishes to <br /> take their professional life to the next level.
-                    </Typography>
-                </Content>
-                <Box >
-                    <CarouselButton sliderRef={sliderRef} />
-                </Box>
-            </Box>
-
-
-            <Box sx={{ mt: '30px' }}>
-                <Carousel sliderRef={sliderRef}
-                    content={courses?.map(course => (
-                        <CourseCard key={course.id} course={course} />
-                    ))}
-                />
-            </Box>
-
-
-
-        </Container>
-
-    );
-=======
  const sliderRef = useRef(null);
 
  return (
-  <div>
-   <Container
+  <Container
+   sx={{
+    mt: "50px",
+    maxWidth: {
+     lg: "lg",
+     xl: "xl",
+    },
+   }}
+   id="courses"
+  >
+   <Tagline>Interacting First Aid Courses</Tagline>
+   <Box
     sx={{
-     mt: "50px",
-     maxWidth: {
-      lg: "lg",
-      xl: "xl",
-     },
+     display: "flex",
+     justifyContent: "space-between",
+     flexDirection: { xs: "column", md: "row" },
     }}
-    id="courses"
    >
-    <Tagline>Interacting First Aid Courses</Tagline>
-    <Box
-     sx={{
-      display: "flex",
-      justifyContent: "space-between",
-      flexDirection: { xs: "column", md: "row" },
-     }}
-    >
-     <Content>
-      <Typography component="span">
-       We are a company who is best known for offering awarding body accredited
-       courses for anyone who wishes to <br /> take their professional life to
-       the next level.
-      </Typography>
-     </Content>
-     <Box>
-      <CarouselButton sliderRef={sliderRef} />
-     </Box>
+    <Content>
+     <Typography component="span">
+      We are a company who is best known for offering awarding body accredited
+      courses for anyone who wishes to <br /> take their professional life to
+      the next level.
+     </Typography>
+    </Content>
+    <Box>
+     <CarouselButton sliderRef={sliderRef} />
     </Box>
+   </Box>
 
-    <Box sx={{ mt: "30px", padding: "10px" }}>
-     <Container sx={{ maxWidth: { lg: "lg", xl: "xl" } }}>
-      <Carousel
-       sliderRef={sliderRef}
-       content={courses?.map((course) => (
-        <CourseCard key={course.id} course={course} />
-       ))}
-      />
-     </Container>
-    </Box>
-   </Container>
-  </div>
+   <Box sx={{ mt: "30px" }}>
+    <Carousel
+     sliderRef={sliderRef}
+     content={courses?.map((course) => (
+      <CourseCard key={course.id} course={course} />
+     ))}
+    />
+   </Box>
+  </Container>
  );
->>>>>>> hamim
 };
 
 export default Courses;
