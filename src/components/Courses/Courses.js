@@ -36,7 +36,7 @@ const Courses = ({ courses }) => {
                     </Box>
                 </Box>
 
-                <Box sx={{ backgroundColor: '#FEF9F7', mt: '30px', padding: '10px' }}>
+                <Box sx={{ mt: '30px', padding: '10px' }}>
                     <Container sx={{ maxWidth: { lg: 'lg', xl: 'xl' } }}>
                         <Carousel sliderRef={sliderRef}
                             content={courses?.map(course => (

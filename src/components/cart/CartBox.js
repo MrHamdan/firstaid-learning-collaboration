@@ -14,6 +14,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
+import Swal from 'sweetalert2';
 
 const CartBox = () => {
     const state = useSelector(state => state.cart);
@@ -57,6 +58,14 @@ const CartBox = () => {
         if (cupon === 'discount') {
             dispatch(calculateDiscount(totalPrice / 2));
             dispatch(addCupon(true));
+            Swal.fire({
+                position: 'middle',
+                icon: 'success',
+                title: '50% discount applied',
+                showConfirmButton: false,
+                timer: 1500
+            })
+
         }
         else if (cupon === '') {
             alert('Enter a cupon code');
@@ -188,7 +197,7 @@ const CartBox = () => {
                         <Typography>${!cuponUsed ? totalPrice : discountPrice}</Typography>
                         {/* <Typography>${totalPrice}</Typography> */}
                     </Box>
-                    <Link href='/payment'><a ><Button variant="contained" sx={{width:'100%'}}>Proceed To Checkout</Button></a></Link>
+                    <Link href='/payment'><a ><Button variant="contained" sx={{ width: '100%' }}>Proceed To Checkout</Button></a></Link>
                 </Box >
             </Container >
 
