@@ -1,8 +1,14 @@
 import BlogDetailsHome from "components/BlogDetails/BlogDetailsHome";
+import Head from "next/head";
+import favico from "../../../../public/faviconHome.ico";
 
 const index = ({ blog, allBlogsData }) => {
  return (
   <>
+   <Head>
+    <title>First Aid | {blog.mainTitle}</title>
+    <link rel="shortcut icon" href={favico.src}></link>
+   </Head>
    <BlogDetailsHome blog={blog} allBlogsData={allBlogsData} />
   </>
  );
