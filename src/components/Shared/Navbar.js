@@ -134,7 +134,7 @@ const Navbar = () => {
                                     <SearchIcon />
                                 </IconButton>
                                 <InputBase
-                                    placeholder="Search Course"
+                                    placeholder="Search for course"
                                     inputProps={{ "aria-label": "Search Course" }}
                                 />
                             </Paper>
