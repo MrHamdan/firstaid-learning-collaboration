@@ -51,14 +51,16 @@ const LatestNews = ({ newses }) => {
         <Box sx={{ backgroundColor: '#FFF6F6', padding: '50px 0' }} >
             <Typography sx={{ textAlign: 'center', padding: '50px 0' }} ><TagLine>Our Latest News</TagLine></Typography>
             <Container sx={{ maxWidth: { xl: 'xl', lg: 'lg' } }}>
-                <Carousel
-                    content={newses.map(news =>
-                        <NewsCard key={news.id} news={news} />
-                    )}
-                    slidesToShow={3}
-                    dots={true}
-                >
-                </Carousel>
+                <Container>
+                    <Carousel
+                        content={newses.map(news =>
+                            <NewsCard key={news.id} news={news} />
+                        )}
+                        slidesToShow={3}
+                        dots={true}
+                    >
+                    </Carousel>
+                </Container>
             </Container >
         </Box >
     );
