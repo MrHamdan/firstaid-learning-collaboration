@@ -26,7 +26,9 @@ const Hero = () => {
             <Box className={styles.hero_container}>
                 <Box className={styles.hero_grid}>
                     <Tagline > <div>Engaging & <br /> Accessible Online Courses</div> </Tagline> <br />
-                    <PrimaryButton>Explore Now</PrimaryButton>
+                    <Link href="/#courses">
+                        <PrimaryButton>Explore Now</PrimaryButton>
+                    </Link>
                     <Box className={styles.grid_image} sx={{
                         bottom: 0,
                         right: 0,
