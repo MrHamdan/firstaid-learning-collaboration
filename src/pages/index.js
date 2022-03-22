@@ -8,7 +8,7 @@ import StudentReviewSection from "components/Shared/StudentReviewSection";
 import Head from "next/head";
 import Image from "next/image";
 import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { fetchCourses } from "Redux/actions/fetchCourses";
 
 

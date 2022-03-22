@@ -46,7 +46,6 @@ const settings = {
 };
 
 const LatestNews = ({ newses }) => {
-
     return (
         <Box sx={{ backgroundColor: '#FFF6F6', padding: '50px 0' }} >
             <Typography sx={{ textAlign: 'center', padding: '50px 0' }} ><TagLine>Our Latest News</TagLine></Typography>
