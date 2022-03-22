@@ -73,99 +73,6 @@ const StudentReviewSection = () => {
           zIndex: 100,
          }}
         >
-<<<<<<< HEAD
-            <Typography textAlign="center"> <Tagline>{<div>We Value Our Students, <br />Let’s Hear from them</div>}</Tagline></Typography>
-
-
-            <Container sx={{ maxWidth: { xl: "xl", lg: "lg" } }}>
-
-                <Box sx={{ mx: 'auto', textAlign: 'center', padding: '20px 10px', position: 'relative' }}>
-
-
-                    <Carousel sliderRef={sliderRef} slidesToShow={1} slidesToScroll={1}
-
-                        content={reviews.map(data => (
-                            <Card key={data.id} sx={{
-                                maxWidth: 400,
-                                minWidth: 100,
-                                boxShadow: '0px 18px 52.8537px rgba(234, 46, 16, 0.09)',
-                                borderRadius: '20px',
-                                padding: '50px',
-                                backgroundImage: `url(${quote})`,
-                                backgroundSize: '25%',
-                                backgroundRepeat: 'no-repeat',
-                                backgroundPosition: 'center',
-                                marginTop: '50px',
-                                zIndex: 100,
-                            }}>
-                                <br /> <br />
-                                <Typography style={{ width: '100%' }}><Content fontSize='20px' >{data.review} </Content></Typography>
-                                <br />
-                                <Typography> <span>- </span> <span><Tagline fontSize='20px'>{data.name}</Tagline></span></Typography>
-                            </Card>
-                        ))
-                        }
-                    />
-
-                    <ArrowRightAltIcon sx={{
-                        transform: 'rotate(180deg)',
-                        color: '#B3AEAE',
-                        fontSize: '40px',
-                        '&:active': {
-                            color: '#EA2E10',
-                            transform: 'rotate(180deg) scaleX(1.5)'
-                        }
-                    }}
-                        onClick={() => sliderRef?.current?.slickPrev()}
-                    />
-                    <ArrowRightAltIcon sx={{
-                        color: '#B3AEAE',
-                        fontSize: '40px',
-                        '&:active': {
-                            color: '#EA2E10',
-                            transform: 'scaleX(1.5)'
-                        }
-                    }}
-                        onClick={() => sliderRef?.current?.slickNext()}
-                    />
-
-                    <Box
-                        component="img"
-                        sx={{
-                            bottom: '50px',
-                            left: '700px',
-                            width: '200px',
-                            display: {
-                                xs: 'none',
-                                lg: 'block'
-                            },
-                            position: 'absolute',
-                            zIndex: -1,
-                        }}
-                        src={dot_bg.src}
-                    />
-                    <Box
-                        component="img"
-                        sx={{
-                            top: '50px',
-                            right: '700px',
-                            width: '200px',
-                            position: 'absolute',
-                            display: {
-                                xs: 'none',
-                                lg: 'block'
-                            },
-                            zIndex: -1
-                        }}
-                        src={dot_bg.src}
-                    />
-                </Box>
-
-
-            </Container>
-        </Box>
-    );
-=======
          <br /> <br />
          <Typography style={{ width: "100%" }}>
           <Content fontSize="20px">{data.review} </Content>
@@ -319,7 +226,6 @@ const StudentReviewSection = () => {
    </Container>
   </Box>
  );
->>>>>>> hamim
 };
 
 export default StudentReviewSection;
