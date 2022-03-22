@@ -21,7 +21,7 @@ const Item = styled(Paper)(({ theme }) => ({
 const CourseReview = () => {
     return (
         <>
-            <Box sx={{ height: { xl: '800px', xs: '1450px' } }}>
+            <Box sx={{ height: '100%' }}>
                 <Container maxWidth='xl'>
                     <Box sx={{ display: 'flex', position: 'relative', alignItems: 'center', marginTop: '40px' }} >
                         <Tagline>Reviews of This Course</Tagline> <Box sx={{ marginLeft: '30px' }}><Image src={reviewDesign} alt="" />
@@ -149,7 +149,7 @@ const CourseReview = () => {
                             </Grid>
                             <Grid item xs={12} xl={12} md={12} sx={{ marginTop: '40px' }}>
                                 <Item sx={{ backgroundColor: 'transparent', boxShadow: '0' }}>
-                                    <Button sx={{ width: '241px', height: '75px', backgroundColor: 'white !important', border: '1px solid #ED3B45', color: '#ED3B45', fontSize: '22px', fontStyle: 'normal', fontweight: '900', lineHeight: '32px' }}>Load More</Button>
+                                    <Button sx={{ width: '241px', height: '75px', backgroundColor: 'white !important', border: '1px solid #ED3B45', color: '#ED3B45', fontSize: '22px', fontStyle: 'normal', fontweight: '900', lineHeight: '32px', marginBottom: '99px' }}>Load More</Button>
                                 </Item>
                             </Grid>
                         </Grid>

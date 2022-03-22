@@ -18,7 +18,7 @@ const viewCourseBackground = {
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
-        height: { xl: '288px', xs: '700px' },
+        height: '100%',
         width: '100%',
     }
 }
@@ -28,7 +28,7 @@ const ViewCourseBottom = () => {
             <Box sx={{ ...viewCourseBackground.viewCourseBg, display: 'flex', alignItems: 'center' }}>
                 <Container maxWidth='xl'>
                     <Box>
-                        <Box sx={{ flexGrow: 1 }}>
+                        <Box sx={{ flexGrow: 1, margin: '50px' }}>
                             <Grid container spacing={2}>
                                 <Grid item xs={12} xl={8}>
                                     <Item sx={{ backgroundColor: 'transparent', textAlign: 'left', boxShadow: '0' }}>
