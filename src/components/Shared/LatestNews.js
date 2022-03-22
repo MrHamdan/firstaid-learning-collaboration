@@ -1,7 +1,6 @@
 import { Box, Container, Typography } from '@mui/material';
-import React, { useRef } from 'react';
+import React from 'react';
 import Slider from 'react-slick';
-import Carousel from '../shared/Carousel';
 import TagLine from '../shared/Tagline';
 import NewsCard from '../Shared/NewsCard';
 import "slick-carousel/slick/slick.css";
@@ -11,7 +10,6 @@ import styles from "../../styles/LatestNews.module.css"
 const settings = {
     dots: true,
     className: "slick-center ",
-    // dotsClass: `${styles.slick_dots}`,
     arrows: false,
     dots: true,
     infinite: false,
@@ -51,13 +49,11 @@ const settings = {
 
 const LatestNews = ({ newses }) => {
 
-    const sliderRef = useRef(null);
-    console.log(sliderRef);
     return (
         <Box sx={{ backgroundColor: '#FFF6F6', padding: '50px 0' }} >
             <Typography sx={{ textAlign: 'center', padding: '50px 0' }} ><TagLine>Our Latest News</TagLine></Typography>
             <Container sx={{ maxWidth: { xl: 'xl', lg: 'lg' } }}>
-                <Slider ref={sliderRef} {...settings}>
+                <Slider {...settings}>
                     {
                         newses.map(news =>
                             <NewsCard key={news.id} news={news} />

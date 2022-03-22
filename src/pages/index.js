@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import Courses from "components/Courses/Courses";
 import Freeresources from "components/Home/Freeresources";
 import Hero from "components/Home/Hero";
