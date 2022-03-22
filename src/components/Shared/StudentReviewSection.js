@@ -93,11 +93,11 @@ const StudentReviewSection = () => {
                         component="img"
                         sx={{
                             bottom: '50px',
-                            left: '450px',
+                            left: '700px',
                             width: '200px',
                             display: {
                                 xs: 'none',
-                                md: 'block'
+                                lg: 'block'
                             },
                             position: 'absolute',
                             zIndex: -1,
@@ -108,7 +108,7 @@ const StudentReviewSection = () => {
                         component="img"
                         sx={{
                             top: '50px',
-                            right: '450px',
+                            right: '700px',
                             width: '200px',
                             position: 'absolute',
                             display: {
