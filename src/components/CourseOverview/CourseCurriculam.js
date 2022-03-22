@@ -5,7 +5,6 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import { HiPlusCircle } from "react-icons/hi"
 import { AiOutlineClockCircle } from "react-icons/ai"
-import CourseLink from 'components/CourseOverview/CourseLink';
 import Tagline from 'components/Shared/Tagline';
 
 
@@ -35,7 +34,6 @@ const CourseCurriculam = ({ course }) => {
                                 <Item sx={{ backgroundColor: 'transparent', textAlign: 'left', boxShadow: '0' }}>
                                     <Accordion>
                                         <AccordionSummary
-                                            // expandIcon={<ExpandMoreIcon />}
                                             aria-controls="panel1a-content"
                                             id="panel1a-header"
                                         >
@@ -44,7 +42,7 @@ const CourseCurriculam = ({ course }) => {
                                                     <Typography sx={{ display: 'flex', alignItems: 'center' }}><HiPlusCircle style={{ color: '#ED3B45', marginRight: '10px', width: '32px', height: '65px' }} />  Module 1: Introduction to Food Safety and the Law </Typography>
                                                 </Box>
                                                 <Box>
-                                                    <Typography sx={{ display: 'flex', alignItems: 'center', marginLeft: { xl: '420px', xs: '0px' } }}><AiOutlineClockCircle style={{ fontSize: '20px' }} />
+                                                    <Typography sx={{ display: 'flex', alignItems: 'center', marginLeft: { xl: '420px', xs: '0px' } }}><AiOutlineClockCircle style={{ fontSize: '20px', marginRight: '10px' }} />
                                                         35.00 min</Typography>
                                                 </Box>
                                             </Box>
@@ -58,7 +56,6 @@ const CourseCurriculam = ({ course }) => {
                                     </Accordion>
                                     <Accordion>
                                         <AccordionSummary
-                                            // expandIcon={<ExpandMoreIcon />}
                                             aria-controls="panel1a-content"
                                             id="panel1a-header"
                                         >
@@ -67,7 +64,7 @@ const CourseCurriculam = ({ course }) => {
                                                     <Typography sx={{ display: 'flex', alignItems: 'center' }}><HiPlusCircle style={{ color: '#ED3B45', marginRight: '10px', width: '32px', height: '65px' }} />  Module 1: Introduction to Food Safety and the Law </Typography>
                                                 </Box>
                                                 <Box>
-                                                    <Typography sx={{ display: 'flex', alignItems: 'center', marginLeft: { xl: '420px', xs: '0px' } }}><AiOutlineClockCircle style={{ fontSize: '20px' }} />
+                                                    <Typography sx={{ display: 'flex', alignItems: 'center', marginLeft: { xl: '420px', xs: '0px' } }}><AiOutlineClockCircle style={{ fontSize: '20px', marginRight: '10px' }} />
                                                         35.00 min</Typography>
                                                 </Box>
                                             </Box>
@@ -81,7 +78,6 @@ const CourseCurriculam = ({ course }) => {
                                     </Accordion>
                                     <Accordion>
                                         <AccordionSummary
-                                            // expandIcon={<ExpandMoreIcon />}
                                             aria-controls="panel1a-content"
                                             id="panel1a-header"
                                         >
@@ -90,7 +86,7 @@ const CourseCurriculam = ({ course }) => {
                                                     <Typography sx={{ display: 'flex', alignItems: 'center' }}><HiPlusCircle style={{ color: '#ED3B45', marginRight: '10px', width: '32px', height: '65px' }} />  Module 1: Introduction to Food Safety and the Law </Typography>
                                                 </Box>
                                                 <Box>
-                                                    <Typography sx={{ display: 'flex', alignItems: 'center', marginLeft: { xl: '420px', xs: '0px' } }}><AiOutlineClockCircle style={{ fontSize: '20px' }} />
+                                                    <Typography sx={{ display: 'flex', alignItems: 'center', marginLeft: { xl: '420px', xs: '0px' } }}><AiOutlineClockCircle style={{ fontSize: '20px', marginRight: '10px' }} />
                                                         35.00 min</Typography>
                                                 </Box>
                                             </Box>
@@ -104,7 +100,6 @@ const CourseCurriculam = ({ course }) => {
                                     </Accordion>
                                     <Accordion>
                                         <AccordionSummary
-                                            // expandIcon={<ExpandMoreIcon />}
                                             aria-controls="panel1a-content"
                                             id="panel1a-header"
                                         >
@@ -113,7 +108,7 @@ const CourseCurriculam = ({ course }) => {
                                                     <Typography sx={{ display: 'flex', alignItems: 'center' }}><HiPlusCircle style={{ color: '#ED3B45', marginRight: '10px', width: '32px', height: '65px' }} />  Module 1: Introduction to Food Safety and the Law </Typography>
                                                 </Box>
                                                 <Box>
-                                                    <Typography sx={{ display: 'flex', alignItems: 'center', marginLeft: { xl: '420px', xs: '0px' } }}><AiOutlineClockCircle style={{ fontSize: '20px' }} />
+                                                    <Typography sx={{ display: 'flex', alignItems: 'center', marginLeft: { xl: '420px', xs: '0px' } }}><AiOutlineClockCircle style={{ fontSize: '20px', marginRight: '10px' }} />
                                                         35.00 min</Typography>
                                                 </Box>
                                             </Box>
@@ -127,7 +122,6 @@ const CourseCurriculam = ({ course }) => {
                                     </Accordion>
                                     <Accordion>
                                         <AccordionSummary
-                                            // expandIcon={<ExpandMoreIcon />}
                                             aria-controls="panel1a-content"
                                             id="panel1a-header"
                                         >
@@ -136,7 +130,7 @@ const CourseCurriculam = ({ course }) => {
                                                     <Typography sx={{ display: 'flex', alignItems: 'center' }}><HiPlusCircle style={{ color: '#ED3B45', marginRight: '10px', width: '32px', height: '65px' }} />  Module 1: Introduction to Food Safety and the Law </Typography>
                                                 </Box>
                                                 <Box>
-                                                    <Typography sx={{ display: 'flex', alignItems: 'center', marginLeft: { xl: '420px', xs: '0px' } }}><AiOutlineClockCircle style={{ fontSize: '20px' }} />
+                                                    <Typography sx={{ display: 'flex', alignItems: 'center', marginLeft: { xl: '420px', xs: '0px' } }}><AiOutlineClockCircle style={{ fontSize: '20px', marginRight: '10px' }} />
                                                         35.00 min</Typography>
                                                 </Box>
                                             </Box>
@@ -150,7 +144,6 @@ const CourseCurriculam = ({ course }) => {
                                     </Accordion>
                                     <Accordion>
                                         <AccordionSummary
-                                            // expandIcon={<ExpandMoreIcon />}
                                             aria-controls="panel1a-content"
                                             id="panel1a-header"
                                         >
@@ -159,7 +152,7 @@ const CourseCurriculam = ({ course }) => {
                                                     <Typography sx={{ display: 'flex', alignItems: 'center' }}><HiPlusCircle style={{ color: '#ED3B45', marginRight: '10px', width: '32px', height: '65px' }} />  Module 1: Introduction to Food Safety and the Law </Typography>
                                                 </Box>
                                                 <Box>
-                                                    <Typography sx={{ display: 'flex', alignItems: 'center', marginLeft: { xl: '420px', xs: '0px' } }}><AiOutlineClockCircle style={{ fontSize: '20px' }} />
+                                                    <Typography sx={{ display: 'flex', alignItems: 'center', marginLeft: { xl: '420px', xs: '0px' } }}><AiOutlineClockCircle style={{ fontSize: '20px', marginRight: '10px' }} />
                                                         35.00 min</Typography>
                                                 </Box>
                                             </Box>
@@ -173,7 +166,6 @@ const CourseCurriculam = ({ course }) => {
                                     </Accordion>
                                     <Accordion>
                                         <AccordionSummary
-                                            // expandIcon={<ExpandMoreIcon />}
                                             aria-controls="panel1a-content"
                                             id="panel1a-header"
                                         >
@@ -182,7 +174,7 @@ const CourseCurriculam = ({ course }) => {
                                                     <Typography sx={{ display: 'flex', alignItems: 'center' }}><HiPlusCircle style={{ color: '#ED3B45', marginRight: '10px', width: '32px', height: '65px' }} />  Module 1: Introduction to Food Safety and the Law </Typography>
                                                 </Box>
                                                 <Box>
-                                                    <Typography sx={{ display: 'flex', alignItems: 'center', marginLeft: { xl: '420px', xs: '0px' } }}><AiOutlineClockCircle style={{ fontSize: '20px' }} />
+                                                    <Typography sx={{ display: 'flex', alignItems: 'center', marginLeft: { xl: '420px', xs: '0px' } }}><AiOutlineClockCircle style={{ fontSize: '20px', marginRight: '10px' }} />
                                                         35.00 min</Typography>
                                                 </Box>
                                             </Box>
