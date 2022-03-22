@@ -1,11 +1,9 @@
 import { Box, Container, Typography } from '@mui/material';
 import React from 'react';
-import Slider from 'react-slick';
 import TagLine from '../shared/Tagline';
 import NewsCard from '../Shared/NewsCard';
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import styles from "../../styles/LatestNews.module.css"
+import Carousel from './Carousel';
 
 const settings = {
     dots: true,
@@ -53,13 +51,14 @@ const LatestNews = ({ newses }) => {
         <Box sx={{ backgroundColor: '#FFF6F6', padding: '50px 0' }} >
             <Typography sx={{ textAlign: 'center', padding: '50px 0' }} ><TagLine>Our Latest News</TagLine></Typography>
             <Container sx={{ maxWidth: { xl: 'xl', lg: 'lg' } }}>
-                <Slider {...settings}>
-                    {
-                        newses.map(news =>
-                            <NewsCard key={news.id} news={news} />
-                        )
-                    }
-                </Slider>
+                <Carousel
+                    content={newses.map(news =>
+                        <NewsCard key={news.id} news={news} />
+                    )}
+                    slidesToShow={3}
+                    dots={true}
+                >
+                </Carousel>
             </Container >
         </Box >
     );

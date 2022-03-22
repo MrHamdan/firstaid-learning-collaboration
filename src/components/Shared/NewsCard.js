@@ -2,10 +2,10 @@ import { Button, Card, CardActionArea, CardActions, CardContent, CardMedia, Typo
 import React from 'react';
 import Content from './Content';
 import Tagline from './Tagline';
-
+import styles from "../../styles/LatestNews.module.css"
 const NewsCard = ({ news }) => {
     return (
-        <Card sx={{ maxWidth: 345 }}>
+        <Card sx={{ maxWidth: 300 }} className={styles.news_card}>
             <CardActionArea>
                 <CardMedia
                     component="img"
