@@ -17,7 +17,6 @@ const Carousel = ({
   dots: dots || false,
   infinite: false,
   speed: 100,
-  centerMode: false,
   slidesToShow: slidesToShow || 4,
   slidesToScroll: slidesToScroll || 4,
   initialSlide: 0,
@@ -54,11 +53,9 @@ const Carousel = ({
  };
 
  return (
-  <div>
-   <Slider ref={sliderRef} {...settings}>
-    {content}
-   </Slider>
-  </div>
+  <Slider ref={sliderRef} {...settings}>
+   {content}
+  </Slider>
  );
 };
 
