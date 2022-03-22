@@ -19,8 +19,8 @@ const Carousel = ({ content, sliderRef, slidesToShow, slidesToScroll, arrows, do
             {
                 breakpoint: 1024,
                 settings: {
-                    slidesToShow: slidesToShow || 3,
-                    slidesToScroll: slidesToScroll || 3,
+                    slidesToShow: slidesToShow || 2,
+                    slidesToScroll: slidesToScroll || 1,
                     infinite: false,
                     dots: dots || false
                 }

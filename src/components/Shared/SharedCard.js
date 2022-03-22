@@ -8,7 +8,7 @@ const SharedCard = ({ resource }) => {
     console.log(resource.icon)
     return (
 
-        <Card sx={{ maxWidth: 300, pt: '30px', mt: '20px' }}>
+        <Card sx={{ maxWidth: 300, pt: '30px', mt: '20px', mx: 'auto' }}>
             {/* sx={{ backgroundColor: '#FDE3E0', width: '60px', borderRadius: '50%', padding: '40px', mx: 'auto' }} */}
             <Box sx={{ backgroundColor: '#FDE3E0', width: "150px", borderRadius: '50%', padding: '40px', mx: 'auto' }} >
                 <Image src={resource.icon} alt="" width="10px" height="10px" layout='responsive' />
@@ -42,7 +42,7 @@ const SharedCard = ({ resource }) => {
                             border: '2.54439px solid rgba(234, 46, 16, 0.2)',
                             color: '#EA2E10',
                             fontWeight: 600,
-                            textDecoration: 'none'
+                            textDecoration: 'none',
                         }}
                             href={resource.link} target='_blank'
                         >

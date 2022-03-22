@@ -20,7 +20,7 @@ const Freeresources = ({ freeResources }) => {
                 <Grid container spacing={{ xs: 2 }} columns={{ xs: 4, sm: 8, md: 12 }}>
                     {
                         freeResources?.map(resource => (
-                            <Grid key={resource?.id} item xs={2} sm={4} md={3} xl={3} >
+                            <Grid key={resource?.id} item xs={12} sm={6} md={3} xl={3} >
                                 <SharedCard resource={resource} />
                             </Grid>
                         ))
