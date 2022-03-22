@@ -1,7 +1,7 @@
 import { Box, Modal, TextField, Typography } from '@mui/material';
 import React, { useEffect, useState } from 'react';
-import google_icon from '../../images/google-icon.png';
-import facebook_icon from '../../images/facebook-icon.png';
+import google_icon from '../../../public/assets/images/google-icon.png';
+import facebook_icon from '../../../public/assets/images/facebook-icon.png';
 import CloseIcon from '@mui/icons-material/Close';
 import { AiOutlineClose } from "react-icons/ai";
 import AuthenticationButton from './AuthenticationButton';

@@ -8,7 +8,7 @@ import {
     Typography,
 } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
-import popularBlogsImg from "../../images/blogs_cover_1.png";
+import popularBlogsImg from "../../../public/assets/images/blogs_cover_1.png";
 
 const BlogsSideBar = () => {
     const Styles = {

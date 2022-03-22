@@ -1,12 +1,12 @@
 import { Box, Typography, Paper, Grid, Container } from '@mui/material';
 import Image from 'next/image';
-import detailBg from '../../Images/detailbackground.png';
+import detailBg from '../../../public/assets/images/detailbackground.png';
 import { FaStar } from "react-icons/fa";
 import { styled } from '@mui/material/styles';
-import certificateIcon from '../../Images/certificateicon.png'
-import documentIcon from '../../Images/documenticon.png'
-import clockIcon from '../../Images/clockicon.png'
-import supportIcon from '../../Images/supporticon.png'
+import certificateIcon from '../../../public/assets/images/certificateicon.png'
+import documentIcon from '../../../public/assets/images/documenticon.png'
+import clockIcon from '../../../public/assets/images/clockicon.png'
+import supportIcon from '../../../public/assets/images/supporticon.png'
 import PrimaryButton from 'components/Shared/PrimaryButton';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect, useState } from 'react';

@@ -6,9 +6,9 @@ import Tagline from 'components/Shared/Tagline';
 import React from 'react';
 import styles from '../../styles/Hero.module.css'
 import Image from 'next/image';
-import doctor_img from '../../images/doctors.png'
-import firstaid_box from '../../images/first-aid-box.png'
-import quiz_icon from '../../images/grid3.png'
+import doctor_img from '../../../public/assets/images/doctors.png'
+import firstaid_box from '../../../public/assets/images/first-aid-box.png'
+import quiz_icon from '../../../public/assets/images/grid3.png'
 import ArrowIcon from 'components/Shared/ArrowIcon';
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import Link from 'next/link';

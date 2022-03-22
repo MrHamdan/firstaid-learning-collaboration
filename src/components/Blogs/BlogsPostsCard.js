@@ -8,7 +8,7 @@ import {
     Typography,
 } from "@mui/material";
 import Link from "next/link";
-import cover1 from "../../images/blogs_cover_1.png";
+import cover1 from "../../../public/assets/images/blogs_cover_1.png";
 
 const BlogsPostsCard = ({ blog }) => {
     console.log(blog.title);

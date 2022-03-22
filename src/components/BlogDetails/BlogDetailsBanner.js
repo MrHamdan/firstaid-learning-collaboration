@@ -1,7 +1,7 @@
 import { Box, Container, Typography } from "@mui/material";
 import Link from "next/link";
 import React from "react";
-import blogsBanner from "../../images/blogs_cover_1.png";
+import blogsBanner from "../../../public/assets/images/blogs_cover_1.png";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 
 const BlogDetailsBanner = ({ blog }) => {

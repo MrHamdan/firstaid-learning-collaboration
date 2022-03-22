@@ -1,4 +1,4 @@
-import paymentBg from '../../Images/paymentbackground.png';
+import paymentBg from '../../../public/assets/images/paymentbackground.png';
 
 import { Box, Button, Container, FormControl, Grid, MenuItem, Paper, Select, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, TextField, Typography } from '@mui/material';
 import React, { useContext, useState } from 'react';

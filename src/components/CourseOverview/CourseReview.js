@@ -1,12 +1,12 @@
 import { Box, Typography, Paper, Container, Grid, Button } from '@mui/material';
 import Image from 'next/image';
 import { FaStar } from "react-icons/fa";
-import reviewDesign from '../../Images/reviewdesign.png'
+import reviewDesign from '../../../public/assets/images/reviewdesign.png'
 import { styled } from '@mui/material/styles';
-import conorOne from '../../Images/conorone.png'
-import conorTwo from '../../Images/conortwo.png'
-import conorThree from '../../Images/conorThree.png'
-import conorFour from '../../Images/conorFour.png'
+import conorOne from '../../../public/assets/images/conorone.png'
+import conorTwo from '../../../public/assets/images/conortwo.png'
+import conorThree from '../../../public/assets/images/conorThree.png'
+import conorFour from '../../../public/assets/images/conorFour.png'
 import Tagline from 'components/Shared/Tagline';
 
 
