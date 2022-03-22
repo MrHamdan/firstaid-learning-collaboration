@@ -1,6 +1,5 @@
 import { Box, Typography, Paper, Grid, Container } from '@mui/material';
 import Image from 'next/image';
-import detailBg from '../../../public/assets/images/detailbackground.png';
 import { FaStar } from "react-icons/fa";
 import { styled } from '@mui/material/styles';
 import PrimaryButton from 'components/Shared/PrimaryButton';
