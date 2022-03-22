@@ -8,7 +8,6 @@ import {
     Typography,
 } from "@mui/material";
 import Image from "next/image";
-import logo from "../../../public/assets/images/footer-logo.png";
 import FacebookTwoToneIcon from "@mui/icons-material/FacebookTwoTone";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import TwitterIcon from "@mui/icons-material/Twitter";
@@ -41,7 +40,7 @@ const Footer = () => {
             <Container sx={{ maxWidth: { xl: "xl", lg: "lg" } }}>
                 <Grid container spacing={2}>
                     <Grid item xs={12} md={4}>
-                        <Image src="/assets/images/footer-logo.png" alt="logo" width="100px" height="100px" />
+                        <Image src="/assets/images/footer-logo.png" alt="logo" width="200px" height="50px" />
                         <Typography sx={{ mt: 2, mb: 3 }}>
                             Beaufort House, 15 St Botolph <br /> Street, London EC3A 7BB
                         </Typography>
