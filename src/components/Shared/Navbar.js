@@ -123,7 +123,7 @@ const Navbar = () => {
                             },
                         }}
                     >
-                        <TextField id="outlined-basic" placeholder="Search" variant="outlined" />
+                        <TextField id="outlined-basic" placeholder="Search for courses" variant="outlined" />
 
                         <Box
                             sx={{
