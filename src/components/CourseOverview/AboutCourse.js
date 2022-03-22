@@ -3,8 +3,6 @@ import Image from 'next/image';
 import detailBg from '../../../public/assets/images/detailbackground.png';
 import { FaStar } from "react-icons/fa";
 import { styled } from '@mui/material/styles';
-import certificateIcon from '../../../public/assets/images/certificateicon.png'
-import documentIcon from '../../../public/assets/images/documenticon.png'
 import clockIcon from '../../../public/assets/images/clockicon.png'
 import supportIcon from '../../../public/assets/images/supporticon.png'
 import PrimaryButton from 'components/Shared/PrimaryButton';
@@ -162,7 +160,7 @@ const AboutCourse = ({ course }) => {
                                                     justifyContent: { xs: 'center', xl: 'left' }
                                                 }}>
                                                     <Box>
-                                                        <Image src={certificateIcon} alt="" />
+                                                        <Image src="/assets/images/certificateicon.png" alt="" width="55px" height="55px" />
                                                     </Box>
                                                     <Box sx={{
                                                         textAlign: 'left',
@@ -195,7 +193,7 @@ const AboutCourse = ({ course }) => {
                                                     display: 'flex', alignItems: 'center', justifyContent: 'center', justifyContent: { xs: 'center', xl: 'left' }
                                                 }}>
                                                     <Box>
-                                                        <Image src={documentIcon} alt="" />
+                                                        <Image src="/assets/images/documenticon.png" alt="" width="50px" height="50px" />
                                                     </Box>
                                                     <Box sx={{
                                                         textAlign: 'left', marginLeft: '30px'
@@ -212,7 +210,7 @@ const AboutCourse = ({ course }) => {
                                             <Item sx={{ backgroundColor: 'transparent', boxShadow: '0' }}>
                                                 <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', justifyContent: { xs: 'center', xl: 'left' } }}>
                                                     <Box>
-                                                        <Image src={clockIcon} alt="" />
+                                                        <Image src="/assets/images/clockicon.png" alt="" width="50px" height="50px" />
                                                     </Box>
                                                     <Box sx={{
                                                         textAlign: 'left', marginLeft: '30px'
@@ -239,7 +237,7 @@ const AboutCourse = ({ course }) => {
                                                     display: 'flex', alignItems: 'center', justifyContent: 'center', justifyContent: { xs: 'center', xl: 'left' }
                                                 }}>
                                                     <Box>
-                                                        <Image src={supportIcon} alt="" />
+                                                        <Image src="/assets/images/supporticon.png" alt="" width="50px" height="50px" />
                                                     </Box >
                                                     <Box sx={{
                                                         textAlign: 'left', marginLeft: '30px'
