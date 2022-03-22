@@ -119,7 +119,7 @@ const Payment = () => {
                                                     onChange={handleChange}
                                                 >
                                                     <MenuItem value={10}>Bangladesh</MenuItem>
-                                                    <MenuItem value={20}>United States</MenuItem>
+                                                    <MenuItem value={20}>United Kingdom</MenuItem>
                                                     <MenuItem value={30}>Canada</MenuItem>
                                                 </Select>
                                             </FormControl>
