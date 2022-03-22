@@ -1,4 +1,4 @@
-import { Button, Container, Typography } from '@mui/material';
+import { Container, Typography } from '@mui/material';
 import { Box } from '@mui/system';
 import HeroCircularLayout from 'components/Shared/HeroCircularLayout';
 import PrimaryButton from 'components/Shared/PrimaryButton';
@@ -37,7 +37,7 @@ const Hero = () => {
                     }}>
                         <Image src={doctor_img} alt='' />
                     </Box>
-                    <PromoModel  open={open}  handleClose={handleClose}/>
+                    <PromoModel open={open} handleClose={handleClose} />
                     <Box sx={{
                         position: 'absolute', bottom: '-111px',
                         right: {
@@ -55,8 +55,8 @@ const Hero = () => {
                         <Tagline fontSize='35px'>
                             <div>Trustable First Aid <br /> Courses Online</div>
                         </Tagline>
-                        <Box  component="span" sx={{ display: 'flex', alignItems: 'center', mt: 1, width: '50%' }}>
-                            <ArrowIcon  handleOpen={handleOpen} />
+                        <Box component="span" sx={{ display: 'flex', alignItems: 'center', mt: 1, width: '50%' }}>
+                            <ArrowIcon handleOpen={handleOpen} />
                             <Typography sx={{
                                 fontWeight: 600,
                                 fontSize: {

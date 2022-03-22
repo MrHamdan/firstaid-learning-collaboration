@@ -11,7 +11,7 @@ const Tagline = ({ children, fontSize, fontWeight }) => {
                     fontWeight: { fontWeight } || 900,
                     fontSize: {
                         xs: '20px',
-                        sm: '25px',
+                        sm: '30px',
                         md: '40px',
                         lg: fontSize || '55px',
                     },

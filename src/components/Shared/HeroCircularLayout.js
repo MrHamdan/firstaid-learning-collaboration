@@ -7,13 +7,13 @@ const HeroCircularLayout = ({ children }) => {
             sx={{
 
                 height: {
-                    xs: '300px',
+                    xs: '280px',
                     sm: '350px',
                     lg: '380px',
                     xl: '450px'
                 },
                 width: {
-                    xs: '300px',
+                    xs: '280px',
                     sm: '350px',
                     lg: '380px',
                     xl: '450px'

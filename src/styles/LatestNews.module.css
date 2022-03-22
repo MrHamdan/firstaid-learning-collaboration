@@ -16,3 +16,8 @@
 .slick_track {
     width: fit-content !important;
 }
+
+.news_card:hover {
+    transform: scale(.9);
+    transition: .5s;
+}
