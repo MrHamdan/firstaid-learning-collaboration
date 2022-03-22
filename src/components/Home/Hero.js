@@ -12,15 +12,21 @@ import quiz_icon from '../../images/grid3.png'
 import ArrowIcon from 'components/Shared/ArrowIcon';
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import Link from 'next/link';
+import PromoModel from './PromoModel';
+
+
+
+
 const Hero = () => {
+    const [open, setOpen] = React.useState(false);
+    const handleOpen = () => setOpen(true);
+    const handleClose = () => setOpen(false);
     return (
         <Container sx={{ maxWidth: { xl: 'xl', lg: 'lg' } }}>
             <Box className={styles.hero_container}>
                 <Box className={styles.hero_grid}>
-                    <Tagline> <div>Engaging & <br /> Accessible Online Courses</div> </Tagline>
-                    <Link href="/#courses" passHref>
-                        <PrimaryButton >Explore Now</PrimaryButton>
-                    </Link>
+                    <Tagline > <div>Engaging & <br /> Accessible Online Courses</div> </Tagline> <br />
+                    <PrimaryButton>Explore Now</PrimaryButton>
                     <Box className={styles.grid_image} sx={{
                         bottom: 0,
                         right: 0,
@@ -31,6 +37,7 @@ const Hero = () => {
                     }}>
                         <Image src={doctor_img} alt='' />
                     </Box>
+                    <PromoModel  open={open}  handleClose={handleClose}/>
                     <Box sx={{
                         position: 'absolute', bottom: '-111px',
                         right: {
@@ -48,8 +55,8 @@ const Hero = () => {
                         <Tagline fontSize='35px'>
                             <div>Trustable First Aid <br /> Courses Online</div>
                         </Tagline>
-                        <Box component="span" sx={{ display: 'flex', alignItems: 'center', mt: 1, width: '50%' }}>
-                            <ArrowIcon />
+                        <Box  component="span" sx={{ display: 'flex', alignItems: 'center', mt: 1, width: '50%' }}>
+                            <ArrowIcon  handleOpen={handleOpen} />
                             <Typography sx={{
                                 fontWeight: 600,
                                 fontSize: {

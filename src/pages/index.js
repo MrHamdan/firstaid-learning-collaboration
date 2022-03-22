@@ -10,16 +10,20 @@ import Image from "next/image";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchCourses } from "Redux/actions/fetchCourses";
-import styles from "../styles/Home.module.css";
+
 
 
 export default function Home({ courses, freeResources, newses }) {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchCourses(courses));
-  }, [])
+  }, [dispatch,courses]);
   return (
     <div >
+      <Head>
+        <title>First Aid Online Courses</title>
+        <link rel="shortcut icon"  href="faviconHome.ico"></link>
+      </Head>
       <Hero />
       <Courses courses={courses} />
       <Freeresources freeResources={freeResources} />

@@ -14,7 +14,6 @@ import Tagline from '../shared/Tagline'
 const Courses = ({ courses }) => {
     const sliderRef = useRef(null);
 
-
     return (
         <div>
             <Container sx={{

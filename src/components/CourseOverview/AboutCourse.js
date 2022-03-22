@@ -22,7 +22,6 @@ const Item = styled(Paper)(({ theme }) => ({
     color: theme.palette.text.secondary,
 }));
 
-// { xl: '800.89px', xs: '1400px', md: '1450px' }
 
 const Styles = {
     detailBackground: {
