@@ -77,17 +77,50 @@ const CourseCard = ({ course }) => {
                 </Link>
             </Tagline>
 
-            return (
-            <Box sx={{
-                my: '30px',
-                mr: '10px',
-                padding: '10px',
-                background: '#FFFFFF',
-                boxShadow: '0px 0px 50px rgba(234, 46, 16, 0.06)',
-                borderRadius: '19.0829px'
-            }}>
+            <Box
+                sx={{
+                    mt: "30px",
+                    display: "flex",
+                    justifyContent: "space-between",
+                }}
+            >
+                <Box
+                    sx={{
+                        display: "flex",
+                        alignItems: "center",
+                    }}
+                >
+                    <PeopleIcon sx={{ mr: 1, color: "#EA2E10" }} />
+                    <span style={{ color: "#435770" }}>{enrolledStudents}</span>
+                </Box>
+                <Box
+                    sx={{
+                        display: "flex",
+                        alignItems: "center",
+                    }}
+                >
+                    <MilitaryTechIcon sx={{ mr: 1, color: "#EA2E10" }} />
+                    <span style={{ color: "#435770" }}>CPD Accrediated</span>
+                </Box>
+            </Box>
 
-                {!isAdded ? (
+            {!isAdded ? (
+                <Button
+                    variant="outlined"
+                    sx={{
+                        width: "100%",
+                        mt: "50px",
+                        border: "2.54439px solid rgba(234, 46, 16, 0.2)",
+                        color: "#EA2E10",
+                        fontWeight: 600,
+                    }}
+                    onClick={() => handleAddToCart(course)}
+                >
+                    <ShoppingCartIcon />
+                    Add to Cart
+                </Button>
+            ) : (
+                <Link href="/cart">
                     <Button
                         variant="outlined"
                         sx={{
@@ -97,28 +130,11 @@ const CourseCard = ({ course }) => {
                             color: "#EA2E10",
                             fontWeight: 600,
                         }}
-                        onClick={() => handleAddToCart(course)}
                     >
-                        <ShoppingCartIcon />
-                        Add to Cart
+                        Visit Cart
                     </Button>
-                ) : (
-                    <Link href="/cart">
-                        <Button
-                            variant="outlined"
-                            sx={{
-                                width: "100%",
-                                mt: "50px",
-                                border: "2.54439px solid rgba(234, 46, 16, 0.2)",
-                                color: "#EA2E10",
-                                fontWeight: 600,
-                            }}
-                        >
-                            Visit Cart
-                        </Button>
-                    </Link>
-                )}
-            </Box>
+                </Link>
+            )}
         </Box>
     );
 };
