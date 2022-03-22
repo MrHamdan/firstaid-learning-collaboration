@@ -23,7 +23,7 @@ const Courses = ({ courses }) => {
                     lg: 'lg',
                     xl: 'xl'
                 }
-            }}>
+            }} id="courses">
                 <Tagline>Interacting First Aid Courses</Tagline>
                 <Box sx={{ display: 'flex', justifyContent: 'space-between', flexDirection: { xs: 'column', md: 'row' } }}>
                     <Content>
