@@ -1,7 +1,5 @@
 import { Box, Modal, TextField, Typography } from '@mui/material';
 import React, { useEffect, useState } from 'react';
-import google_icon from '../../../public/assets/images/google-icon.png';
-import facebook_icon from '../../../public/assets/images/facebook-icon.png';
 import CloseIcon from '@mui/icons-material/Close';
 import { AiOutlineClose } from "react-icons/ai";
 import AuthenticationButton from './AuthenticationButton';
@@ -86,10 +84,10 @@ const LoginModal = ({ handleClose }) => {
 
                         </Typography>
                         {isFunction &&
-                            <AuthenticationButton onClick={handleGoogleSignIn} backgroundColor='#4688F1' icon={google_icon} >Log In With Google</AuthenticationButton>
+                            <AuthenticationButton onClick={handleGoogleSignIn} backgroundColor='#4688F1' icon="/assets/images/google-icon.png" >Log In With Google</AuthenticationButton>
                         }
 
-                        <AuthenticationButton backgroundColor='#3E5C97' icon={facebook_icon} onClick={handleFacebookSignIn}>Log In With Facebook</AuthenticationButton>
+                        <AuthenticationButton backgroundColor='#3E5C97' icon="/assets/images/facebook-icon.png" onClick={handleFacebookSignIn}>Log In With Facebook</AuthenticationButton>
                         <Box sx={{ mt: '100px', mb: '20px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                             <hr style={{ width: '40%' }} /> <span style={{
                                 fontWeight: 600,

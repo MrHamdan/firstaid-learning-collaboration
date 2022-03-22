@@ -19,7 +19,7 @@ const AuthenticationButton = ({ children, backgroundColor, icon, onClick }) => {
                 onClick={onClick}
             >
                 {icon &&
-                    <Box sx={{ mr: 2 }}><Image src={icon} alt="" /></Box>
+                    <Box sx={{ mr: 2 }}><Image src={icon} alt="" width="20px" height="20px" /></Box>
                 }
                 {children}
             </Button>
