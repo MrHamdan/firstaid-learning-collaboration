@@ -6,7 +6,6 @@ import Tagline from 'components/Shared/Tagline';
 import React from 'react';
 import styles from '../../styles/Hero.module.css'
 import Image from 'next/image';
-import quiz_icon from '../../../public/assets/images/grid3.png'
 import ArrowIcon from 'components/Shared/ArrowIcon';
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import Link from 'next/link';

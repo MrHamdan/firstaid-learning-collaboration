@@ -41,7 +41,7 @@ const Footer = () => {
             <Container sx={{ maxWidth: { xl: "xl", lg: "lg" } }}>
                 <Grid container spacing={2}>
                     <Grid item xs={12} md={4}>
-                        <Image src={logo} alt="logo" />
+                        <Image src="/assets/images/footer-logo.png" alt="logo" width="100px" height="100px" />
                         <Typography sx={{ mt: 2, mb: 3 }}>
                             Beaufort House, 15 St Botolph <br /> Street, London EC3A 7BB
                         </Typography>
