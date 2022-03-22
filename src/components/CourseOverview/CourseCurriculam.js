@@ -5,7 +5,7 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import { HiPlusCircle } from "react-icons/hi"
 import { AiOutlineClockCircle } from "react-icons/ai"
-import Tagline from 'components/Shared/Tagline';
+import Tagline from 'components/shared/Tagline';
 
 
 const Item = styled(Paper)(({ theme }) => ({

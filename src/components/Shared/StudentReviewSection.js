@@ -1,10 +1,10 @@
 import { Avatar, Box, Card, Container, Typography } from "@mui/material";
 import React from "react";
-import Tagline from "../shared/Tagline";
+import Tagline from "./Tagline";
 import quote from "../../../public/assets/images/quote.png";
 import dot_bg from "../../../public/assets/images/dot-bg.png";
-import Content from "../shared/Content";
-import Carousel from "../shared/Carousel";
+import Content from "./Content";
+import Carousel from "./Carousel";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 import reviewpeople from "../../../public/assets/images/reviewpeople.png";
 

@@ -9,7 +9,7 @@ import Grid from '@mui/material/Grid';
 import coursefaqBg from '../../../public/assets/images/faqbackground.png';
 import { Container } from '@mui/material';
 import AddIcon from '@mui/icons-material/Add';
-import Tagline from 'components/Shared/Tagline';
+import Tagline from 'components/shared/Tagline';
 
 const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',

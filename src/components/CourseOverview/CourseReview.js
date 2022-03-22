@@ -2,7 +2,7 @@ import { Box, Typography, Paper, Container, Grid, Button } from '@mui/material';
 import Image from 'next/image';
 import { FaStar } from "react-icons/fa";
 import { styled } from '@mui/material/styles';
-import Tagline from 'components/Shared/Tagline';
+import Tagline from 'components/shared/Tagline';
 
 
 const Item = styled(Paper)(({ theme }) => ({

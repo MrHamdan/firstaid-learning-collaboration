@@ -2,7 +2,7 @@ import { Box, Typography, Paper, Grid, Container } from '@mui/material';
 import Image from 'next/image';
 import { FaStar } from "react-icons/fa";
 import { styled } from '@mui/material/styles';
-import PrimaryButton from 'components/Shared/PrimaryButton';
+import PrimaryButton from 'components/shared/PrimaryButton';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect, useState } from 'react';
 import { addCupon, addToCart } from 'Redux/actions/cartAction';

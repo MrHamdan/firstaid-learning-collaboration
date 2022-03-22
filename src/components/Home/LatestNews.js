@@ -1,9 +1,9 @@
 import { Box, Container, Typography } from '@mui/material';
 import React from 'react';
 import TagLine from '../shared/Tagline';
-import NewsCard from '../Shared/NewsCard';
+import NewsCard from '../shared/NewsCard';
 import styles from "../../styles/LatestNews.module.css"
-import Carousel from '../Shared/Carousel';
+import Carousel from '../shared/Carousel';
 
 const settings = {
     dots: true,

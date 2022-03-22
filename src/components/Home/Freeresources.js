@@ -1,7 +1,7 @@
 import { Box, Container, Grid } from '@mui/material';
 import Content from 'components/shared/Content';
-import SharedCard from 'components/Shared/SharedCard';
-import Tagline from 'components/Shared/Tagline';
+import SharedCard from 'components/shared/SharedCard';
+import Tagline from 'components/shared/Tagline';
 import React from 'react';
 
 const Freeresources = ({ freeResources }) => {

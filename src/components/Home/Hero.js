@@ -1,12 +1,12 @@
 import { Container, Typography } from '@mui/material';
 import { Box } from '@mui/system';
-import HeroCircularLayout from 'components/Shared/HeroCircularLayout';
-import PrimaryButton from 'components/Shared/PrimaryButton';
-import Tagline from 'components/Shared/Tagline';
+import HeroCircularLayout from 'components/shared/HeroCircularLayout';
+import PrimaryButton from 'components/shared/PrimaryButton';
+import Tagline from 'components/shared/Tagline';
 import React from 'react';
 import styles from '../../styles/Hero.module.css'
 import Image from 'next/image';
-import ArrowIcon from 'components/Shared/ArrowIcon';
+import ArrowIcon from 'components/shared/ArrowIcon';
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import Link from 'next/link';
 import PromoModel from './PromoModel';

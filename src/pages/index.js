@@ -4,7 +4,7 @@ import Freeresources from "components/Home/Freeresources";
 import Hero from "components/Home/Hero";
 import TipsSection from "components/Home/TipsSection";
 import LatestNews from "components/Home/LatestNews";
-import StudentReviewSection from "components/Shared/StudentReviewSection";
+import StudentReviewSection from "components/shared/StudentReviewSection";
 import Head from "next/head";
 import Image from "next/image";
 import { useEffect } from "react";

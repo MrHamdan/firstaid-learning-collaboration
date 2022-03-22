@@ -1,9 +1,9 @@
 import { Box, Typography, Paper, Grid, Container } from '@mui/material';
 import Image from 'next/image';
 import { styled } from '@mui/material/styles';
-import PrimaryButton from 'components/Shared/PrimaryButton';
+import PrimaryButton from 'components/shared/PrimaryButton';
 
-import Tagline from 'components/Shared/Tagline';
+import Tagline from 'components/shared/Tagline';
 
 const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
