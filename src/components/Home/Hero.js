@@ -6,8 +6,6 @@ import Tagline from 'components/Shared/Tagline';
 import React from 'react';
 import styles from '../../styles/Hero.module.css'
 import Image from 'next/image';
-import doctor_img from '../../../public/assets/images/doctors.png'
-import firstaid_box from '../../../public/assets/images/first-aid-box.png'
 import quiz_icon from '../../../public/assets/images/grid3.png'
 import ArrowIcon from 'components/Shared/ArrowIcon';
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
@@ -37,7 +35,7 @@ const Hero = () => {
                             xs: '25%'
                         }
                     }}>
-                        <Image src={doctor_img} alt='' />
+                        <Image src="/assets/images/doctors.png" alt='' width="500px" height="400px" />
                     </Box>
                     <PromoModel open={open} handleClose={handleClose} />
                     <Box sx={{
@@ -82,7 +80,7 @@ const Hero = () => {
                                 xs: '25%'
                             }
                         }}>
-                            <Image src={firstaid_box} alt='' />
+                            <Image src="/assets/images/first-aid-box.png" alt='' width="150px" height="150px" />
                         </Box>
                         <Box sx={{
                             position: 'absolute',
@@ -111,7 +109,7 @@ const Hero = () => {
                                 xs: '25%'
                             }
                         }}>
-                            <Image src={quiz_icon} alt='' />
+                            <Image src="/assets/images/grid3.png" alt='' width="130px" height="130px" />
                         </Box>
                         <Box sx={{ display: 'flex', alignItems: 'center' }}>
                             <Link href='/quiz' >
