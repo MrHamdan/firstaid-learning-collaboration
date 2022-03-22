@@ -9,7 +9,7 @@ import useAuth from 'hooks/useAuth';
 
 const Styles = {
     modal: {
-        position: 'absolute',
+        position: 'relative',
         top: '50%',
         left: '50%',
         transform: 'translate(-50%, -50%)',
@@ -39,7 +39,7 @@ const Styles = {
 
 const LoginModal = ({ handleClose }) => {
     const { handleGoogleSignIn, registered, setRegistered, open, handleEmailChange,
-        handlePasswordChange,
+        handlePasswordChange, handleFacebookSignIn,
         handleRegistration, } = useAuth();
     const [isFunction, setFunction] = useState(false);
     // console.log(handleGoogleSignIn);
@@ -61,20 +61,21 @@ const LoginModal = ({ handleClose }) => {
             >
 
                 <Box sx={Styles.modal}>
-                    <AiOutlineClose onClick={handleClose}
-                        style={{
-                            position: 'absolute',
-                            top: 16, right: 16,
-                            backgroundColor: '#F8F8F8',
-                            padding: 2,
-                            borderRadius: '50%',
-                            cursor: 'pointer',
-                            transition: '.5s',
-                            ':hover': {
-                                color: 'white',
-                                backgroundColor: 'black'
-                            }
-                        }} />
+                    <Box>
+                        <AiOutlineClose onClick={handleClose}
+                            style={{
+                                position: 'absolute',
+                                top: 16,
+                                right: 16,
+                                backgroundColor: '#F8F8F8',
+                                padding: 2,
+                                borderRadius: '50%',
+                                cursor: 'pointer',
+                                transition: '.5s',
+                                fontSize: '20px',
+                                fontWeight: 'bold'
+                            }} />
+                    </Box>
                     <Box sx={{ my: 5 }}>
                         <Typography id="modal-modal-title" sx={{
                             fontWeight: 'bold',
@@ -88,7 +89,7 @@ const LoginModal = ({ handleClose }) => {
                             <AuthenticationButton onClick={handleGoogleSignIn} backgroundColor='#4688F1' icon={google_icon} >Log In With Google</AuthenticationButton>
                         }
 
-                        <AuthenticationButton backgroundColor='#3E5C97' icon={facebook_icon} >Log In With Facebook</AuthenticationButton>
+                        <AuthenticationButton backgroundColor='#3E5C97' icon={facebook_icon} onClick={handleFacebookSignIn}>Log In With Facebook</AuthenticationButton>
                         <Box sx={{ mt: '100px', mb: '20px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                             <hr style={{ width: '40%' }} /> <span style={{
                                 fontWeight: 600,

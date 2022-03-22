@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import {
     signInWithPopup,
     GoogleAuthProvider,
@@ -8,6 +9,7 @@ import {
     onAuthStateChanged,
     signOut,
     getAuth,
+    FacebookAuthProvider,
 } from "firebase/auth";
 import { useEffect, useState } from "react";
 import initializeAuthentication from "../Firebase/firebase.init";
@@ -62,6 +64,16 @@ const useFirebase = () => {
         }
         registered ? processLogin(email, password) : registerNewUser(email, password);
     };
+
+    const handleFacebookSignIn = () => {
+        setIsLoading(true);
+        const facebookProvider = new FacebookAuthProvider();
+        return signInWithPopup(auth, facebookProvider)
+            .catch((error) => {
+                setError("Firebase Popup Closed By User Try Again!");
+            })
+            .finally(() => setIsLoading(false));
+    }
 
     const processLogin = (email, password) => {
         return signInWithEmailAndPassword(auth, email, password)
@@ -153,7 +165,9 @@ const useFirebase = () => {
         logOut,
         open,
         setOpen,
-        registered, setRegistered
+        registered,
+        setRegistered,
+        handleFacebookSignIn
     };
 };
 
