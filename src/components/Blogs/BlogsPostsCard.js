@@ -11,8 +11,6 @@ import Link from "next/link";
 import cover1 from "../../../public/assets/images/blogs_cover_1.png";
 
 const BlogsPostsCard = ({ blog }) => {
-    console.log(blog.title);
-
     const Styles = {
         card: { maxWidth: "100%", pb: "1em", mb: 5 },
         cardMedia: { borderRadius: "8px" },

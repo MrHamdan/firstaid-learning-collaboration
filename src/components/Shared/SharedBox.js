@@ -21,7 +21,6 @@ const SharedBox = ({ text, fontSize, tips }) => {
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
 
-    // console.log(tips?.title)
     return (
         <Box sx={Styles.gridStyle}>
             <Box

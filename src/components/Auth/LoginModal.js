@@ -40,8 +40,7 @@ const LoginModal = ({ handleClose }) => {
         handlePasswordChange, handleFacebookSignIn,
         handleRegistration, } = useAuth();
     const [isFunction, setFunction] = useState(false);
-    // console.log(handleGoogleSignIn);
-    // console.log(typeof (handleGoogleSignIn))
+
 
     useEffect(() => {
         if (typeof (handleGoogleSignIn) === 'function') {

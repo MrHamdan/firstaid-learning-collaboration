@@ -36,9 +36,6 @@ const Payment = () => {
     const { cart, subTotal, totalVat, totalPrice, cuponUsed, discountPrice } = useSelector(state => state.cart);
     const vat = 0.15;
 
-    console.log(cart);
-
-
     const [country, setCountry] = React.useState('');
 
     const handleChange = (event) => {
