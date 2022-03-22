@@ -15,7 +15,7 @@ const QuizCourse = ({level , courses}) => {
        useEffect(() => {
         const courseByLevel = courses?.filter(course => course.level === level)
         setCourseByQuizlvl(courseByLevel);
-       },[level])
+       },[level,courses])
    
    
   return (

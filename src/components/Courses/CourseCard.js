@@ -118,8 +118,8 @@ const CourseCard = ({ course }) => {
                     </Button>
                     :
 
-
-                    <Button variant="outlined" sx={{
+                    <Link href='/cart' >
+                   <a > <Button variant="outlined" sx={{
                         width: '100%',
                         mt: '50px',
                         border: '2.54439px solid rgba(234, 46, 16, 0.2)',
@@ -127,10 +127,10 @@ const CourseCard = ({ course }) => {
                         fontWeight: 600,
                     }}
                     >
-                        <Link href='/cart' passHref>
+                        
                             Visit Cart
-                        </Link>
-                    </Button>
+                      
+                    </Button> </a> </Link>
 
             }
 

@@ -33,7 +33,13 @@
     line-height: 36px;
     color: #EA2E10;
     text-decoration: none;
-    cursor: pointer
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.link:hover {
+    color: #dd5a45;
+    letter-spacing: 2px;
+    text-decoration: none;
 }
 
 @media only screen and (max-width:1200px) {
