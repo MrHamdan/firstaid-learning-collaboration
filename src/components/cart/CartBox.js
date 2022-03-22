@@ -113,7 +113,9 @@ const CartBox = () => {
                             </TableHead>
                             <TableBody>
                                 {cart.map((item) => (
+                                    // eslint-disable-next-line react/jsx-key
                                     <TableRow item={item.id} sx={{ "&:last-child td, &:last-child th": { border: 0 } }}>
+                                        
                                         <TableCell align="left" sx={{ display: 'flex', alignItems: 'center', fontSize: '16px', fontFamily: 'Inter', fontWeight: '500', fontStyle: 'normal' }}> <img style={{ width: '60px', height: '60px', borderRadius: '6px', marginRight: '20px' }} src={item.coverImage} alt="" /> {item.title}</TableCell>
                                         <TableCell align="center" sx={{ fontSize: '16px', fontFamily: 'Inter', fontWeight: '500', fontStyle: 'normal' }}>$ {item.regularPrice}</TableCell>
                                         <TableCell align="center" sx={{ fontSize: '16px', fontFamily: 'Inter', fontWeight: '500', fontStyle: 'normal' }}><Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-around', border: '1px solid #9D9D9D', borderRadius: '10px' }}><RemoveIcon sx={{ cursor: 'pointer' }} onClick={() => handleQuantity(item, 'decrease')}></RemoveIcon>{item.quantity}<AddIcon sx={{ cursor: 'pointer' }} onClick={() => handleQuantity(item, 'increase')}></AddIcon></Box></TableCell>
