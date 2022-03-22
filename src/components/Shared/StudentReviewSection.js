@@ -15,7 +15,7 @@ const Styles = {
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
-        height: { xl: '1209px', xs: '800px' },
+        height: { xl: '1000px', xs: '800px' },
         width: '100%',
     }
 }
