@@ -74,40 +74,136 @@ const AboutCourse = ({ course }) => {
                     <Box sx={{ flexGrow: 1 }}>
                         <Grid container spacing={2}>
                             <Grid item xs={12} xl={6} md={12}>
-                                <Item sx={{ backgroundColor: 'transparent', textAlign: 'left', boxShadow: '0' }}>
-                                    <Typography sx={{ fontSize: '36px', fontStyle: 'normal', fontWeight: '500', color: 'white', lineHeight: '145%' }}>{course.title}</Typography>
-                                    <Typography sx={{ margin: '50px 0px' }}><span style={{ fontSize: '16px', fontStyle: 'normal', fontWeight: '400', color: 'white', lineHeight: '32px', marginRight: '20px' }}>{course.rating} <FaStar style={{
-                                        color: '#FFB300'
-                                    }} /></span> <span style={{ fontSize: '16px', fontStyle: 'normal', fontWeight: '400', color: 'white', lineHeight: '32px', marginTop: '50px', marginBottom: '29px', marginRight: '20px' }}>(50 REVIEWS)</span> <span style={{ fontSize: '16px', fontStyle: 'normal', fontWeight: '400', color: 'white', lineHeight: '32px', marginTop: '50px', marginBottom: '29px', marginRight: '20px' }}>6245 STUDENTS</span></Typography>
-                                    <Typography sx={{ fontSize: '18px', fontStyle: 'normal', fontWeight: '400', color: 'white', lineHeight: '145%' }}>We are a company who is best known for offering awarding body accredited courses for anyone who wishes to take their professional life to the next level.</Typography>
+                                <Item sx={{
+                                    backgroundColor: 'transparent',
+                                    textAlign: 'left',
+                                    boxShadow: '0'
+                                }}>
+                                    <Typography sx={{
+                                        fontSize: '36px',
+                                        fontStyle: 'normal',
+                                        fontWeight: '500',
+                                        color: 'white',
+                                        lineHeight: '145%'
+                                    }}>
+                                        {course.title}
+                                    </Typography>
+                                    <Typography sx={{
+                                        margin: '50px 0px'
+                                    }}>
+                                        <span style={{
+                                            fontSize:
+                                                '16px',
+                                            fontStyle: 'normal',
+                                            fontWeight: '400',
+                                            color: 'white',
+                                            lineHeight: '32px',
+                                            marginRight: '20px'
+                                        }}>
+                                            {course.rating}
+                                            <FaStar style={{
+                                                color: '#FFB300'
+                                            }} />
+                                        </span>
+                                        <span style={{
+                                            fontSize: '16px',
+                                            fontStyle: 'normal',
+                                            fontWeight: '400',
+                                            color: 'white',
+                                            lineHeight: '32px',
+                                            marginTop: '50px',
+                                            marginBottom: '29px',
+                                            marginRight: '20px'
+                                        }}>
+                                            (50 REVIEWS)
+                                        </span>
+                                        <span style={{
+                                            fontSize: '16px',
+                                            fontStyle: 'normal',
+                                            fontWeight: '400',
+                                            color: 'white',
+                                            lineHeight: '32px',
+                                            marginTop: '50px',
+                                            marginBottom: '29px',
+                                            marginRight: '20px'
+                                        }}>
+                                            {course.enrolledStudents} students
+                                        </span>
+                                    </Typography>
+                                    <Typography sx={{
+                                        fontSize: '18px',
+                                        fontStyle: 'normal',
+                                        fontWeight: '400',
+                                        color: 'white',
+                                        lineHeight: '145%'
+                                    }}>
+                                        We are a company who is best known for offering awarding body accredited courses for anyone who wishes to take their professional life to the next level.
+                                    </Typography>
                                 </Item>
                             </Grid>
                             <Grid item xs={12} xl={6} md={12}>
-                                <Item sx={{ backgroundColor: 'transparent', boxShadow: '0' }}><Image src={course.coverImage} width={589} height={425} alt="" /></Item>
+                                <Item sx={{
+                                    backgroundColor: 'transparent', boxShadow: '0'
+                                }}><Image src={course.coverImage} width={589} height={425} alt="" />
+                                </Item>
                             </Grid>
                             <Grid item xs={12} xl={6} md={12} sx={{ marginTop: { xs: '120px', xl: '0px' } }}>
-                                <Item sx={{ backgroundColor: 'transparent', boxShadow: '0' }}>
+                                <Item sx={{
+                                    backgroundColor: 'transparent', boxShadow: '0'
+                                }}>
                                     <Grid container spacing={2}>
                                         <Grid item xs={12} xl={6} md={6}>
-                                            <Item sx={{ backgroundColor: 'transparent', boxShadow: '0' }}>
-                                                <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: { xs: 'center', xl: 'left' } }}>
+                                            <Item sx={{
+                                                backgroundColor: 'transparent', boxShadow: '0'
+                                            }}>
+                                                <Box sx={{
+                                                    display: 'flex',
+                                                    alignItems: 'center',
+                                                    justifyContent: { xs: 'center', xl: 'left' }
+                                                }}>
                                                     <Box>
                                                         <Image src={certificateIcon} alt="" />
                                                     </Box>
-                                                    <Box sx={{ textAlign: 'left', marginLeft: '30px' }}>
-                                                        <span style={{ fontStyle: 'normal', fontSize: '16px', fontWeight: '400', lineHeight: '26px', color: 'rgba(76, 112, 138, 0.9)' }}>You will Get</span> <br /> <span style={{ fontStyle: 'normal', fontSize: '18px', fontWeight: '500', lineHeight: '26px', color: 'rgba(26, 60, 85, 0.9)' }}>Certificate of Completion</span>
+                                                    <Box sx={{
+                                                        textAlign: 'left',
+                                                        marginLeft: '30px'
+                                                    }}>
+                                                        <span style={{
+                                                            fontStyle: 'normal',
+                                                            fontSize: '16px',
+                                                            fontWeight: '400',
+                                                            lineHeight: '26px',
+                                                            color: 'rgba(76, 112, 138, 0.9)'
+                                                        }}>
+                                                            You will Get</span> <br /> <span style={{
+                                                                fontStyle: 'normal',
+                                                                fontSize: '18px',
+                                                                fontWeight: '500',
+                                                                lineHeight: '26px',
+                                                                color: 'rgba(26, 60, 85, 0.9)'
+                                                            }}>Certificate of Completion
+                                                        </span>
                                                     </Box>
                                                 </Box>
                                             </Item>
                                         </Grid>
                                         <Grid item xs={12} xl={6} md={6}>
-                                            <Item sx={{ backgroundColor: 'transparent', boxShadow: '0' }}>
-                                                <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', justifyContent: { xs: 'center', xl: 'left' } }}>
+                                            <Item sx={{
+                                                backgroundColor: 'transparent', boxShadow: '0'
+                                            }}>
+                                                <Box sx={{
+                                                    display: 'flex', alignItems: 'center', justifyContent: 'center', justifyContent: { xs: 'center', xl: 'left' }
+                                                }}>
                                                     <Box>
                                                         <Image src={documentIcon} alt="" />
                                                     </Box>
-                                                    <Box sx={{ textAlign: 'left', marginLeft: '30px' }}>
-                                                        <span style={{ fontStyle: 'normal', fontSize: '16px', fontWeight: '400', lineHeight: '26px', color: 'rgba(76, 112, 138, 0.9)' }}>Renewal Requirements</span> <br /> <span style={{ fontStyle: 'normal', fontSize: '18px', fontWeight: '500', lineHeight: '26px', color: 'rgba(26, 60, 85, 0.9)' }}>Check with your Employer</span>
+                                                    <Box sx={{
+                                                        textAlign: 'left', marginLeft: '30px'
+                                                    }}>
+                                                        <span style={{
+                                                            fontStyle: 'normal', fontSize: '16px', fontWeight: '400', lineHeight: '26px', color: 'rgba(76, 112, 138, 0.9)'
+                                                        }}>
+                                                            Renewal Requirements</span> <br /> <span style={{ fontStyle: 'normal', fontSize: '18px', fontWeight: '500', lineHeight: '26px', color: 'rgba(26, 60, 85, 0.9)' }}>Check with your Employer</span>
                                                     </Box>
                                                 </Box>
                                             </Item>
@@ -118,20 +214,45 @@ const AboutCourse = ({ course }) => {
                                                     <Box>
                                                         <Image src={clockIcon} alt="" />
                                                     </Box>
-                                                    <Box sx={{ textAlign: 'left', marginLeft: '30px' }}>
-                                                        <span style={{ fontStyle: 'normal', fontSize: '16px', fontWeight: '400', lineHeight: '26px', color: 'rgba(76, 112, 138, 0.9)' }}>Course Duration</span> <br /> <span style={{ fontStyle: 'normal', fontSize: '18px', fontWeight: '500', lineHeight: '26px', color: 'rgba(26, 60, 85, 0.9)' }}>4 Hours 32 Minutes</span>
+                                                    <Box sx={{
+                                                        textAlign: 'left', marginLeft: '30px'
+                                                    }}>
+                                                        <span style={{
+                                                            fontStyle: 'normal', fontSize: '16px', fontWeight: '400', lineHeight: '26px', color: 'rgba(76, 112, 138, 0.9)'
+                                                        }}>
+                                                            Course Duration
+                                                        </span> <br />
+                                                        <span style={{
+                                                            fontStyle: 'normal', fontSize: '18px', fontWeight: '500', lineHeight: '26px', color: 'rgba(26, 60, 85, 0.9)'
+                                                        }}>
+                                                            4 Hours 32 Minutes
+                                                        </span>
                                                     </Box>
                                                 </Box>
                                             </Item>
                                         </Grid>
                                         <Grid item xs={12} xl={6} md={6}>
-                                            <Item sx={{ backgroundColor: 'transparent', boxShadow: '0' }}>
-                                                <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', justifyContent: { xs: 'center', xl: 'left' } }}>
+                                            <Item sx={{
+                                                backgroundColor: 'transparent', boxShadow: '0'
+                                            }}>
+                                                <Box sx={{
+                                                    display: 'flex', alignItems: 'center', justifyContent: 'center', justifyContent: { xs: 'center', xl: 'left' }
+                                                }}>
                                                     <Box>
                                                         <Image src={supportIcon} alt="" />
                                                     </Box >
-                                                    <Box sx={{ textAlign: 'left', marginLeft: '30px' }}>
-                                                        <span style={{ fontStyle: 'normal', fontSize: '16px', fontWeight: '400', lineHeight: '26px', color: 'rgba(76, 112, 138, 0.9)' }}>Support</span> <br /> <span style={{ fontStyle: 'normal', fontSize: '18px', fontWeight: '500', lineHeight: '26px', color: 'rgba(26, 60, 85, 0.9)' }}>24/7 Customer Support</span>
+                                                    <Box sx={{
+                                                        textAlign: 'left', marginLeft: '30px'
+                                                    }}>
+                                                        <span style={{
+                                                            fontStyle: 'normal', fontSize: '16px', fontWeight: '400', lineHeight: '26px', color: 'rgba(76, 112, 138, 0.9)'
+                                                        }}>Support
+                                                        </span> <br />
+                                                        <span style={{
+                                                            fontStyle: 'normal', fontSize: '18px', fontWeight: '500', lineHeight: '26px', color: 'rgba(26, 60, 85, 0.9)'
+                                                        }}>
+                                                            24/7 Customer Support
+                                                        </span>
                                                     </Box>
                                                 </Box>
                                             </Item>
@@ -140,8 +261,12 @@ const AboutCourse = ({ course }) => {
                                 </Item>
                             </Grid>
                             <Grid item xs={12} xl={6} md={12} sx={{ marginTop: '90px' }}>
-                                <Item sx={{ backgroundColor: 'transparent', boxShadow: '0' }}>
-                                    <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-around' }}>
+                                <Item sx={{
+                                    backgroundColor: 'transparent', boxShadow: '0'
+                                }}>
+                                    <Box sx={{
+                                        display: 'flex', alignItems: 'center', justifyContent: 'space-around'
+                                    }}>
                                         <Box sx={{ textAlign: 'left' }}>
                                             <Typography sx={{
                                                 fonWeight: 500,
@@ -152,7 +277,7 @@ const AboutCourse = ({ course }) => {
                                                 color: '#595959',
                                                 fontStyle: 'normal',
                                             }}>
-                                                ${course?.regularPrice}.00
+                                                ${parseFloat(course.regularPrice).toFixed()}
                                             </Typography> <br /> <span style={{ fontStyle: 'normal', fontWeight: '700', fontSize: '16px', color: '#EA2E10' }}>75% off</span>
                                         </Box>
                                         <Box>
@@ -160,15 +285,10 @@ const AboutCourse = ({ course }) => {
                                         </Box>
                                         <Box>
                                             {!isAdded ? (
-                                                <Link
-                                                    href="/cart"
-                                                    style={{ textDecoration: "none" }}
-                                                    passHref
-                                                >
-                                                    <PrimaryButton onClick={() => handleAddToCart(course)}>
-                                                        BUY NOW
-                                                    </PrimaryButton>
-                                                </Link>
+
+                                                <PrimaryButton onClick={() => handleAddToCart(course)}>
+                                                    BUY NOW
+                                                </PrimaryButton>
                                             ) : (
                                                 <Link
                                                     href="/cart"
