@@ -3,7 +3,7 @@ import Courses from "components/Courses/Courses";
 import Freeresources from "components/Home/Freeresources";
 import Hero from "components/Home/Hero";
 import TipsSection from "components/Home/TipsSection";
-import LatestNews from "components/Shared/LatestNews";
+import LatestNews from "components/Home/LatestNews";
 import StudentReviewSection from "components/Shared/StudentReviewSection";
 import Head from "next/head";
 import Image from "next/image";
@@ -17,12 +17,12 @@ export default function Home({ courses, freeResources, newses }) {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchCourses(courses));
-  }, [dispatch,courses]);
+  }, [dispatch, courses]);
   return (
     <div >
       <Head>
         <title>First Aid Online Courses</title>
-        <link rel="shortcut icon"  href="faviconHome.ico"></link>
+        <link rel="shortcut icon" href="faviconHome.ico"></link>
       </Head>
       <Hero />
       <Courses courses={courses} />
