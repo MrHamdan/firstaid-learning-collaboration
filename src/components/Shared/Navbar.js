@@ -102,7 +102,7 @@ const Navbar = () => {
                         <TextField
                             id="outlined-basic"
                             variant="outlined"
-                            placeholder="Search"
+                            placeholder="Search for courses"
                             sx={{
                                 mt: 2,
                                 display: {
