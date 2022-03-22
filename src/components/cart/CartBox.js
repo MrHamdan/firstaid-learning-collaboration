@@ -1,4 +1,5 @@
 import {
+  Alert,
  Box,
  Button,
  Container,
@@ -40,7 +41,7 @@ const CartBox = () => {
  const vat = 0.15;
 
  const [cupon, setCupon] = useState("");
-
+  const[error,setError]=useState('')
  // console.log(discount)
  let total = 0;
 
@@ -83,9 +84,9 @@ const CartBox = () => {
     timer: 1500,
    });
   } else if (cupon === "") {
-   alert("Enter a cupon code");
+    setError("Enter a cupon code");
   } else {
-   alert("Wrong Code");
+    setError("Wrong Code");
   }
  };
 
@@ -98,18 +99,29 @@ const CartBox = () => {
    dispatch(addCupon(false));
   }
  };
-
+ setTimeout(() => {
+  setError("");
+ },[3000])
  return (
   <Box sx={{ backgroundColor: "#EDF5FF", py: "50px", minHeight: "70vh" }}>
+   
+    {
+     error && <Container sx={{mb:2}}> <Alert severity="error">{error}</Alert> </Container>
+   }
+   
    <Container
     maxWidth="xl"
-    sx={{ display: "flex", justifyContent: "space-evenly" }}
+    sx={{ display: "flex", justifyContent: "space-evenly",flexDirection:{
+      xs:"column",
+      sm:"column",
+      md:"row",
+    } }}
    >
     <Box
      sx={{
       background: "#FFFFFF",
       borderRadius: "10px",
-      width: 770,
+      width: { xs: "100%", sm: "50%", md: "770" },
       p: 3,
      }}
     >
@@ -242,7 +254,8 @@ const CartBox = () => {
       background: "#ED3B45",
       borderRadius: "10px",
       position: "relative",
-      width: 400,
+      width: { xs: "100%", sm: "50%", md: "400px" },
+      mt: { xs: "20px", sm: "0", md: "0" },
      }}
     >
      <Typography
