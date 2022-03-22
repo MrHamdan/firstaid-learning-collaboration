@@ -2,8 +2,7 @@ import { Box, Typography, Paper, Grid, Container } from '@mui/material';
 import Image from 'next/image';
 import { styled } from '@mui/material/styles';
 import PrimaryButton from 'components/Shared/PrimaryButton';
-import certificateBg from '../../../public/assets/images/certificatebackground.png'
-import certificate from '../../../public/assets/images/certificate.png'
+
 import Tagline from 'components/Shared/Tagline';
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -17,7 +16,7 @@ const Item = styled(Paper)(({ theme }) => ({
 
 const certificateBackground = {
     certificateBg: {
-        backgroundImage: `url(${certificateBg.src})`,
+        backgroundImage: `url('/assets/images/certificatebackground.png')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
@@ -40,7 +39,7 @@ const CourseCertificate = () => {
                             </Item>
                         </Grid>
                         <Grid item xs={12} xl={6}>
-                            <Item sx={{ backgroundColor: 'transparent', textAlign: 'left', boxShadow: '0' }}><Image src={certificate} /></Item>
+                            <Item sx={{ backgroundColor: 'transparent', textAlign: 'left', boxShadow: '0' }}><Image src="/assets/images/certificate.png" width="600px" height="600px" s alt="" /></Item>
                         </Grid>
                     </Grid>
                 </Container>

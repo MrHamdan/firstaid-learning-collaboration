@@ -3,8 +3,6 @@ import Image from 'next/image';
 import detailBg from '../../../public/assets/images/detailbackground.png';
 import { FaStar } from "react-icons/fa";
 import { styled } from '@mui/material/styles';
-import clockIcon from '../../../public/assets/images/clockicon.png'
-import supportIcon from '../../../public/assets/images/supporticon.png'
 import PrimaryButton from 'components/Shared/PrimaryButton';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect, useState } from 'react';
@@ -23,7 +21,7 @@ const Item = styled(Paper)(({ theme }) => ({
 
 const Styles = {
     detailBackground: {
-        backgroundImage: `url(${detailBg.src})`,
+        backgroundImage: `url('/assets/images/detailbackground.png')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
