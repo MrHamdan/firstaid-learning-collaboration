@@ -1,5 +1,6 @@
 import {
     AppBar,
+    Badge,
     Button,
     Container,
     IconButton,
@@ -21,6 +22,7 @@ import LoginModal from "components/Auth/LoginModal";
 import { FaShoppingCart } from "react-icons/fa";
 import logo from "../../images/logo.png";
 import useAuth from "hooks/useAuth";
+import { useSelector } from "react-redux";
 const Styles = {
     navlink: {
         color: "#4A5074",
@@ -41,6 +43,8 @@ const Styles = {
     },
 };
 const Navbar = () => {
+    const state = useSelector(state => state.cart);
+    const { cart } = state;
     const router = useRouter();
     const { user, logOut, open, setOpen } = useAuth();
     const handleOpen = () => setOpen(true);
@@ -130,6 +134,7 @@ const Navbar = () => {
                                 display: "flex",
                                 justifyContent: "space-between",
                                 flexBasis: "500px",
+                                alignItems: "center",
                             }}
                         >
                             <Link href="/" style={{ textDecoration: "none" }} passHref>
@@ -144,10 +149,12 @@ const Navbar = () => {
                             <Button sx={Styles.navlink}>Contact</Button>
 
                             <Button>
-                                <FaShoppingCart
-                                    onClick={gotoCart}
-                                    style={{ ...Styles.navlink, fontSize: "25px" }}
-                                />
+                                <Badge badgeContent={cart.length} color="error">
+                                    <FaShoppingCart
+                                        onClick={gotoCart}
+                                        style={{ ...Styles.navlink, fontSize: "25px" }}
+                                    />
+                                </Badge>
                             </Button>
                         </Box>
                     </Box>
