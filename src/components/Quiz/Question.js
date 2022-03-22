@@ -1,7 +1,12 @@
 import { Box, FormControl, FormControlLabel, Radio, RadioGroup } from "@mui/material"
-
+import React from 'react'
 
 const Question = ({quiz,handleOnChange,index}) => {
+   
+
+
+
+ 
   return (
     <Box  sx={{width:{
         xs: "100%",
@@ -32,7 +37,15 @@ const Question = ({quiz,handleOnChange,index}) => {
                                             borderRadius: '5px',
                                             border: '1px solid #d4d4d4',
 
-                                        }} onChange={() => handleOnChange(element)} key={element.id} value={element.id} control={<Radio />} label={element.option} />
+                                        }} onChange={() => handleOnChange(element)} key={element.id} value={element.id} control={<Radio 
+                                           
+                                            sx={{
+                                             
+                                              '&.Mui-checked': {
+                                                color: "red",
+                                              },
+                                            }}
+                                            />} label={element.option} />
                                 ))
                             }
 
