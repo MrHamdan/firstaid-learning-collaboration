@@ -12,6 +12,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useEffect, useState } from 'react';
 import { addCupon, addToCart } from 'Redux/actions/cartAction';
 import Link from 'next/link';
+import Swal from 'sweetalert2';
 
 const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -58,6 +59,14 @@ const AboutCourse = ({ course }) => {
         dispatch(addToCart(newCart));
         dispatch(addCupon(false));
         setIsAdded(true);
+        Swal.fire({
+            position: 'middle',
+            icon: 'success',
+            title: 'Added to cart',
+            showConfirmButton: false,
+            timer: 1500
+        })
+
     };
     return (
         <>
