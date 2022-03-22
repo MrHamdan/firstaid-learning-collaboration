@@ -1,10 +1,15 @@
 import BlogsHome from "components/Blogs/BlogsHome";
+import Head from "next/head";
 
 const blogs = ({ blogsData }) => {
  return (
-  <div>
+  <>
+   <Head>
+    <title>First Aid | Blogs</title>
+    <link rel="shortcut icon" href="faviconHome.ico"></link>
+   </Head>
    <BlogsHome blogsData={blogsData} />
-  </div>
+  </>
  );
 };
 

@@ -28,30 +28,28 @@ const Quiz = () => {
  useEffect(() => {
   setShowQuestion(true);
   selectedAnswer.forEach((element) => {
-   if (
-    element.questionId ===
-    userSelectedAnswers[userSelectedAnswers.length - 1]?.questionId
-   ) {
-    userSelectedAnswers.pop();
-    userSelectedAnswers.push(element);
-   } else {
-    userSelectedAnswers.push(element);
-   }
+             if ( element.questionId === userSelectedAnswers[userSelectedAnswers.length - 1]?.questionId) {
+                              userSelectedAnswers.pop();
+                                userSelectedAnswers.push(element);
+                                } 
+                else {
+                        userSelectedAnswers.push(element);
+                 }
 
-   let newArr = [...userSelectedAnswers];
-   dispatch({
-    type: "SUBMIT_QUIZ",
-    payload: newArr,
-   });
-  });
- }, [
-  index,
-  isSubmitted,
-  isSelected,
-  dispatch,
-  selectedAnswer,
-  userSelectedAnswers,
- ]);
+            let newArr = [...userSelectedAnswers];
+             dispatch({
+                type: "SUBMIT_QUIZ",
+                payload: newArr,
+              });
+             });
+             }, [
+                     index,
+                isSubmitted,
+                isSelected,
+                dispatch,
+                selectedAnswer,
+                userSelectedAnswers,
+                ]);
  const goNext = () => {
   setShowQuestion(false);
   setIsSelected(false);
@@ -138,12 +136,7 @@ const Quiz = () => {
 
       {index > 0 && (
        <Button
-        sx={{
-         background: "red",
-         px: {
-          xs: 2,
-          sm: 4,
-          md: 6,
+        sx={{ background: "red",px: { xs: 2,sm: 4, md: 6,
          },
          fontSize: {
           xs: "16px",
