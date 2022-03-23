@@ -54,7 +54,7 @@ const LoginModal = ({ handleClose }) => {
                 open={open}
                 aria-labelledby="modal-modal-title"
                 aria-describedby="modal-modal-description"
-                sx={{ position: 'absolute' }}
+                sx={{ position: 'absolute', top: '100px' }}
             >
 
                 <Box sx={Styles.modal}>
@@ -73,7 +73,7 @@ const LoginModal = ({ handleClose }) => {
                                 fontWeight: 'bold'
                             }} />
                     </Box>
-                    <Box sx={{ my: 5 }}>
+                    <Box >
                         <Typography id="modal-modal-title" sx={{
                             fontWeight: 'bold',
                             fontSize: '24px',
@@ -87,7 +87,7 @@ const LoginModal = ({ handleClose }) => {
                         }
 
                         <AuthenticationButton backgroundColor='#3E5C97' icon="/assets/images/facebook-icon.png" onClick={handleFacebookSignIn}>Log In With Facebook</AuthenticationButton>
-                        <Box sx={{ mt: '100px', mb: '20px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                        <Box sx={{ mt: '20px', mb: '20px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                             <hr style={{ width: '40%' }} /> <span style={{
                                 fontWeight: 600,
                                 fontSize: '12px',
